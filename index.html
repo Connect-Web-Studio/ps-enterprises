@@ -1,0 +1,1347 @@
+<!-- Load FontAwesome Icons & Google Fonts safely -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap">
+
+<!-- Global Full-Width Breakout for Astra & WPBakery -->
+<style>
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    background-color: #060911 !important;
+  }
+  .site-content,
+  #primary,
+  #main,
+  .ast-container,
+  .entry-content,
+  .entry-content .vc_row,
+  .entry-content .vc_column_container,
+  article.page,
+  .ast-plain-container.ast-no-sidebar #primary {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    background-color: #060911 !important;
+  }
+</style>
+
+<div id="pse-app">
+  <!-- Glowing Background Mesh -->
+  <div class="pse-ambient-glow orb-1"></div>
+  <div class="pse-ambient-glow orb-2"></div>
+
+  <!-- Top Sticky Navigation -->
+  <header class="pse-nav">
+    <a href="#" class="pse-logo-link">
+      <!-- Official PS Enterprises Logo -->
+      <img class="pse-site-logo" src="data:image/png;base64,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" alt="PS Enterprises" draggable="false">
+    </a>
+    <div class="pse-nav-menu">
+      <a href="#pse-services">Services</a>
+      <a href="#pse-process">Process</a>
+      <a href="#pse-clients">Clients</a>
+      <a href="#pse-team">Team</a>
+    </div>
+
+    <button type="button" class="pse-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="pse-mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="pse-mobile-menu" class="pse-mobile-menu" aria-label="Mobile navigation">
+      <a href="#pse-services">Services</a>
+      <a href="#pse-process">Process</a>
+      <a href="#pse-clients">Clients</a>
+      <a href="#pse-team">Team</a>
+      <a href="#pse-contact">Get in Touch</a>
+    </nav>
+
+    <a href="#pse-contact" class="pse-btn-pill">Get in Touch <i class="fa-solid fa-arrow-right"></i></a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pse-hero">
+    <div class="pse-badge"><i class="fa-solid fa-shield-halved"></i> PS ENTERPRISES</div>
+    <h1 class="pse-hero-title">Reliable Solutions.<br><span class="pse-gradient-text">Smarter Security.</span></h1>
+    <p class="pse-hero-subtitle">
+      PS Enterprises delivers end-to-end fire safety, CCTV surveillance, high-speed enterprise networking, AMC, and specialized engineering manpower across Madhya Pradesh, Chhattisgarh, and Maharashtra.
+    </p>
+    
+    <div class="pse-hero-btns">
+      <a href="#pse-services" class="pse-btn-primary">Explore Services</a>
+      <a href="#pse-contact" class="pse-btn-secondary">Request Staffing Quote</a>
+    </div>
+
+    <!-- Live Metrics Grid -->
+    <div class="pse-stats-grid">
+      <div class="pse-stat-box">
+        <h3>2000</h3><span>+</span>
+        <p>Candidates Placed</p>
+      </div>
+      <div class="pse-stat-box">
+        <h3>4</h3><span>+</span>
+        <p>Years Experience</p>
+      </div>
+      <div class="pse-stat-box">
+        <h3>3</h3>
+        <p>States (MP, CG, MH)</p>
+      </div>
+      <div class="pse-stat-box">
+        <h3>100</h3><span>%</span>
+        <p>SLA Compliance</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Bento Grid -->
+  <section id="pse-services" class="pse-section">
+    <div class="pse-section-header">
+      <span class="pse-tag">Core Offerings</span>
+      <h2>Engineering & Facility Infrastructure</h2>
+      <p>Precision execution across life-safety and enterprise technology installations.</p>
+    </div>
+
+    <div class="pse-grid-3">
+      <!-- 1. Fire Alarm Systems -->
+      <div class="pse-card">
+        <div class="pse-icon-wrap"><i class="fa-solid fa-fire-extinguisher"></i></div>
+        <h3>Fire Alarm Systems</h3>
+        <p>Commercial fire detection, smoke sensors, control panel installations, manual call points, and compliance testing.</p>
+        <a href="#pse-contact" class="pse-card-link">Enquire Details <i class="fa-solid fa-angle-right"></i></a>
+      </div>
+
+      <!-- 2. CCTV Surveillance -->
+      <div class="pse-card">
+        <div class="pse-icon-wrap"><i class="fa-solid fa-video"></i></div>
+        <h3>CCTV Surveillance</h3>
+        <p>End-to-end IP & HD camera deployments, remote matrix monitoring, NVR/DVR installation, and 24/7 site security.</p>
+        <a href="#pse-contact" class="pse-card-link">Enquire Details <i class="fa-solid fa-angle-right"></i></a>
+      </div>
+
+      <!-- 3. Networking Solutions -->
+      <div class="pse-card">
+        <div class="pse-icon-wrap"><i class="fa-solid fa-network-wired"></i></div>
+        <h3>Networking Solutions</h3>
+        <p>Structured cabling, server rack installations, switches, routers, and internal low-latency connectivity optimization.</p>
+        <a href="#pse-contact" class="pse-card-link">Enquire Details <i class="fa-solid fa-angle-right"></i></a>
+      </div>
+
+      <!-- 4. AMC -->
+      <div class="pse-card">
+        <div class="pse-icon-wrap"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h3>Annual Maintenance (AMC)</h3>
+        <p>Comprehensive proactive maintenance contracts ensuring smooth, zero-downtime operation of all equipment.</p>
+        <a href="#pse-contact" class="pse-card-link">View AMC Plans <i class="fa-solid fa-angle-right"></i></a>
+      </div>
+
+      <!-- 5. Manpower & Payrolling -->
+      <div class="pse-card">
+        <div class="pse-icon-wrap"><i class="fa-solid fa-id-card-clip"></i></div>
+        <h3>Manpower & Payrolling</h3>
+        <p>Flexible workforce sourcing, candidate screening, statutory compliance, and payroll administration tailored to plant operations.</p>
+        <a href="#pse-contact" class="pse-card-link">Request Staffing <i class="fa-solid fa-angle-right"></i></a>
+      </div>
+
+      <!-- 6. Engineering Crew -->
+      <div class="pse-card">
+        <div class="pse-icon-wrap"><i class="fa-solid fa-user-gear"></i></div>
+        <h3>Engineering Deputation</h3>
+        <p>Deputation of verified site engineers, electrical supervisors, and technical crew support for complex facilities.</p>
+        <a href="#pse-contact" class="pse-card-link">Deploy Team <i class="fa-solid fa-angle-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5-Step Process Pipeline -->
+  <section id="pse-process" class="pse-section" style="background: rgba(255,255,255,0.015); border-radius: 32px;">
+    <div class="pse-section-header">
+      <span class="pse-tag">Structured Delivery</span>
+      <h2>Workforce Process Framework</h2>
+      <p>A 5-phase delivery pipeline ensuring candidates meet stringent technical standards.</p>
+    </div>
+
+    <div class="pse-process-grid">
+      <div class="pse-step-card">
+        <div class="pse-num">01</div>
+        <h4>Understand</h4>
+        <p>Analyze corporate hierarchy demands and specific JD requirements.</p>
+      </div>
+      <div class="pse-step-card">
+        <div class="pse-num">02</div>
+        <h4>Search</h4>
+        <p>Access active prospect databases and coordinate recruitment drives.</p>
+      </div>
+      <div class="pse-step-card">
+        <div class="pse-num">03</div>
+        <h4>Screen</h4>
+        <p>Stringent candidate assessment, profile validation, and skill checks.</p>
+      </div>
+      <div class="pse-step-card">
+        <div class="pse-num">04</div>
+        <h4>Recommend</h4>
+        <p>Forward vetted eligible candidates for final internal client review.</p>
+      </div>
+      <div class="pse-step-card">
+        <div class="pse-num">05</div>
+        <h4>Deploy</h4>
+        <p>Support onboarding, payroll integration, and site operational deployment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Continuous Left-to-Right Scrolling Brand Ticker with Logos -->
+  <section id="pse-clients" class="pse-section">
+    <div class="pse-section-header" style="margin-bottom: 24px;">
+      <span class="pse-tag">Trusted Deployments</span>
+      <h2>Leading Enterprise Partners</h2>
+    </div>
+    
+    <div class="pse-ticker-wrap">
+      <div class="pse-ticker-track-ltr">
+        <!-- 1. Eicher Volvo -->
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <circle cx="22" cy="18" r="14" fill="#e11d23"/>
+            <path d="M12 20 L26 12 L22 24 Z" fill="#fff"/>
+            <text x="42" y="22" font-family="'Arial Black', sans-serif" font-weight="900" font-size="14" fill="#e11d23">EICHER</text>
+            <text x="104" y="22" font-family="Arial, sans-serif" font-weight="800" font-size="15" fill="#003057">VOLVO</text>
+            <text x="80" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" font-weight="700" fill="#94a3b8">VE COMMERCIAL VEHICLES</text>
+          </svg>
+          <span class="pse-brand-label">Eicher Volvo</span>
+        </div>
+
+        <!-- 2. PRL Infrastructure -->
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <rect x="12" y="18" width="6" height="18" fill="#94a3b8"/>
+            <rect x="21" y="11" width="8" height="25" fill="#0056b3"/>
+            <text x="36" y="30" font-family="'Arial Black', sans-serif" font-weight="900" font-size="21" fill="#38bdf8">PRL</text>
+            <text x="80" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#94a3b8">INFRASTRUCTURE PVT. LTD.</text>
+          </svg>
+          <span class="pse-brand-label">PRL Infrastructure</span>
+        </div>
+
+        <!-- 3. Moment Energy Ispat Plant -->
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <path d="M15 32 L26 12 L37 32 Z" fill="#94a3b8"/>
+            <path d="M29 32 L40 12 L51 32 Z" fill="#f97316"/>
+            <text x="105" y="24" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="10.5" fill="#ffffff">MOMENT ENERGY</text>
+            <text x="105" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" letter-spacing="2" fill="#f97316">ISPAT PLANT</text>
+          </svg>
+          <span class="pse-brand-label">Moment Energy</span>
+        </div>
+
+        <!-- 4. J.S.W. -->
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <path d="M 38 12 C 55 12, 75 16, 85 22 C 72 20, 52 19, 45 22 Z" fill="#e11d23"/>
+            <text x="80" y="38" text-anchor="middle" font-family="'Arial Black', sans-serif" font-style="italic" font-weight="900" font-size="28" fill="#3b82f6">JSW</text>
+          </svg>
+          <span class="pse-brand-label">J.S.W.</span>
+        </div>
+
+        <!-- 5. M.P.E.B. -->
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <circle cx="25" cy="25" r="18" fill="none" stroke="#0284c7" stroke-width="2"/>
+            <line x1="25" y1="12" x2="25" y2="38" stroke="#0284c7" stroke-width="2"/>
+            <line x1="16" y1="20" x2="34" y2="20" stroke="#0284c7" stroke-width="2"/>
+            <text x="50" y="27" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="14" fill="#38bdf8">M.P.E.B.</text>
+            <text x="50" y="38" font-family="Arial, sans-serif" font-size="7" fill="#94a3b8">Contract Basis</text>
+          </svg>
+          <span class="pse-brand-label">M.P.E.B.</span>
+        </div>
+
+        <!-- 6. Aeolus Engineering -->
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <text x="12" y="28" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="17" fill="#0284c7">AE</text>
+            <circle cx="48" cy="22" r="8" fill="none" stroke="#10b981" stroke-width="3"/>
+            <text x="60" y="28" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="17" fill="#0284c7">LUS</text>
+            <text x="80" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" letter-spacing="2" fill="#cbd5e1">ENGINEERING</text>
+          </svg>
+          <span class="pse-brand-label">Aeolus Engg.</span>
+        </div>
+
+        <!-- 7. Business Automation (ba) -->
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <text x="28" y="26" font-family="'Arial Black', sans-serif" font-weight="900" font-size="24" fill="#3b82f6">b</text>
+            <text x="44" y="26" font-family="'Arial Black', sans-serif" font-weight="900" font-size="24" fill="#e11d23">a</text>
+            <text x="68" y="18" font-family="Arial, sans-serif" font-weight="700" font-size="7.5" fill="#ffffff">business</text>
+            <text x="68" y="26" font-family="Arial, sans-serif" font-weight="700" font-size="7.5" fill="#ffffff">automation</text>
+            <text x="80" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#94a3b8">(i) private limited</text>
+          </svg>
+          <span class="pse-brand-label">Business Automation</span>
+        </div>
+
+        <!-- 8. Reliance ResQ -->
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <text x="80" y="16" text-anchor="middle" font-family="Georgia, serif" font-weight="600" font-size="10" fill="#e2e8f0">Reliance</text>
+            <text x="80" y="38" text-anchor="middle" font-family="'Arial Black', sans-serif" font-weight="900" font-size="20" fill="#ef4444">resQ</text>
+          </svg>
+          <span class="pse-brand-label">Reliance ResQ</span>
+        </div>
+
+        <!-- DUPLICATE SET -->
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <circle cx="22" cy="18" r="14" fill="#e11d23"/>
+            <path d="M12 20 L26 12 L22 24 Z" fill="#fff"/>
+            <text x="42" y="22" font-family="'Arial Black', sans-serif" font-weight="900" font-size="14" fill="#e11d23">EICHER</text>
+            <text x="104" y="22" font-family="Arial, sans-serif" font-weight="800" font-size="15" fill="#003057">VOLVO</text>
+            <text x="80" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" font-weight="700" fill="#94a3b8">VE COMMERCIAL VEHICLES</text>
+          </svg>
+          <span class="pse-brand-label">Eicher Volvo</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <rect x="12" y="18" width="6" height="18" fill="#94a3b8"/>
+            <rect x="21" y="11" width="8" height="25" fill="#0056b3"/>
+            <text x="36" y="30" font-family="'Arial Black', sans-serif" font-weight="900" font-size="21" fill="#38bdf8">PRL</text>
+            <text x="80" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#94a3b8">INFRASTRUCTURE PVT. LTD.</text>
+          </svg>
+          <span class="pse-brand-label">PRL Infrastructure</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <path d="M15 32 L26 12 L37 32 Z" fill="#94a3b8"/>
+            <path d="M29 32 L40 12 L51 32 Z" fill="#f97316"/>
+            <text x="105" y="24" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="10.5" fill="#ffffff">MOMENT ENERGY</text>
+            <text x="105" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" letter-spacing="2" fill="#f97316">ISPAT PLANT</text>
+          </svg>
+          <span class="pse-brand-label">Moment Energy</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <path d="M 38 12 C 55 12, 75 16, 85 22 C 72 20, 52 19, 45 22 Z" fill="#e11d23"/>
+            <text x="80" y="38" text-anchor="middle" font-family="'Arial Black', sans-serif" font-style="italic" font-weight="900" font-size="28" fill="#3b82f6">JSW</text>
+          </svg>
+          <span class="pse-brand-label">J.S.W.</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <circle cx="25" cy="25" r="18" fill="none" stroke="#0284c7" stroke-width="2"/>
+            <line x1="25" y1="12" x2="25" y2="38" stroke="#0284c7" stroke-width="2"/>
+            <line x1="16" y1="20" x2="34" y2="20" stroke="#0284c7" stroke-width="2"/>
+            <text x="50" y="27" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="14" fill="#38bdf8">M.P.E.B.</text>
+            <text x="50" y="38" font-family="Arial, sans-serif" font-size="7" fill="#94a3b8">Contract Basis</text>
+          </svg>
+          <span class="pse-brand-label">M.P.E.B.</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <text x="12" y="28" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="17" fill="#0284c7">AE</text>
+            <circle cx="48" cy="22" r="8" fill="none" stroke="#10b981" stroke-width="3"/>
+            <text x="60" y="28" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="17" fill="#0284c7">LUS</text>
+            <text x="80" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" letter-spacing="2" fill="#cbd5e1">ENGINEERING</text>
+          </svg>
+          <span class="pse-brand-label">Aeolus Engg.</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <text x="28" y="26" font-family="'Arial Black', sans-serif" font-weight="900" font-size="24" fill="#3b82f6">b</text>
+            <text x="44" y="26" font-family="'Arial Black', sans-serif" font-weight="900" font-size="24" fill="#e11d23">a</text>
+            <text x="68" y="18" font-family="Arial, sans-serif" font-weight="700" font-size="7.5" fill="#ffffff">business</text>
+            <text x="68" y="26" font-family="Arial, sans-serif" font-weight="700" font-size="7.5" fill="#ffffff">automation</text>
+            <text x="80" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#94a3b8">(i) private limited</text>
+          </svg>
+          <span class="pse-brand-label">Business Automation</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <text x="80" y="16" text-anchor="middle" font-family="Georgia, serif" font-weight="600" font-size="10" fill="#e2e8f0">Reliance</text>
+            <text x="80" y="38" text-anchor="middle" font-family="'Arial Black', sans-serif" font-weight="900" font-size="20" fill="#ef4444">resQ</text>
+          </svg>
+          <span class="pse-brand-label">Reliance ResQ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Team -->
+  <section id="pse-team" class="pse-section">
+    <div class="pse-section-header">
+      <span class="pse-tag">Core Team</span>
+      <h2>Key Operational Staff</h2>
+      <p>Key full-time staff managing project execution and client partnerships.</p>
+    </div>
+
+    <div class="pse-grid-4">
+      <div class="pse-team-box">
+        <div class="pse-avatar">SS</div>
+        <h4>Samstrapati Saran</h4>
+        <span>Project Head</span>
+      </div>
+      <div class="pse-team-box">
+        <div class="pse-avatar">SN</div>
+        <h4>Sulabh Nema</h4>
+        <span>Project Engineer</span>
+      </div>
+      <div class="pse-team-box">
+        <div class="pse-avatar">P</div>
+        <h4>Payal</h4>
+        <span>Human Resources</span>
+      </div>
+      <div class="pse-team-box">
+        <div class="pse-avatar">PL</div>
+        <h4>Parshant Lakhra</h4>
+        <span>Field Engineer</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Grid -->
+  <section id="pse-contact" class="pse-section">
+    <div class="pse-contact-grid">
+      <div class="pse-contact-left">
+        <span class="pse-tag">Direct Lines</span>
+        <h2>Let's Build a Reliable Solution Together</h2>
+        <p style="color: #94a3b8; margin-bottom: 30px;">Reach our estimation and technical team across our offices in Bhopal.</p>
+        
+        <div class="pse-info-row">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <div>
+            <strong>Corporate Office</strong>
+            <p>Office No. S-2, 3rd Floor, Plot No. 91 B, Above Domino's, Zone II, M.P. Nagar, Bhopal (M.P.)</p>
+          </div>
+        </div>
+
+        <div class="pse-info-row">
+          <i class="fa-solid fa-building"></i>
+          <div>
+            <strong>Branch Office</strong>
+            <p>OFF. No. LIG 180 M Sector, Ayodhya Nagar, Bhopal</p>
+          </div>
+        </div>
+
+        <div class="pse-info-row">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <strong>Telephone Lines</strong>
+            <p>+91-9588089759 / 6299091885 | Sales: +91-9399226485</p>
+          </div>
+        </div>
+
+        <div class="pse-info-row">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <strong>Email Support</strong>
+            <p>enterprisesps91@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pse-form-box">
+        <h3>Send Requirement Inquiry</h3>
+        <form onsubmit="event.preventDefault(); alert('Inquiry sent successfully!');">
+          <div class="pse-input-group">
+            <label>Full Name *</label>
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="pse-input-group">
+            <label>Enterprise / Company</label>
+            <input type="text" placeholder="Company Name">
+          </div>
+          <div class="pse-input-group">
+            <label>Phone Number *</label>
+            <input type="tel" placeholder="+91-XXXXXXXXXX" required>
+          </div>
+          <div class="pse-input-group">
+            <label>Email ID</label>
+            <input type="email" placeholder="your@email.com">
+          </div>
+          <div class="pse-input-group">
+            <label>Service Category *</label>
+            <select required>
+              <option value="Fire Alarm & CCTV">Fire Alarm & CCTV Systems</option>
+              <option value="Networking Solutions">Networking Solutions</option>
+              <option value="Manpower & Payrolling">Manpower & Payrolling</option>
+              <option value="Annual Maintenance (AMC)">Annual Maintenance (AMC)</option>
+            </select>
+          </div>
+          <button type="submit" class="pse-submit-btn">Submit Inquiry <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="pse-footer">
+    <p>© 2026 PS Enterprises. All Rights Reserved. Designed for Enterprise Reliability.</p>
+  </footer>
+</div>
+
+<!-- ========================================================
+     CSS STYLES
+     ======================================================== -->
+<style>
+  #pse-app {
+    background-color: #060911 !important;
+    color: #f8fafc !important;
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    overflow-x: hidden !important;
+    padding: 0 !important;
+    line-height: 1.6 !important;
+    box-sizing: border-box !important;
+  }
+  #pse-app * {
+    box-sizing: border-box !important;
+  }
+
+  .pse-ambient-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(140px);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.35;
+  }
+  .orb-1 { top: 0%; left: 50%; transform: translateX(-50%); background: #ef4444; }
+  .orb-2 { top: 40%; right: -150px; background: #2563eb; }
+
+  /* Navbar with Pill Logo */
+  .pse-nav {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 28px !important;
+    margin: 20px auto !important;
+    max-width: 1180px !important;
+    background: rgba(15, 23, 42, 0.8) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 100px !important;
+    position: relative !important;
+    z-index: 100 !important;
+  }
+  .pse-logo-link {
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    background: #ffffff !important;
+    padding: 4px 14px !important;
+    border-radius: 50px !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2) !important;
+  }
+  .pse-site-logo {
+    height: 38px !important;
+    width: auto !important;
+    display: block !important;
+  }
+  .pse-nav-menu {
+    display: flex !important;
+    gap: 28px !important;
+  }
+  .pse-nav-menu a {
+    color: #94a3b8 !important;
+    text-decoration: none !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    transition: color 0.3s ease !important;
+  }
+  .pse-nav-menu a:hover {
+    color: #fff !important;
+  }
+  .pse-btn-pill {
+    background: linear-gradient(135deg, #ef4444, #b91c1c) !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 10px 22px !important;
+    border-radius: 99px !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 4px 20px rgba(239, 68, 68, 0.35) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  }
+  .pse-btn-pill:hover {
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow: 0 8px 30px rgba(239, 68, 68, 0.5) !important;
+  }
+
+  /* Hero Section */
+  .pse-hero {
+    position: relative !important;
+    z-index: 1 !important;
+    padding: 80px 24px 60px 24px !important;
+    text-align: center !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+  }
+  .pse-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 6px 18px !important;
+    border-radius: 99px !important;
+    background: rgba(239, 68, 68, 0.1) !important;
+    color: #ef4444 !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 24px !important;
+  }
+  .pse-hero-title {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: clamp(2.6rem, 5vw, 4.4rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -1.5px !important;
+    margin-bottom: 24px !important;
+    color: #fff !important;
+  }
+  .pse-gradient-text {
+    background: linear-gradient(135deg, #ffffff 40%, #ef4444 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+  .pse-hero-subtitle {
+    color: #94a3b8 !important;
+    font-size: 1.15rem !important;
+    max-width: 720px !important;
+    margin: 0 auto 36px auto !important;
+  }
+  .pse-hero-btns {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    margin-bottom: 60px !important;
+    flex-wrap: wrap !important;
+  }
+  .pse-btn-primary {
+    background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+    color: #fff !important;
+    padding: 14px 34px !important;
+    border-radius: 99px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    box-shadow: 0 8px 30px rgba(239, 68, 68, 0.35) !important;
+    transition: all 0.3s ease !important;
+  }
+  .pse-btn-primary:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 35px rgba(239, 68, 68, 0.5) !important;
+  }
+  .pse-btn-secondary {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #f8fafc !important;
+    padding: 14px 34px !important;
+    border-radius: 99px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(10px) !important;
+    transition: all 0.3s ease !important;
+  }
+  .pse-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
+
+  /* Stats Grid */
+  .pse-stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 16px !important;
+    background: rgba(18, 24, 38, 0.6) !important;
+    backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 24px !important;
+    padding: 28px !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5) !important;
+  }
+  .pse-stat-box {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .pse-stat-box h3 {
+    display: inline-block !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 2.4rem !important;
+    font-weight: 800 !important;
+    color: #fff !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+  }
+  .pse-stat-box span {
+    color: #ef4444 !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+  }
+  .pse-stat-box p {
+    font-size: 0.85rem !important;
+    color: #94a3b8 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    margin-top: 8px !important;
+  }
+
+  /* Global Sections */
+  .pse-section {
+    position: relative !important;
+    z-index: 1 !important;
+    max-width: 1200px !important;
+    margin: 0 auto 90px auto !important;
+    padding: 40px 24px !important;
+  }
+  .pse-section-header {
+    text-align: center !important;
+    max-width: 650px !important;
+    margin: 0 auto 50px auto !important;
+  }
+  .pse-tag {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    color: #ef4444 !important;
+    display: inline-block !important;
+    margin-bottom: 12px !important;
+  }
+  .pse-section-header h2 {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 2.4rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 12px !important;
+    color: #fff !important;
+    letter-spacing: -0.5px !important;
+  }
+  .pse-section-header p {
+    color: #94a3b8 !important;
+    font-size: 1.05rem !important;
+  }
+
+  /* Services Grid */
+  .pse-grid-3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+  }
+  .pse-card {
+    background: rgba(18, 24, 38, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 24px !important;
+    padding: 36px 28px !important;
+    backdrop-filter: blur(15px) !important;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+  .pse-card:hover {
+    transform: translateY(-8px) !important;
+    border-color: rgba(239, 68, 68, 0.5) !important;
+    box-shadow: 0 20px 40px rgba(239, 68, 68, 0.2) !important;
+  }
+  .pse-icon-wrap {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 16px !important;
+    background: rgba(239, 68, 68, 0.1) !important;
+    color: #ef4444 !important;
+    display: grid !important;
+    place-items: center !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 24px !important;
+    border: 1px solid rgba(239, 68, 68, 0.2) !important;
+    transition: transform 0.3s ease !important;
+  }
+  .pse-card:hover .pse-icon-wrap {
+    transform: scale(1.1) rotate(5deg) !important;
+  }
+  .pse-card h3 {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 1.35rem !important;
+    color: #fff !important;
+    margin-bottom: 12px !important;
+  }
+  .pse-card p {
+    color: #94a3b8 !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 24px !important;
+  }
+  .pse-card-link {
+    color: #ef4444 !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    font-size: 0.9rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+
+  /* Process Grid */
+  .pse-process-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 16px !important;
+    padding: 10px !important;
+  }
+  .pse-step-card {
+    background: rgba(18, 24, 38, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 20px !important;
+    padding: 28px 20px !important;
+    transition: all 0.3s ease !important;
+  }
+  .pse-step-card:hover {
+    border-color: #ef4444 !important;
+    transform: translateY(-5px) !important;
+  }
+  .pse-num {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 1.8rem !important;
+    font-weight: 800 !important;
+    color: #ef4444 !important;
+    margin-bottom: 12px !important;
+  }
+  .pse-step-card h4 {
+    color: #fff !important;
+    font-size: 1.15rem !important;
+    margin-bottom: 8px !important;
+  }
+  .pse-step-card p {
+    color: #94a3b8 !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* Left-to-Right Scrolling Marquee */
+  .pse-ticker-wrap {
+    width: 100% !important;
+    overflow: hidden !important;
+    padding: 24px 0 !important;
+    mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent) !important;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent) !important;
+  }
+  .pse-ticker-track-ltr {
+    display: flex !important;
+    gap: 24px !important;
+    width: max-content !important;
+    animation: pseScrollLTR 30s linear infinite !important;
+  }
+  .pse-ticker-track-ltr:hover {
+    animation-play-state: paused !important;
+  }
+  .pse-partner-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 190px !important;
+    height: 105px !important;
+    padding: 12px 16px !important;
+    background: rgba(18, 24, 38, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    backdrop-filter: blur(10px) !important;
+    transition: all 0.3s ease !important;
+    flex-shrink: 0 !important;
+  }
+  .pse-partner-card:hover {
+    transform: translateY(-4px) scale(1.03) !important;
+    border-color: rgba(225, 29, 35, 0.5) !important;
+    box-shadow: 0 10px 25px rgba(225, 29, 35, 0.25) !important;
+  }
+  .pse-brand-svg {
+    width: 100% !important;
+    height: 48px !important;
+    margin-bottom: 6px !important;
+  }
+  .pse-brand-label {
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    color: #94a3b8 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+  }
+
+  /* Team Grid */
+  .pse-grid-4 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+  }
+  .pse-team-box {
+    background: rgba(18, 24, 38, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 20px !important;
+    padding: 30px 20px !important;
+    text-align: center !important;
+    transition: transform 0.3s ease !important;
+  }
+  .pse-team-box:hover {
+    transform: translateY(-6px) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  .pse-avatar {
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.3), rgba(59, 130, 246, 0.3)) !important;
+    border: 2px solid #ef4444 !important;
+    display: grid !important;
+    place-items: center !important;
+    margin: 0 auto 16px auto !important;
+    font-weight: 700 !important;
+    font-size: 1.3rem !important;
+    color: #fff !important;
+  }
+  .pse-team-box h4 {
+    color: #fff !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 4px !important;
+  }
+  .pse-team-box span {
+    color: #ef4444 !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+  }
+
+  /* Contact Section */
+  .pse-contact-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 50px !important;
+    background: rgba(18, 24, 38, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 32px !important;
+    padding: 50px !important;
+  }
+  .pse-info-row {
+    display: flex !important;
+    gap: 16px !important;
+    margin-bottom: 24px !important;
+  }
+  .pse-info-row i {
+    color: #ef4444 !important;
+    font-size: 1.3rem !important;
+    padding-top: 4px !important;
+  }
+  .pse-info-row strong {
+    display: block !important;
+    color: #fff !important;
+  }
+  .pse-info-row p {
+    color: #94a3b8 !important;
+    font-size: 0.9rem !important;
+  }
+  .pse-form-box {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 24px !important;
+    padding: 32px !important;
+  }
+  .pse-form-box h3 {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 1.4rem !important;
+    color: #fff !important;
+    margin-bottom: 20px !important;
+  }
+  .pse-input-group {
+    margin-bottom: 16px !important;
+  }
+  .pse-input-group label {
+    display: block !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    color: #94a3b8 !important;
+    margin-bottom: 6px !important;
+  }
+  .pse-input-group input, .pse-input-group select {
+    width: 100% !important;
+    padding: 12px 16px !important;
+    background: #090e18 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px !important;
+    color: #fff !important;
+    font-size: 0.9rem !important;
+  }
+  .pse-input-group input:focus, .pse-input-group select:focus {
+    border-color: #ef4444 !important;
+    outline: none !important;
+  }
+  .pse-submit-btn {
+    width: 100% !important;
+    padding: 14px !important;
+    background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    transition: all 0.3s ease !important;
+  }
+  .pse-submit-btn:hover {
+    box-shadow: 0 8px 30px rgba(239, 68, 68, 0.5) !important;
+  }
+
+  .pse-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 24px !important;
+    text-align: center !important;
+    color: #64748b !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* Keyframe for Left-to-Right Scrolling */
+  @keyframes pseScrollLTR {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  /* Responsive safeguards — preserve the desktop design above 1023px */
+  .pse-site-logo {
+    width: 72px !important;
+    height: 46px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    max-width: 100% !important;
+    flex: 0 1 auto !important;
+  }
+
+  .pse-nav-menu,
+  .pse-nav > .pse-btn-pill,
+  .pse-menu-toggle,
+  .pse-mobile-menu {
+    min-width: 0 !important;
+  }
+
+  .pse-menu-toggle {
+    display: none !important;
+    width: 48px !important;
+    height: 44px !important;
+    flex: 0 0 48px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 1px solid rgba(255,255,255,0.12) !important;
+    border-radius: 14px !important;
+    background: rgba(15, 23, 42, 0.55) !important;
+    color: #f8fafc !important;
+    cursor: pointer !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  .pse-menu-toggle span {
+    display: block !important;
+    width: 25px !important;
+    height: 2px !important;
+    border-radius: 2px !important;
+    background: #f8fafc !important;
+    transition: transform 0.2s ease, opacity 0.2s ease !important;
+  }
+
+  .pse-menu-toggle:hover {
+    border-color: rgba(255,255,255,0.25) !important;
+    background: rgba(255,255,255,0.05) !important;
+  }
+
+  .pse-mobile-menu {
+    display: none !important;
+    position: absolute !important;
+    top: calc(100% + 10px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px !important;
+    background: rgba(15, 23, 42, 0.97) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.45) !important;
+    z-index: 200 !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+  }
+
+  .pse-mobile-menu.is-open {
+    display: flex !important;
+  }
+
+  .pse-mobile-menu a {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 12px 14px !important;
+    border-radius: 12px !important;
+    color: #e2e8f0 !important;
+    text-decoration: none !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .pse-mobile-menu a:hover,
+  .pse-mobile-menu a:focus-visible {
+    background: rgba(255,255,255,0.06) !important;
+    color: #fff !important;
+    outline: none !important;
+  }
+
+  .pse-grid-3 > *,
+  .pse-process-grid > *,
+  .pse-grid-4 > *,
+  .pse-stats-grid > *,
+  .pse-contact-grid > *,
+  .pse-contact-left,
+  .pse-form-box {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .pse-card h3,
+  .pse-card p,
+  .pse-step-card h4,
+  .pse-step-card p,
+  .pse-team-box h4,
+  .pse-team-box span,
+  .pse-info-row p,
+  .pse-section-header h2,
+  .pse-section-header p,
+  .pse-hero-subtitle,
+  .pse-footer p {
+    max-width: 100% !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .pse-input-group {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .pse-input-group input,
+  .pse-input-group select,
+  .pse-submit-btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .pse-input-group select {
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  @media (max-width: 1023px) {
+    .pse-grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    .pse-process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    .pse-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    .pse-contact-grid { grid-template-columns: 1fr !important; }
+    .pse-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    .pse-nav-menu,
+    .pse-nav > .pse-btn-pill { display: none !important; }
+    .pse-menu-toggle { display: flex !important; }
+    .pse-nav {
+      width: calc(100% - 32px) !important;
+      max-width: 1180px !important;
+      margin: 16px auto !important;
+      padding: 8px 16px !important;
+      border-radius: 28px !important;
+    }
+    .pse-logo-link {
+      max-width: calc(100% - 60px) !important;
+      min-width: 0 !important;
+      padding: 2px 10px !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .pse-nav {
+      width: calc(100% - 20px) !important;
+      margin: 10px auto !important;
+      padding: 7px 10px !important;
+      border-radius: 24px !important;
+    }
+
+    .pse-site-logo {
+      width: 70px !important;
+      height: 44px !important;
+    }
+
+    .pse-menu-toggle {
+      width: 46px !important;
+      height: 42px !important;
+      flex-basis: 46px !important;
+    }
+
+    .pse-grid-3,
+    .pse-process-grid,
+    .pse-grid-4,
+    .pse-stats-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .pse-section {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 32px 16px !important;
+      margin-bottom: 60px !important;
+    }
+
+    .pse-hero {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 56px 16px 40px 16px !important;
+    }
+
+    .pse-hero-title {
+      font-size: clamp(2.2rem, 11vw, 3.2rem) !important;
+    }
+
+    .pse-hero-subtitle {
+      font-size: 1rem !important;
+    }
+
+    .pse-hero-btns {
+      width: 100% !important;
+      gap: 10px !important;
+      margin-bottom: 40px !important;
+    }
+
+    .pse-btn-primary,
+    .pse-btn-secondary {
+      max-width: 100% !important;
+      white-space: normal !important;
+      text-align: center !important;
+    }
+
+    .pse-stats-grid {
+      padding: 22px 16px !important;
+    }
+
+    .pse-contact-grid {
+      padding: 24px !important;
+      gap: 28px !important;
+    }
+
+    .pse-form-box {
+      padding: 24px !important;
+    }
+
+    .pse-info-row {
+      align-items: flex-start !important;
+      min-width: 0 !important;
+    }
+
+    .pse-info-row > div {
+      min-width: 0 !important;
+      max-width: 100% !important;
+    }
+
+    .pse-partner-card {
+      width: 180px !important;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .pse-section-header h2 {
+      font-size: 2rem !important;
+    }
+
+    .pse-badge {
+      max-width: 100% !important;
+      white-space: normal !important;
+      text-align: center !important;
+      justify-content: center !important;
+    }
+  }
+</style>
+
+<!-- Micro-Interactions Script -->
+<script>
+  (function() {
+    const cards = document.querySelectorAll('.pse-card, .pse-step-card');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        card.style.transform = `perspective(600px) rotateX(${(-y/rect.height)*8}deg) rotateY(${(x/rect.width)*8}deg) translateY(-6px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = `perspective(600px) rotateX(0deg) rotateY(0deg) translateY(0)`;
+      });
+    });
+  })();
+
+  /* Tablet/mobile navigation */
+  (function() {
+    const toggle = document.querySelector('.pse-menu-toggle');
+    const menu = document.getElementById('pse-mobile-menu');
+
+    if (!toggle || !menu) return;
+
+    const closeMenu = () => {
+      menu.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open navigation menu');
+    };
+
+    toggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    });
+
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!menu.classList.contains('is-open')) return;
+      if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1023) closeMenu();
+    });
+  })();
+</script>
