@@ -1,3 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#060911">
+  <title>PS Enterprises</title>
+</head>
+<body>
 <!-- Mobile/desktop viewport behavior: responsive layout activates only below 768 CSS px.
      This keeps Android/iPhone "Desktop site" (~980px CSS viewport) on the full desktop navigation/layout,
      while normal phone viewport widths use the mobile category menu. -->
@@ -1899,6 +1908,76 @@
     background: transparent !important;
   }
 
+
+
+  /* FINAL RESPONSIVE BRAND GUARANTEE */
+  .pse-nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+  }
+  .pse-brand-group {
+    display: flex !important;
+    align-items: center !important;
+    flex: 0 1 auto !important;
+    min-width: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .pse-brand-group .pse-logo-link,
+  .pse-brand-name {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .pse-brand-name {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: clip !important;
+  }
+  @media (max-width: 767px) {
+    .pse-nav {
+      width: calc(100% - 12px) !important;
+      max-width: none !important;
+      margin: 8px auto !important;
+      padding: 6px !important;
+    }
+    .pse-brand-group {
+      flex: 1 1 auto !important;
+      min-width: 0 !important;
+      max-width: calc(100% - 50px) !important;
+      gap: 6px !important;
+    }
+    .pse-brand-group .pse-logo-link { flex: 0 0 auto !important; }
+    .pse-brand-name {
+      flex: 0 1 auto !important;
+      min-width: 0 !important;
+      max-width: 100% !important;
+      color: #ffffff !important;
+    }
+    .pse-menu-toggle {
+      display: flex !important;
+      flex: 0 0 42px !important;
+      width: 42px !important;
+      height: 39px !important;
+      margin-left: 4px !important;
+    }
+    .pse-nav-menu,
+    .pse-nav > .pse-btn-pill { display: none !important; }
+    .pse-mobile-menu {
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+  }
+  @media (max-width: 360px) {
+    .pse-brand-group { max-width: calc(100% - 47px) !important; gap: 5px !important; }
+    .pse-brand-name { font-size: .64rem !important; letter-spacing: .08px !important; }
+    .pse-menu-toggle { flex-basis: 40px !important; width: 40px !important; }
+  }
 </style>
 
 <!-- Micro-Interactions Script -->
@@ -1956,5 +2035,17 @@
     window.addEventListener('resize', () => {
       if (window.innerWidth > 767) closeMenu();
     });
+
+    const breakpoint = window.matchMedia('(max-width: 767px)');
+    const handleBreakpointChange = (event) => {
+      if (!event.matches) closeMenu();
+    };
+    if (breakpoint.addEventListener) {
+      breakpoint.addEventListener('change', handleBreakpointChange);
+    } else if (breakpoint.addListener) {
+      breakpoint.addListener(handleBreakpointChange);
+    }
   })();
 </script>
+</body>
+</html>
