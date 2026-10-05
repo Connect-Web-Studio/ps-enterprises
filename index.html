@@ -300,6 +300,182 @@
   }
 </style>
 
+
+<style id="pse-mobile-footer-center-fix">
+/* MOBILE ONLY — footer alignment surgical fix */
+@media (max-width: 767px) {
+  footer,
+  .site-footer,
+  .footer,
+  [class*="footer"] {
+    text-align: center !important;
+  }
+
+  footer .container,
+  footer .max-w-7xl,
+  footer .max-w-6xl,
+  footer .mx-auto,
+  .site-footer .container,
+  .site-footer .mx-auto,
+  .footer .container,
+  .footer .mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  footer > div,
+  .site-footer > div,
+  .footer > div {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  footer .grid,
+  .site-footer .grid,
+  .footer .grid {
+    justify-items: center !important;
+    text-align: center !important;
+  }
+
+  footer .flex,
+  .site-footer .flex,
+  .footer .flex {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  footer ul,
+  footer nav,
+  .site-footer ul,
+  .site-footer nav,
+  .footer ul,
+  .footer nav {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+  }
+
+  footer li,
+  .site-footer li,
+  .footer li {
+    text-align: center !important;
+    list-style-position: inside !important;
+  }
+
+  footer a,
+  .site-footer a,
+  .footer a {
+    text-align: center !important;
+  }
+
+  /* Keep footer content comfortably inside the mobile viewport */
+  footer,
+  .site-footer,
+  .footer {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  footer p,
+  footer h1,
+  footer h2,
+  footer h3,
+  footer h4,
+  .site-footer p,
+  .site-footer h1,
+  .site-footer h2,
+  .site-footer h3,
+  .site-footer h4,
+  .footer p,
+  .footer h1,
+  .footer h2,
+  .footer h3,
+  .footer h4 {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+</style>
+
+
+<style id="pse-footer-mobile-final-center">
+/* FINAL SURGICAL FIX — mobile footer content centered relative to viewport */
+@media screen and (max-width: 640px) {
+  .pse-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    overflow: hidden !important;
+  }
+
+  .pse-footer .pse-footer-inner {
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+    margin: 0 auto 16px !important;
+    padding: 0 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+  }
+
+  .pse-footer .pse-footer-inner > div:first-child {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .pse-footer .pse-footer-inner strong,
+  .pse-footer .pse-footer-inner span {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .pse-footer .pse-footer-links {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 18px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .pse-footer .pse-footer-links a {
+    display: inline-block !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  .pse-footer > p {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    padding: 0 16px !important;
+    text-align: center !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <!-- Mobile/desktop viewport behavior: responsive layout activates only below 768 CSS px.
