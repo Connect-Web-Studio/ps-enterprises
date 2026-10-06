@@ -279,6 +279,50 @@
   .pse-hero .pse-hero-prev { left: 8px !important; }
   .pse-hero .pse-hero-next { right: 8px !important; }
 }
+
+/* SURGICAL: Enterprise Partners white section + black branded cards */
+#pse-app #pse-clients{
+  background:#ffffff !important;
+  color:#171717 !important;
+}
+#pse-app #pse-clients .pse-section-header h2{
+  color:#171717 !important;
+}
+#pse-app #pse-clients .pse-tag{
+  color:#C45A32 !important;
+}
+#pse-app #pse-clients .pse-ticker-wrap{
+  background:#fff !important;
+  padding:28px 0 !important;
+  mask-image:linear-gradient(to right,transparent,black 7%,black 93%,transparent) !important;
+  -webkit-mask-image:linear-gradient(to right,transparent,black 7%,black 93%,transparent) !important;
+}
+#pse-app #pse-clients .pse-partner-card{
+  background:#050505 !important;
+  border:1px solid rgba(255,255,255,.14) !important;
+  border-radius:18px !important;
+  box-shadow:0 12px 30px rgba(0,0,0,.20),0 0 0 1px rgba(0,0,0,.08) !important;
+  transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease, filter .35s ease !important;
+}
+#pse-app #pse-clients .pse-partner-card:hover{
+  transform:translateY(-7px) scale(1.035) !important;
+  border-color:rgba(196,90,50,.65) !important;
+  box-shadow:0 18px 42px rgba(0,0,0,.28),0 0 24px rgba(196,90,50,.18) !important;
+}
+#pse-app #pse-clients .pse-brand-svg{
+  filter:drop-shadow(0 2px 5px rgba(255,255,255,.10)) drop-shadow(0 0 8px rgba(255,255,255,.08)) !important;
+}
+#pse-app #pse-clients .pse-brand-label{
+  color:#fff !important;
+  text-shadow:0 1px 8px rgba(255,255,255,.18) !important;
+}
+@media(max-width:640px){
+  #pse-app #pse-clients .pse-ticker-wrap{padding:22px 0 !important;}
+  #pse-app #pse-clients .pse-partner-card{
+    width:190px !important;height:105px !important;
+  }
+}
+
 </style>
 
 
@@ -476,6 +520,608 @@
 }
 </style>
 
+
+<style id="pse-kexart-inspired-theme-v1">
+/* =========================================================
+   PS ENTERPRISES — KEXART-INSPIRED VISUAL LAYER
+   Design-only override. Existing content/functionality retained.
+   ========================================================= */
+:root{
+  --pse-bg:#f3f0e8;
+  --pse-paper:#faf9f5;
+  --pse-ink:#11110f;
+  --pse-muted:#6d6a62;
+  --pse-line:rgba(17,17,15,.14);
+  --pse-accent:#b85b32;
+  --pse-accent-2:#d38a5e;
+  --pse-dark:#171715;
+}
+html,body{background:var(--pse-bg)!important;color:var(--pse-ink)!important;scroll-behavior:smooth!important}
+body{font-family:'Plus Jakarta Sans',Arial,sans-serif!important}
+#pse-app{background:var(--pse-bg)!important;color:var(--pse-ink)!important;overflow:clip!important}
+#pse-app:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9990;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+.pse-ambient-glow{display:none!important}
+
+/* Navigation — clean floating editorial bar */
+.pse-nav{position:sticky!important;top:14px!important;z-index:1000!important;width:calc(100% - 44px)!important;max-width:1380px!important;margin:14px auto 0!important;padding:10px 14px!important;border:1px solid rgba(17,17,15,.12)!important;border-radius:999px!important;background:rgba(250,249,245,.88)!important;box-shadow:0 12px 45px rgba(20,18,14,.08)!important;backdrop-filter:blur(18px)!important;-webkit-backdrop-filter:blur(18px)!important;transition:all .35s ease!important}
+.pse-nav:hover{box-shadow:0 18px 55px rgba(20,18,14,.12)!important}
+.pse-brand-group{gap:10px!important}
+.pse-logo-link{background:#111!important;border-radius:50%!important;width:48px!important;height:48px!important;padding:7px!important;display:grid!important;place-items:center!important;overflow:hidden!important;transition:transform .35s ease,background .35s ease!important}
+.pse-logo-link:hover{transform:rotate(-5deg) scale(1.05)!important;background:var(--pse-accent)!important}
+.pse-site-logo{width:100%!important;height:100%!important;object-fit:contain!important;filter:none!important}
+.pse-brand-name{color:var(--pse-ink)!important;font-family:'Space Grotesk',sans-serif!important;letter-spacing:.08em!important;font-weight:800!important}
+.pse-nav-menu{gap:30px!important}
+.pse-nav-menu a,.pse-btn-pill{color:var(--pse-ink)!important;font-size:.78rem!important;letter-spacing:.08em!important;text-transform:uppercase!important;font-weight:700!important}
+.pse-nav-menu a{position:relative!important;padding:10px 0!important}
+.pse-nav-menu a:after{content:"";position:absolute;left:0;bottom:3px;width:0;height:1px;background:var(--pse-accent);transition:width .3s ease}
+.pse-nav-menu a:hover:after{width:100%}
+.pse-btn-pill{background:var(--pse-ink)!important;color:#fff!important;border-radius:999px!important;padding:12px 18px!important;transition:transform .3s ease,background .3s ease!important}
+.pse-btn-pill:hover{background:var(--pse-accent)!important;transform:translateY(-2px)!important}
+
+/* Hero — image remains, but becomes editorial rather than neon */
+.pse-hero{min-height:760px!important;margin-top:18px!important;border-radius:0 0 34px 34px!important;background:#20201d!important;box-shadow:none!important}
+.pse-hero-bg-shade{background:linear-gradient(180deg,rgba(12,12,10,.20),rgba(12,12,10,.42) 58%,rgba(12,12,10,.78))!important}
+.pse-hero-bg-slide img{filter:saturate(.82) contrast(1.02)!important;transform:scale(1.015)!important;transition:transform 8s cubic-bezier(.2,.7,.2,1),filter 1s ease!important}
+.pse-hero-bg-slide.is-active img{transform:scale(1.075)!important}
+.pse-hero-content{max-width:1120px!important}
+.pse-badge{border-color:rgba(255,255,255,.35)!important;background:rgba(255,255,255,.08)!important;backdrop-filter:blur(10px)!important;letter-spacing:.12em!important;text-transform:uppercase!important}
+.pse-hero-title{font-family:'Space Grotesk',sans-serif!important;font-size:clamp(3.4rem,8vw,7.7rem)!important;line-height:.92!important;letter-spacing:-.055em!important;font-weight:800!important;text-wrap:balance!important}
+.pse-gradient-text{background:linear-gradient(90deg,#fff 0%,#e7c5b0 52%,#d48a5f 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
+.pse-hero-subtitle{max-width:760px!important;color:rgba(255,255,255,.82)!important;font-size:clamp(.95rem,1.5vw,1.12rem)!important}
+.pse-btn-primary,.pse-btn-secondary{border-radius:999px!important;padding:14px 22px!important;transition:transform .3s ease,box-shadow .3s ease,background .3s ease!important}
+.pse-btn-primary{background:#fff!important;color:#111!important}
+.pse-btn-secondary{border:1px solid rgba(255,255,255,.45)!important;background:rgba(255,255,255,.07)!important;color:#fff!important;backdrop-filter:blur(8px)!important}
+.pse-btn-primary:hover,.pse-btn-secondary:hover{transform:translateY(-3px)!important;box-shadow:0 14px 35px rgba(0,0,0,.22)!important}
+.pse-service-strip{background:rgba(17,17,15,.62)!important;border-color:rgba(255,255,255,.20)!important;backdrop-filter:blur(14px)!important;border-radius:18px 18px 0 0!important}
+.pse-service-item{transition:background .35s ease,transform .35s ease!important}
+.pse-service-item:hover,.pse-service-item.is-active{background:rgba(184,91,50,.22)!important;transform:translateY(-2px)!important}
+.pse-service-item i{color:#e0a17f!important}
+
+/* Main sections — Kexart-style whitespace + editorial headings */
+.pse-section{position:relative!important;max-width:1380px!important;margin:0 auto!important;padding:120px 48px!important;background:transparent!important;border-radius:0!important}
+.pse-section + .pse-section{border-top:1px solid var(--pse-line)!important}
+.pse-section-header{max-width:850px!important;margin-bottom:58px!important}
+.pse-tag{display:inline-flex!important;align-items:center!important;gap:8px!important;color:var(--pse-accent)!important;background:transparent!important;border:0!important;padding:0!important;border-radius:0!important;font-size:.72rem!important;font-weight:800!important;letter-spacing:.16em!important;text-transform:uppercase!important}
+.pse-tag:before{content:"";width:28px;height:1px;background:currentColor;display:inline-block}
+.pse-section-header h2,.pse-contact-left h2{font-family:'Space Grotesk',sans-serif!important;color:var(--pse-ink)!important;font-size:clamp(2.6rem,5vw,5.5rem)!important;line-height:.96!important;letter-spacing:-.055em!important;font-weight:800!important;margin:16px 0 18px!important;text-wrap:balance!important}
+.pse-section-header p,.pse-contact-left p{color:var(--pse-muted)!important;max-width:700px!important;font-size:1rem!important}
+
+/* Cards become clean gallery tiles */
+.pse-card,.pse-step-card,.pse-team-box,.pse-why-card,.pse-industry-card,.pse-partner-card,.pse-stat-box{background:var(--pse-paper)!important;color:var(--pse-ink)!important;border:1px solid var(--pse-line)!important;border-radius:22px!important;box-shadow:none!important;transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s ease,border-color .45s ease!important;overflow:hidden!important}
+.pse-card:hover,.pse-step-card:hover,.pse-team-box:hover,.pse-why-card:hover,.pse-industry-card:hover,.pse-partner-card:hover,.pse-stat-box:hover{transform:translateY(-8px)!important;box-shadow:0 24px 55px rgba(35,30,24,.10)!important;border-color:rgba(184,91,50,.35)!important}
+.pse-card h3,.pse-step-card h4,.pse-team-box h4,.pse-why-card h3,.pse-industry-card strong{color:var(--pse-ink)!important}
+.pse-card p,.pse-step-card p,.pse-team-box span,.pse-why-card p,.pse-industry-card span{color:var(--pse-muted)!important}
+.pse-icon-wrap,.pse-avatar{background:#eee9df!important;color:var(--pse-accent)!important;border-color:var(--pse-line)!important}
+.pse-card-link{color:var(--pse-accent)!important}
+
+/* Stats — large typographic numbers */
+.pse-stats-grid{max-width:1380px!important;margin:0 auto!important;padding:0 48px 110px!important;background:var(--pse-bg)!important}
+.pse-stat-box{background:transparent!important;border:0!important;border-top:1px solid var(--pse-line)!important;border-radius:0!important;padding:30px 12px!important;box-shadow:none!important;transform:none!important}
+.pse-stat-box h3{font-family:'Space Grotesk',sans-serif!important;color:var(--pse-ink)!important;font-size:clamp(2.7rem,5vw,5.2rem)!important;letter-spacing:-.06em!important}
+.pse-stat-box>span{color:var(--pse-accent)!important;font-size:1.5rem!important;font-weight:800!important}
+.pse-stat-box p{color:var(--pse-muted)!important;text-transform:uppercase!important;letter-spacing:.1em!important;font-size:.68rem!important}
+
+/* Process numbering — editorial */
+.pse-num{color:var(--pse-accent)!important;font-family:'Space Grotesk',sans-serif!important;font-size:1rem!important;letter-spacing:.12em!important}
+.pse-step-card{position:relative!important}
+.pse-step-card:after{content:"↗";position:absolute;right:20px;top:18px;color:var(--pse-accent);font-size:1.2rem;opacity:.7}
+
+/* Client / Enterprise Partners — surgical dark section treatment */
+#pse-clients{background:var(--pse-dark)!important;color:#fff!important;border-radius:0!important;margin-top:0!important;margin-bottom:0!important}
+#pse-clients .pse-section-header h2{color:#fff!important}
+#pse-clients .pse-section-header p{color:rgba(255,255,255,.65)!important}
+#pse-clients .pse-tag{color:#C45A32!important}
+.pse-ticker-wrap{background:var(--pse-dark)!important;color:#fff!important;border-top:0!important;border-bottom:0!important}
+.pse-ticker-track-ltr{color:#fff!important;letter-spacing:.08em!important}
+
+/* Contact — dark editorial block */
+#pse-contact{background:var(--pse-dark)!important;color:#fff!important;max-width:none!important;margin-top:0!important}
+#pse-contact .pse-contact-grid{max-width:1280px!important;margin:auto!important}
+#pse-contact .pse-contact-left h2{color:#fff!important}
+#pse-contact .pse-contact-left p,.pse-info-row p{color:rgba(255,255,255,.65)!important}
+.pse-form-box{background:#f7f4ed!important;border:0!important;border-radius:26px!important;box-shadow:none!important}
+.pse-form-box h3{color:var(--pse-ink)!important;font-family:'Space Grotesk',sans-serif!important;font-size:1.8rem!important}
+.pse-input-group label{color:#4f4b44!important;font-size:.72rem!important;letter-spacing:.1em!important;text-transform:uppercase!important;font-weight:800!important}
+.pse-input-group input,.pse-input-group select,.pse-input-group textarea{background:#fff!important;color:#111!important;border:1px solid rgba(17,17,15,.14)!important;border-radius:12px!important;transition:border-color .25s ease,box-shadow .25s ease!important}
+.pse-input-group input:focus,.pse-input-group select:focus,.pse-input-group textarea:focus{border-color:var(--pse-accent)!important;box-shadow:0 0 0 4px rgba(184,91,50,.10)!important;outline:none!important}
+.pse-submit-btn{background:var(--pse-ink)!important;color:#fff!important;border-radius:999px!important;transition:transform .3s ease,background .3s ease!important}
+.pse-submit-btn:hover{background:var(--pse-accent)!important;transform:translateY(-2px)!important}
+
+/* Footer */
+.pse-footer{background:var(--pse-dark)!important;color:#fff!important;border-top:1px solid rgba(255,255,255,.12)!important;padding:42px 48px!important}
+.pse-footer-inner{max-width:1280px!important;margin:auto!important}
+.pse-footer strong{letter-spacing:.1em!important}
+.pse-footer span,.pse-footer p{color:rgba(255,255,255,.52)!important}
+.pse-footer-links a{color:#fff!important;transition:color .25s ease!important}
+.pse-footer-links a:hover{color:#d38a5e!important}
+
+/* Reveal animation — subtle, performance friendly */
+.pse-kex-reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.pse-kex-reveal.is-visible{opacity:1;transform:none}
+.pse-kex-reveal:nth-child(2){transition-delay:.06s}.pse-kex-reveal:nth-child(3){transition-delay:.12s}.pse-kex-reveal:nth-child(4){transition-delay:.18s}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.pse-kex-reveal{opacity:1!important;transform:none!important}}
+
+/* Mobile — retain existing responsive behavior, change only visual language */
+@media(max-width:767px){
+  .pse-nav{width:calc(100% - 20px)!important;top:8px!important;margin-top:8px!important}
+  .pse-hero{min-height:760px!important;border-radius:0 0 24px 24px!important;margin-top:10px!important}
+  .pse-hero-title{font-size:clamp(3rem,15vw,5rem)!important}
+  .pse-section{padding:78px 20px!important}
+  .pse-section-header{margin-bottom:38px!important}
+  .pse-section-header h2,.pse-contact-left h2{font-size:clamp(2.55rem,13vw,4rem)!important}
+  .pse-stats-grid{padding:0 20px 70px!important}
+  #pse-contact{padding-top:78px!important}
+  .pse-form-box{border-radius:20px!important}
+  .pse-footer{padding:34px 20px!important}
+}
+</style>
+
+
+<style id="pse-kexart-v2-design">
+/* ==========================================================
+   PS ENTERPRISES — KEXART-INSPIRED EDITORIAL UI V2
+   DESIGN ONLY: content, links, forms and business data remain.
+   ========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --kx-paper:#f3f0ea;
+  --kx-paper-2:#ebe7df;
+  --kx-ink:#171717;
+  --kx-muted:#6f6b64;
+  --kx-line:#c9c3b9;
+  --kx-accent:#b85c38;
+  --kx-accent-2:#d49a68;
+  --kx-olive:#59604a;
+  --kx-white:#fffdf8;
+}
+
+html,body{background:var(--kx-paper)!important;color:var(--kx-ink)!important;}
+body{font-family:'Inter',Arial,sans-serif!important;}
+#pse-app{
+  width:100vw!important;max-width:100vw!important;margin:0!important;left:0!important;
+  background:var(--kx-paper)!important;color:var(--kx-ink)!important;
+  font-family:'Inter',Arial,sans-serif!important;line-height:1.55!important;
+}
+#pse-app *{border-radius:0!important;}
+
+/* Remove old ambient neon graphics */
+.pse-ambient-glow{display:none!important;}
+
+/* Editorial navigation */
+.pse-nav{
+  position:sticky!important;top:14px!important;z-index:100!important;
+  width:min(1320px,calc(100% - 48px))!important;max-width:1320px!important;
+  margin:14px auto 0!important;padding:12px 8px 12px 14px!important;
+  background:rgba(243,240,234,.90)!important;border:1px solid var(--kx-line)!important;
+  box-shadow:0 10px 30px rgba(23,23,23,.06)!important;backdrop-filter:blur(14px)!important;
+}
+.pse-brand-group{gap:12px!important;}
+.pse-site-logo{width:42px!important;height:42px!important;object-fit:contain!important;}
+.pse-logo-link{padding:0!important;background:transparent!important;}
+.pse-brand-name{font-size:.78rem!important;letter-spacing:.18em!important;font-weight:700!important;color:var(--kx-ink)!important;}
+.pse-nav-menu{gap:34px!important;}
+.pse-nav-menu a,.pse-footer-links a{
+  color:var(--kx-ink)!important;text-transform:uppercase!important;letter-spacing:.12em!important;
+  font-size:.68rem!important;font-weight:600!important;text-decoration:none!important;
+  position:relative!important;
+}
+.pse-nav-menu a:after,.pse-footer-links a:after{
+  content:'';position:absolute;left:0;bottom:-5px;width:0;height:1px;background:var(--kx-accent);
+  transition:width .3s ease;
+}
+.pse-nav-menu a:hover:after,.pse-footer-links a:hover:after{width:100%;}
+.pse-btn-pill{
+  background:var(--kx-ink)!important;color:var(--kx-white)!important;border:1px solid var(--kx-ink)!important;
+  padding:12px 18px!important;font-size:.68rem!important;letter-spacing:.1em!important;text-transform:uppercase!important;
+  transition:background .3s ease,color .3s ease,transform .3s ease!important;
+}
+.pse-btn-pill:hover{background:var(--kx-accent)!important;border-color:var(--kx-accent)!important;transform:translateY(-2px)!important;}
+
+/* Static art-directed hero — NO carousel */
+.pse-hero{
+  width:min(1320px,calc(100% - 48px))!important;max-width:1320px!important;min-height:700px!important;
+  margin:42px auto 0!important;padding:82px 6vw 34px!important;display:flex!important;
+  align-items:flex-start!important;justify-content:flex-start!important;text-align:left!important;
+  background:var(--kx-paper)!important;position:relative!important;overflow:hidden!important;
+  border-top:1px solid var(--kx-line)!important;border-bottom:1px solid var(--kx-line)!important;
+}
+.pse-hero:before{
+  content:'';position:absolute;right:4%;top:12%;width:34%;height:68%;
+  background:
+    radial-gradient(circle at 28% 32%,rgba(255,253,248,.96) 0 8%,transparent 8.5%),
+    radial-gradient(circle at 68% 66%,rgba(184,92,56,.92) 0 20%,transparent 20.5%),
+    linear-gradient(135deg,transparent 0 35%,rgba(89,96,74,.92) 35.5% 66%,transparent 66.5%),
+    linear-gradient(45deg,rgba(212,154,104,.55),rgba(235,231,223,.2));
+  clip-path:polygon(18% 0,100% 8%,92% 100%,0 90%);opacity:.9;
+  animation:kxFloat 9s ease-in-out infinite alternate;pointer-events:none;
+}
+.pse-hero:after{
+  content:'PS / 01';position:absolute;right:6%;bottom:28px;font-size:.64rem;letter-spacing:.22em;color:var(--kx-muted);
+}
+@keyframes kxFloat{from{transform:translateY(0) rotate(-1deg)}to{transform:translateY(-14px) rotate(1deg)}}
+.pse-hero-background-carousel,.pse-hero-dots,.pse-hero-arrow{display:none!important;}
+.pse-hero-content{width:56%!important;max-width:720px!important;margin:0!important;align-items:flex-start!important;text-align:left!important;z-index:5!important;}
+.pse-badge{
+  color:var(--kx-accent)!important;background:transparent!important;border:0!important;padding:0!important;
+  font-size:.7rem!important;font-weight:700!important;letter-spacing:.22em!important;text-transform:uppercase!important;
+}
+.pse-hero-title{
+  font-family:'DM Serif Display',Georgia,serif!important;font-weight:400!important;letter-spacing:-.035em!important;
+  color:var(--kx-ink)!important;font-size:clamp(4rem,7.5vw,7.6rem)!important;line-height:.9!important;
+  margin:12px 0 28px!important;text-align:left!important;
+}
+.pse-gradient-text{color:var(--kx-accent)!important;background:none!important;-webkit-text-fill-color:initial!important;}
+.pse-hero-subtitle{max-width:610px!important;margin:0!important;color:var(--kx-muted)!important;font-size:1rem!important;line-height:1.8!important;text-align:left!important;}
+.pse-hero-btns{justify-content:flex-start!important;margin:34px 0 0!important;gap:10px!important;}
+.pse-btn-primary,.pse-btn-secondary{
+  border:1px solid var(--kx-ink)!important;padding:14px 21px!important;font-size:.68rem!important;
+  letter-spacing:.12em!important;text-transform:uppercase!important;transition:.3s ease!important;
+}
+.pse-btn-primary{background:var(--kx-ink)!important;color:var(--kx-white)!important;}
+.pse-btn-secondary{background:transparent!important;color:var(--kx-ink)!important;}
+.pse-btn-primary:hover,.pse-btn-secondary:hover{background:var(--kx-accent)!important;color:#fff!important;border-color:var(--kx-accent)!important;transform:translateY(-3px)!important;}
+
+/* Six service items become a quiet editorial index */
+.pse-service-strip{
+  position:absolute!important;left:0;right:0;bottom:0;width:100%!important;max-width:none!important;
+  min-height:104px!important;margin:0!important;background:rgba(255,253,248,.82)!important;
+  border-top:1px solid var(--kx-line)!important;backdrop-filter:blur(8px)!important;
+  display:grid!important;grid-template-columns:repeat(6,1fr)!important;z-index:8!important;
+}
+.pse-service-item{
+  cursor:default!important;
+  min-height:104px!important;padding:18px 10px!important;color:var(--kx-ink)!important;
+  border-right:1px solid var(--kx-line)!important;background:transparent!important;transition:.3s ease!important;
+}
+.pse-service-item i{color:var(--kx-accent)!important;font-size:1.2rem!important;}
+.pse-service-item strong{font-size:.68rem!important;letter-spacing:.08em!important;}
+.pse-service-item span{font-size:.58rem!important;color:var(--kx-muted)!important;letter-spacing:.06em!important;}
+.pse-service-item:hover,.pse-service-item.is-active{background:var(--kx-ink)!important;color:#fff!important;transform:none!important;}
+.pse-service-item:hover span,.pse-service-item.is-active span{color:#c9c3b9!important;}
+
+/* All major sections become gallery/editorial compositions */
+.pse-section{
+  width:min(1320px,calc(100% - 48px))!important;max-width:1320px!important;margin:0 auto!important;
+  padding:120px 6vw!important;background:var(--kx-paper)!important;border-bottom:1px solid var(--kx-line)!important;
+}
+.pse-section-header{margin-bottom:55px!important;text-align:left!important;align-items:flex-start!important;}
+.pse-tag{
+  color:var(--kx-accent)!important;font-size:.66rem!important;font-weight:700!important;letter-spacing:.22em!important;
+  text-transform:uppercase!important;background:none!important;padding:0!important;border:0!important;
+}
+.pse-section-header h2,.pse-contact-left h2{
+  font-family:'DM Serif Display',Georgia,serif!important;font-weight:400!important;letter-spacing:-.025em!important;
+  color:var(--kx-ink)!important;font-size:clamp(2.8rem,5vw,5.4rem)!important;line-height:.95!important;margin:12px 0 18px!important;
+}
+.pse-section-header p{max-width:650px!important;color:var(--kx-muted)!important;font-size:.95rem!important;}
+.pse-card,.pse-step-card,.pse-team-box,.pse-why-card,.pse-industry-card,.pse-partner-card,.pse-stat-box{
+  background:var(--kx-white)!important;color:var(--kx-ink)!important;border:1px solid var(--kx-line)!important;
+  box-shadow:none!important;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s ease,background .35s ease!important;
+}
+.pse-card:hover,.pse-step-card:hover,.pse-team-box:hover,.pse-why-card:hover,.pse-industry-card:hover,.pse-partner-card:hover,.pse-stat-box:hover{
+  box-shadow:0 18px 45px rgba(23,23,23,.09)!important;transform:translateY(-8px)!important;
+}
+.pse-card i,.pse-step-card i,.pse-why-card>i,.pse-industry-card>i{color:var(--kx-accent)!important;}
+.pse-card h3,.pse-step-card h4,.pse-team-box h4,.pse-why-card h3,.pse-industry-card strong{font-family:'DM Serif Display',Georgia,serif!important;font-weight:400!important;color:var(--kx-ink)!important;}
+.pse-card p,.pse-step-card p,.pse-team-box span,.pse-why-card p,.pse-industry-card span{color:var(--kx-muted)!important;}
+
+/* Stats: large editorial numbers */
+.pse-stats-grid{width:min(1320px,calc(100% - 48px))!important;max-width:1320px!important;margin:0 auto!important;background:var(--kx-ink)!important;}
+.pse-stat-box{background:transparent!important;border-color:#46433e!important;color:#fff!important;box-shadow:none!important;}
+.pse-stat-box h3,.pse-stat-box>span{color:#fff!important;font-family:'DM Serif Display',Georgia,serif!important;font-weight:400!important;}
+.pse-stat-box h3{font-size:clamp(3rem,5vw,5rem)!important;}
+.pse-stat-box p{color:#bdb8af!important;text-transform:uppercase!important;letter-spacing:.1em!important;font-size:.62rem!important;}
+
+/* Process numbering */
+.pse-step-card{position:relative!important;padding-top:70px!important;}
+.pse-step-card:before{content:'01';position:absolute;top:22px;left:22px;color:var(--kx-accent);font-size:.7rem;letter-spacing:.18em;font-weight:700;}
+.pse-step-card:nth-child(2):before{content:'02'}.pse-step-card:nth-child(3):before{content:'03'}.pse-step-card:nth-child(4):before{content:'04'}
+
+/* Contact */
+#pse-contact{background:var(--kx-ink)!important;color:#fff!important;}
+#pse-contact .pse-tag{color:var(--kx-accent-2)!important;}
+#pse-contact .pse-contact-left h2{color:#fff!important;}
+#pse-contact .pse-contact-left p,#pse-contact .pse-info-row p{color:#bdb8af!important;}
+.pse-form-box{background:var(--kx-white)!important;border:0!important;padding:34px!important;}
+.pse-form-box h3{font-family:'DM Serif Display',Georgia,serif!important;font-weight:400!important;font-size:2rem!important;color:var(--kx-ink)!important;}
+.pse-input-group label{color:var(--kx-muted)!important;font-size:.62rem!important;letter-spacing:.12em!important;text-transform:uppercase!important;}
+.pse-input-group input,.pse-input-group select,.pse-input-group textarea{
+  background:transparent!important;border:0!important;border-bottom:1px solid var(--kx-line)!important;border-radius:0!important;
+  color:var(--kx-ink)!important;padding:13px 2px!important;outline:none!important;
+}
+.pse-input-group input:focus,.pse-input-group select:focus,.pse-input-group textarea:focus{border-bottom-color:var(--kx-accent)!important;box-shadow:none!important;}
+.pse-submit-btn{background:var(--kx-ink)!important;color:#fff!important;border:1px solid var(--kx-ink)!important;border-radius:0!important;transition:.3s ease!important;}
+.pse-submit-btn:hover{background:var(--kx-accent)!important;border-color:var(--kx-accent)!important;transform:translateY(-2px)!important;}
+
+/* Footer */
+.pse-footer{width:min(1320px,calc(100% - 48px))!important;max-width:1320px!important;margin:0 auto!important;background:var(--kx-paper-2)!important;color:var(--kx-ink)!important;border-top:1px solid var(--kx-line)!important;}
+.pse-footer-inner{padding:50px 6vw 30px!important;}
+.pse-footer strong{font-family:'DM Serif Display',Georgia,serif!important;font-weight:400!important;font-size:1.8rem!important;}
+.pse-footer span,.pse-footer p{color:var(--kx-muted)!important;}
+
+/* Scroll reveals */
+.pse-kex-reveal{opacity:0!important;transform:translateY(28px)!important;transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)!important;}
+.pse-kex-reveal.is-visible{opacity:1!important;transform:none!important;}
+
+@media(max-width:900px){
+  .pse-hero{min-height:760px!important;padding:70px 5vw 135px!important;}
+  .pse-hero-content{width:100%!important;max-width:700px!important;}
+  .pse-hero:before{width:42%;height:42%;right:-4%;top:13%;opacity:.55;}
+  .pse-service-strip{grid-template-columns:repeat(3,1fr)!important;min-height:156px!important;}
+  .pse-service-item{min-height:78px!important;}
+}
+@media(max-width:767px){
+  .pse-nav{top:8px!important;width:calc(100% - 24px)!important;margin-top:8px!important;}
+  .pse-section,.pse-hero,.pse-footer,.pse-stats-grid{width:calc(100% - 24px)!important;}
+  .pse-hero{margin-top:25px!important;min-height:700px!important;padding:58px 24px 220px!important;}
+  .pse-hero:before{width:80%;height:40%;right:-20%;top:18%;opacity:.28;}
+  .pse-hero-title{font-size:clamp(3.3rem,16vw,5rem)!important;}
+  .pse-hero-subtitle{font-size:.88rem!important;}
+  .pse-hero-btns{align-items:stretch!important;flex-direction:column!important;width:100%!important;}
+  .pse-btn-primary,.pse-btn-secondary{width:100%!important;text-align:center!important;}
+  .pse-service-strip{grid-template-columns:repeat(2,1fr)!important;min-height:208px!important;}
+  .pse-service-item{min-height:104px!important;}
+  .pse-section{padding:82px 24px!important;}
+  .pse-section-header h2,.pse-contact-left h2{font-size:clamp(2.7rem,12vw,4rem)!important;}
+  .pse-stats-grid{grid-template-columns:repeat(2,1fr)!important;}
+  .pse-form-box{padding:25px 20px!important;}
+  .pse-footer-inner{padding:40px 24px 25px!important;}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.pse-kex-reveal{opacity:1!important;transform:none!important;}}
+</style>
+
+
+<style id="pse-v4-visibility-fix">
+/* FINAL VISIBILITY PASS — high contrast, restrained lighting */
+#pse-app { color:#171512 !important; background:#F4EFE7 !important; }
+#pse-app .pse-hero-title,#pse-app .pse-section-header h2,#pse-app .pse-card h3,#pse-app .pse-step-card h4,#pse-app .pse-team-box h4,#pse-app .pse-info-row strong,#pse-app .pse-form-box h3 { color:#151311 !important; text-shadow:none !important; }
+#pse-app .pse-hero-subtitle,#pse-app .pse-section-header p,#pse-app .pse-card p,#pse-app .pse-step-card p,#pse-app .pse-info-row p,#pse-app .pse-stat-box p,#pse-app .pse-why-card p { color:#45403A !important; }
+#pse-app .pse-nav-menu a,#pse-app .pse-footer-links a { color:#24211D !important; }
+#pse-app .pse-nav-menu a:hover,#pse-app .pse-footer-links a:hover { color:#A94E2D !important; text-shadow:0 0 12px rgba(169,78,45,.18) !important; }
+#pse-app .pse-tag,#pse-app .pse-card-link,#pse-app .pse-team-box span,#pse-app .pse-stat-box span { color:#A94E2D !important; }
+#pse-app .pse-card,#pse-app .pse-step-card,#pse-app .pse-team-box,#pse-app .pse-partner-card,#pse-app .pse-why-card { background:#FFFDF9 !important; border-color:#D9D1C6 !important; box-shadow:0 8px 24px rgba(37,29,20,.07) !important; }
+#pse-app .pse-card:hover,#pse-app .pse-step-card:hover,#pse-app .pse-team-box:hover,#pse-app .pse-partner-card:hover,#pse-app .pse-why-card:hover { border-color:#C97855 !important; box-shadow:0 14px 34px rgba(37,29,20,.12),0 0 22px rgba(194,93,58,.13) !important; }
+#pse-app .pse-icon-wrap,#pse-app .pse-avatar { background:#F1E5DA !important; color:#A94E2D !important; border-color:#DDBAA6 !important; }
+#pse-app .pse-card:hover .pse-icon-wrap { box-shadow:0 0 18px rgba(194,93,58,.22) !important; }
+#pse-app .pse-btn-primary,#pse-app .pse-btn-pill,#pse-app .pse-submit-btn { background:#1B1917 !important; color:#FFFDF9 !important; box-shadow:0 7px 20px rgba(27,25,23,.16) !important; }
+#pse-app .pse-btn-primary:hover,#pse-app .pse-btn-pill:hover,#pse-app .pse-submit-btn:hover { background:#A94E2D !important; box-shadow:0 10px 28px rgba(169,78,45,.28),0 0 18px rgba(194,93,58,.16) !important; transform:translateY(-2px); }
+#pse-app .pse-btn-secondary { background:#FFFDF9 !important; color:#1B1917 !important; border-color:#BFB5A8 !important; }
+#pse-app .pse-btn-secondary:hover { border-color:#A94E2D !important; color:#A94E2D !important; box-shadow:0 0 18px rgba(194,93,58,.13) !important; }
+#pse-app .pse-input-group label { color:#302C27 !important; }
+#pse-app .pse-input-group input,#pse-app .pse-input-group select,#pse-app .pse-input-group textarea { background:#FFFDF9 !important; color:#171512 !important; border-color:#CFC6BA !important; }
+#pse-app .pse-input-group input::placeholder,#pse-app .pse-input-group textarea::placeholder { color:#777067 !important; opacity:1 !important; }
+#pse-app .pse-input-group input:focus,#pse-app .pse-input-group select:focus,#pse-app .pse-input-group textarea:focus { border-color:#A94E2D !important; box-shadow:0 0 0 3px rgba(169,78,45,.11),0 0 16px rgba(194,93,58,.10) !important; }
+#pse-app .pse-form-box { background:#FFFDF9 !important; border-color:#D2C9BD !important; box-shadow:0 12px 30px rgba(37,29,20,.08) !important; }
+#pse-app .pse-info-row i,#pse-app .pse-why-card > i { color:#A94E2D !important; filter:drop-shadow(0 0 8px rgba(169,78,45,.18)) !important; }
+#pse-app .pse-footer { color:#5D564E !important; border-top-color:#D1C8BC !important; }
+#pse-app .pse-footer-inner strong { color:#24211D !important; }
+#pse-app .pse-footer-inner span { color:#6B645C !important; }
+#pse-app .pse-gradient-text { background:linear-gradient(90deg,#171512 0%,#171512 62%,#A94E2D 100%) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; }
+@media (prefers-reduced-motion:no-preference){#pse-app a,#pse-app button,#pse-app .pse-card,#pse-app .pse-step-card,#pse-app .pse-team-box,#pse-app .pse-partner-card,#pse-app .pse-why-card { transition:color .25s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease,transform .25s ease !important; }}
+</style>
+
+<style id="pse-v5-dark-section-visibility-fix">
+/* =========================================================
+   V5 — DARK SECTION VISIBILITY FIX
+   Layout/content/functionality intentionally unchanged.
+   ========================================================= */
+
+/* Dark navigation */
+#pse-app .pse-nav,
+#pse-app .pse-nav-menu,
+#pse-app .pse-nav-menu a{
+  color:#F5F6F8 !important;
+}
+#pse-app .pse-nav-menu a{
+  color:#E9EBEF !important;
+  text-shadow:none !important;
+}
+#pse-app .pse-nav-menu a:hover,
+#pse-app .pse-nav-menu a:focus-visible{
+  color:#C45A32 !important;
+  text-shadow:0 0 12px rgba(196,90,50,.22) !important;
+}
+
+/* Dark statistics block */
+#pse-app .pse-stats-grid{
+  background:#0B101A !important;
+}
+#pse-app .pse-stat-box{
+  background:transparent !important;
+  border-color:#3A414D !important;
+  color:#FFFFFF !important;
+}
+#pse-app .pse-stat-box h3,
+#pse-app .pse-stat-box > span{
+  color:#FFFFFF !important;
+  text-shadow:none !important;
+}
+#pse-app .pse-stat-box p{
+  color:#D0D5DC !important;
+  text-shadow:none !important;
+}
+
+/* Process section: this section intentionally sits on the dark canvas */
+#pse-app #pse-process,
+#pse-app #pse-process[style]{
+  background:#0B101A !important;
+  color:#F5F6F8 !important;
+}
+#pse-app #pse-process .pse-section-header h2{
+  color:#FFFFFF !important;
+  text-shadow:none !important;
+}
+#pse-app #pse-process .pse-section-header p{
+  color:#D0D5DC !important;
+  text-shadow:none !important;
+}
+#pse-app #pse-process .pse-tag{
+  color:#C45A32 !important;
+}
+#pse-app #pse-process .pse-step-card{
+  background:#111722 !important;
+  border-color:#343B47 !important;
+  color:#F5F6F8 !important;
+}
+#pse-app #pse-process .pse-step-card h4{
+  color:#FFFFFF !important;
+  text-shadow:none !important;
+}
+#pse-app #pse-process .pse-step-card p{
+  color:#C7CDD5 !important;
+  text-shadow:none !important;
+}
+#pse-app #pse-process .pse-step-card .pse-num,
+#pse-app #pse-process .pse-step-card::before{
+  color:#C45A32 !important;
+}
+
+/* Dark contact section */
+#pse-app #pse-contact{
+  background:#0B101A !important;
+  color:#F5F6F8 !important;
+}
+#pse-app #pse-contact .pse-contact-left h2{
+  color:#FFFFFF !important;
+  text-shadow:none !important;
+}
+#pse-app #pse-contact .pse-contact-left > p{
+  color:#D5DAE1 !important;
+  text-shadow:none !important;
+}
+#pse-app #pse-contact .pse-tag{
+  color:#C45A32 !important;
+}
+#pse-app #pse-contact .pse-info-row strong{
+  color:#FFFFFF !important;
+  text-shadow:none !important;
+}
+#pse-app #pse-contact .pse-info-row p{
+  color:#C7CDD5 !important;
+  text-shadow:none !important;
+}
+#pse-app #pse-contact .pse-info-row i{
+  color:#C45A32 !important;
+  filter:none !important;
+}
+#pse-app #pse-contact .pse-contact-quick-actions .pse-btn-secondary,
+#pse-app #pse-contact .pse-contact-quick-actions a{
+  color:#FFFFFF !important;
+}
+
+/* Do not let the global light-theme rules darken text on dark surfaces. */
+#pse-app .pse-nav a,
+#pse-app #pse-process h2,
+#pse-app #pse-process h4,
+#pse-app #pse-process p,
+#pse-app #pse-contact h2,
+#pse-app #pse-contact strong,
+#pse-app #pse-contact p{
+  text-shadow:none !important;
+}
+
+/* Mobile: preserve the same contrast */
+@media (max-width:767px){
+  #pse-app .pse-nav-menu a{color:#F0F2F5 !important;}
+  #pse-app .pse-stat-box p{color:#D0D5DC !important;}
+  #pse-app #pse-process .pse-section-header h2,
+  #pse-app #pse-contact .pse-contact-left h2{color:#FFFFFF !important;}
+  #pse-app #pse-process .pse-section-header p,
+  #pse-app #pse-contact .pse-contact-left > p,
+  #pse-app #pse-contact .pse-info-row p{color:#D0D5DC !important;}
+}
+</style>
+
+
+<style id="pse-rounded-borders-final">
+/* ==========================================================
+   FINAL SURGICAL ROUND-CORNER PASS
+   Round all visible rectangular bordered UI surfaces while
+   preserving intentional pills/circles and divider lines.
+   ========================================================== */
+#pse-app .pse-nav,
+#pse-app .pse-service-strip,
+#pse-app .pse-service-item,
+#pse-app .pse-card,
+#pse-app .pse-step-card,
+#pse-app .pse-team-box,
+#pse-app .pse-why-card,
+#pse-app .pse-industry-card,
+#pse-app .pse-partner-card,
+#pse-app .pse-form-box,
+#pse-app .pse-input-group input,
+#pse-app .pse-input-group select,
+#pse-app .pse-input-group textarea,
+#pse-app .pse-quick-btn,
+#pse-app .pse-service-carousel,
+#pse-app .pse-service-arrow,
+#pse-app .pse-mobile-menu,
+#pse-app .pse-menu-toggle,
+#pse-app .pse-icon-wrap,
+#pse-app .pse-stat-box,
+#pse-app .pse-footer,
+#pse-app .pse-submit-btn {
+  border-radius: 18px !important;
+}
+
+/* Keep intentional rounded/pill controls fully rounded. */
+#pse-app .pse-btn-pill,
+#pse-app .pse-btn-primary,
+#pse-app .pse-btn-secondary,
+#pse-app .pse-submit-btn,
+#pse-app .pse-badge,
+#pse-app .pse-logo-link {
+  border-radius: 999px !important;
+}
+
+/* Preserve circular visual elements. */
+#pse-app .pse-avatar,
+#pse-app .pse-logo-link img,
+#pse-app .pse-menu-toggle span {
+  border-radius: 50% !important;
+}
+
+/* Partner cards: rounded black premium cards remain unchanged in colour. */
+#pse-app .pse-partner-card {
+  border-radius: 20px !important;
+  overflow: hidden !important;
+}
+
+/* Give bordered cards a clean rounded edge without changing layout. */
+#pse-app .pse-card,
+#pse-app .pse-step-card,
+#pse-app .pse-team-box,
+#pse-app .pse-why-card,
+#pse-app .pse-industry-card,
+#pse-app .pse-partner-card,
+#pse-app .pse-form-box {
+  overflow: hidden !important;
+}
+
+/* Footer/top divider remains a straight section divider; its content stays rounded where applicable. */
+#pse-app .pse-footer {
+  overflow: hidden !important;
+}
+
+@media (max-width: 767px) {
+  #pse-app .pse-card,
+  #pse-app .pse-step-card,
+  #pse-app .pse-team-box,
+  #pse-app .pse-why-card,
+  #pse-app .pse-industry-card,
+  #pse-app .pse-partner-card,
+  #pse-app .pse-form-box,
+  #pse-app .pse-service-strip,
+  #pse-app .pse-mobile-menu,
+  #pse-app .pse-input-group input,
+  #pse-app .pse-input-group select,
+  #pse-app .pse-input-group textarea {
+    border-radius: 16px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <!-- Mobile/desktop viewport behavior: responsive layout activates only below 768 CSS px.
@@ -552,53 +1198,20 @@
 
   <!-- Hero Section -->
   <section class="pse-hero">
-    <!-- Moving AI photography: ONLY the background changes -->
-    <div class="pse-hero-background-carousel" aria-label="PS Enterprises service visuals">
-      <div class="pse-hero-bg-slide is-active" data-slide="0">
-        <img src="ps_enterprises_hero_assets_FIXED/fire.webp" alt="" aria-hidden="true">
-      </div>
-      <div class="pse-hero-bg-slide" data-slide="1">
-        <img src="ps_enterprises_hero_assets_FIXED/cctv.webp" alt="" aria-hidden="true">
-      </div>
-      <div class="pse-hero-bg-slide" data-slide="2">
-        <img src="ps_enterprises_hero_assets_FIXED/network.webp" alt="" aria-hidden="true">
-      </div>
-      <div class="pse-hero-bg-slide" data-slide="3">
-        <img src="ps_enterprises_hero_assets_FIXED/amc.webp" alt="" aria-hidden="true">
-      </div>
-      <div class="pse-hero-bg-slide" data-slide="4">
-        <img src="ps_enterprises_hero_assets_FIXED/manpower.webp" alt="" aria-hidden="true">
-      </div>
-      <div class="pse-hero-bg-slide" data-slide="5">
-        <img src="ps_enterprises_hero_assets_FIXED/engineering.webp" alt="" aria-hidden="true">
-      </div>
-      <div class="pse-hero-bg-shade" aria-hidden="true"></div>
-    </div>
 
     <!-- Fixed hero copy -->
     <div class="pse-hero-content">
       <div class="pse-badge"><i class="fa-solid fa-shield-halved"></i> PS ENTERPRISES</div>
-      <h1 class="pse-hero-title">Reliable Solutions.<br><span class="pse-gradient-text">Smarter Security.</span></h1>
+      <h1 class="pse-hero-title">Simplified Manpower &amp; Payrolling with<br><span class="pse-gradient-text">Security and Services.</span></h1>
       <p class="pse-hero-subtitle">
-        PS Enterprises delivers end-to-end fire safety, CCTV surveillance, high-speed enterprise networking, AMC, and specialized engineering manpower across Madhya Pradesh, Chhattisgarh, and Maharashtra.
+        PS Enterprises specializes in end-to-end Manpower &amp; Payrolling solutions — workforce sourcing, candidate screening, statutory compliance, payroll administration, and reliable workforce deployment for plant and enterprise operations across Madhya Pradesh, Chhattisgarh, and Maharashtra.
       </p>
 
       <!-- CTA stays ABOVE the service strip -->
       <div class="pse-hero-btns">
         <a href="#pse-services" class="pse-btn-primary">Explore Services <i class="fa-solid fa-arrow-right"></i></a>
         <a href="#pse-contact" class="pse-btn-secondary">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-
-      <!-- Background controls -->
-      <div class="pse-hero-dots" role="tablist" aria-label="Hero background">
-        <button type="button" class="is-active" data-slide="0" aria-label="Fire Alarm Systems"></button>
-        <button type="button" data-slide="1" aria-label="CCTV Surveillance"></button>
-        <button type="button" data-slide="2" aria-label="Networking Solutions"></button>
-        <button type="button" data-slide="3" aria-label="Annual Maintenance"></button>
-        <button type="button" data-slide="4" aria-label="Manpower and Payrolling"></button>
-        <button type="button" data-slide="5" aria-label="Engineering Deputation"></button>
-      </div>
-    </div>
+      </div></div>
 
     <!-- Fixed six-category service navigation -->
     <div class="pse-service-strip" aria-label="Services">
@@ -621,13 +1234,6 @@
         <i class="fa-solid fa-hard-hat"></i><strong>ENGINEERING</strong><span>DEPUTATION</span>
       </button>
     </div>
-
-    <button class="pse-hero-arrow pse-hero-prev" type="button" aria-label="Previous background">
-      <i class="fa-solid fa-chevron-left"></i>
-    </button>
-    <button class="pse-hero-arrow pse-hero-next" type="button" aria-label="Next background">
-      <i class="fa-solid fa-chevron-right"></i>
-    </button>
   </section>
 
     <!-- Live Metrics Grid -->
@@ -3697,65 +4303,6 @@
   })();
 </script>
 
-<script>
-(function () {
-  const hero = document.querySelector('.pse-hero');
-  if (!hero) return;
-
-  const slides = [...hero.querySelectorAll('.pse-hero-bg-slide')];
-  const dots = [...hero.querySelectorAll('.pse-hero-dots button')];
-  const items = [...hero.querySelectorAll('.pse-service-item')];
-  const prev = hero.querySelector('.pse-hero-prev');
-  const next = hero.querySelector('.pse-hero-next');
-
-  let current = 0;
-  let timer = null;
-  let touchStartX = 0;
-
-  function render(index) {
-    current = (index + slides.length) % slides.length;
-    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === current));
-    dots.forEach((dot, i) => dot.classList.toggle('is-active', i === current));
-    items.forEach((item, i) => item.classList.toggle('is-active', i === current));
-  }
-
-  function restart() {
-    if (timer) clearInterval(timer);
-    timer = setInterval(() => render(current + 1), 4500);
-  }
-
-  function go(index) {
-    render(index);
-    restart();
-  }
-
-  prev?.addEventListener('click', () => go(current - 1));
-  next?.addEventListener('click', () => go(current + 1));
-  dots.forEach((dot, i) => dot.addEventListener('click', () => go(i)));
-  items.forEach((item, i) => item.addEventListener('click', () => go(i)));
-
-  hero.addEventListener('mouseenter', () => {
-    if (timer) clearInterval(timer);
-  });
-  hero.addEventListener('mouseleave', restart);
-
-  hero.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-    if (timer) clearInterval(timer);
-  }, {passive: true});
-
-  hero.addEventListener('touchend', (e) => {
-    const dx = e.changedTouches[0].screenX - touchStartX;
-    if (Math.abs(dx) > 45) go(dx < 0 ? current + 1 : current - 1);
-    else restart();
-  }, {passive: true});
-
-  render(0);
-  restart();
-})();
-</script>
-
-
 <script id="pse-stats-counter-script">
 (function () {
   const section = document.querySelector('.pse-stats-grid');
@@ -3812,5 +4359,682 @@
 })();
 </script>
 
+
+<script id="pse-kexart-motion-v1">
+(function(){
+  const root=document.getElementById('pse-app');
+  if(!root) return;
+  const selectors=['.pse-section-header','.pse-card','.pse-step-card','.pse-team-box','.pse-why-card','.pse-industry-card','.pse-partner-card','.pse-stat-box','.pse-contact-left','.pse-form-box'];
+  const els=[];
+  selectors.forEach(sel=>root.querySelectorAll(sel).forEach(el=>{el.classList.add('pse-kex-reveal');els.push(el)}));
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -50px 0px'});
+    els.forEach(el=>io.observe(el));
+  }else els.forEach(el=>el.classList.add('is-visible'));
+  // Lightweight pointer parallax for desktop cards; disabled for touch/coarse pointers.
+  if(window.matchMedia && window.matchMedia('(pointer:fine)').matches){
+    root.querySelectorAll('.pse-card,.pse-step-card,.pse-team-box,.pse-why-card').forEach(card=>{
+      card.addEventListener('pointermove',function(e){
+        const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+        card.style.transform='perspective(900px) rotateX('+(-y*2.2)+'deg) rotateY('+(x*2.2)+'deg) translateY(-8px)';
+      });
+      card.addEventListener('pointerleave',function(){card.style.transform=''});
+    });
+  }
+})();
+</script>
+
+
+
+<style id="pse-v9-all-sharp-edges-rounded">
+/* ==========================================================
+   V9 — ALL VISIBLE SECTION/BACKGROUND SHARP EDGES ROUNDED
+   Surgical visual-only pass. No content/functionality changes.
+   ========================================================== */
+#pse-app {
+  border-radius: 34px !important;
+  overflow: hidden !important;
+}
+
+/* Every major page section gets a rounded outer frame. */
+#pse-app > section.pse-section,
+#pse-app > section.pse-hero {
+  border-radius: 34px !important;
+  overflow: hidden !important;
+  clip-path: inset(0 round 34px) !important;
+}
+
+/* Dark/coloured section backgrounds must not remain rectangular. */
+#pse-app #pse-process,
+#pse-app #pse-clients,
+#pse-app #pse-industries,
+#pse-app #pse-why,
+#pse-app #pse-team,
+#pse-app #pse-contact,
+#pse-app #pse-services {
+  border-radius: 34px !important;
+  overflow: hidden !important;
+}
+
+/* The process section has an inline radius; force the same treatment. */
+#pse-app #pse-process[style] {
+  border-radius: 34px !important;
+}
+
+/* Rounded inner section frames that can otherwise expose square corners. */
+#pse-app .pse-contact-grid,
+#pse-app .pse-form-box,
+#pse-app .pse-ticker-wrap,
+#pse-app .pse-service-strip,
+#pse-app .pse-stats-grid,
+#pse-app .pse-process-grid,
+#pse-app .pse-industry-grid,
+#pse-app .pse-why-grid,
+#pse-app .pse-grid-3,
+#pse-app .pse-grid-4 {
+  border-radius: 28px !important;
+  overflow: hidden !important;
+}
+
+/* Preserve individual cards while ensuring no square child background leaks. */
+#pse-app .pse-card,
+#pse-app .pse-step-card,
+#pse-app .pse-team-box,
+#pse-app .pse-why-card,
+#pse-app .pse-industry-card,
+#pse-app .pse-partner-card,
+#pse-app .pse-stat-box,
+#pse-app .pse-quick-btn,
+#pse-app .pse-input-group input,
+#pse-app .pse-input-group select,
+#pse-app .pse-input-group textarea,
+#pse-app .pse-submit-btn {
+  border-radius: 22px !important;
+}
+
+/* Any divider line is rounded at both ends. */
+#pse-app .pse-section + .pse-section::before,
+#pse-app .pse-stat-box::before,
+#pse-app .pse-footer::before {
+  border-radius: 999px !important;
+}
+
+/* Footer is a visible background block too. */
+#pse-app .pse-footer {
+  border-radius: 34px 34px 0 0 !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 767px) {
+  #pse-app,
+  #pse-app > section.pse-section,
+  #pse-app > section.pse-hero,
+  #pse-app #pse-process,
+  #pse-app #pse-clients,
+  #pse-app #pse-industries,
+  #pse-app #pse-why,
+  #pse-app #pse-team,
+  #pse-app #pse-contact,
+  #pse-app #pse-services {
+    border-radius: 24px !important;
+  }
+
+  #pse-app .pse-contact-grid,
+  #pse-app .pse-form-box,
+  #pse-app .pse-ticker-wrap,
+  #pse-app .pse-service-strip,
+  #pse-app .pse-stats-grid,
+  #pse-app .pse-process-grid,
+  #pse-app .pse-industry-grid,
+  #pse-app .pse-why-grid,
+  #pse-app .pse-grid-3,
+  #pse-app .pse-grid-4 {
+    border-radius: 22px !important;
+  }
+}
+</style>
+
+<style id="pse-footer-rounded-final">
+/* FINAL SURGICAL UPDATE — rounded footer section */
+#pse-app .pse-footer {
+  border-radius: 32px 32px 0 0 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  box-shadow: 0 -10px 35px rgba(0,0,0,.12) !important;
+}
+@media (max-width: 767px) {
+  #pse-app .pse-footer {
+    border-radius: 24px 24px 0 0 !important;
+  }
+}
+</style>
+
+<style id="pse-trusted-industry-gap">
+/* SURGICAL SPACING FIX — equal visual separation between Trusted Deployments and Industry Coverage */
+#pse-app #pse-clients {
+  margin-bottom: 90px !important;
+}
+@media (max-width: 767px) {
+  #pse-app #pse-clients {
+    margin-bottom: 60px !important;
+  }
+}
+</style>
+
+<style id="pse-stat-labels-white-final">
+/* FINAL SURGICAL FIX — statistics labels only */
+#pse-app .pse-stat-box p {
+  color:#FFFFFF !important;
+}
+</style>
+
+
+<style id="pse-v15-stat-label-white-final">
+/* FINAL SURGICAL FIX — ONLY the four statistics labels are white */
+#pse-app .pse-stats-grid .pse-stat-box p,
+#pse-app .pse-stats-grid .pse-stat-box p:nth-of-type(1) {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+</style>
+
+<style id="pse-statistics-engineering-gap">
+/* V16 — equal visual separation between Statistics and Engineering & Facility Infrastructure */
+#pse-app .pse-stats-grid {
+  margin-bottom: 90px !important;
+}
+@media (max-width: 767px) {
+  #pse-app .pse-stats-grid {
+    margin-bottom: 60px !important;
+  }
+}
+</style>
 </body>
 </html>
+
+<style id="pse-kexart-visibility-lighting-v3">
+/* =========================================================
+   V3 — TEXT VISIBILITY + SOFT LIGHT / HOVER LIGHTING
+   Visual-only refinement. Content, layout and functionality unchanged.
+   ========================================================= */
+#pse-app{
+  --ink:#171512;
+  --ink-soft:#3f3a34;
+  --muted:#686158;
+  --paper:#f7f3ea;
+  --paper-2:#eee8dc;
+  --accent:#b85c38;
+  --accent-bright:#d46f47;
+  --line:rgba(23,21,18,.16);
+  color:var(--ink) !important;
+}
+
+#pse-app .pse-section-header h2,
+#pse-app .pse-hero-title,
+#pse-app .pse-card h3,
+#pse-app .pse-step-card h4,
+#pse-app .pse-team-box h4,
+#pse-app .pse-why-card h3,
+#pse-app .pse-industry-card strong,
+#pse-app .pse-info-row strong,
+#pse-app .pse-form-box h3,
+#pse-app .pse-contact-left h2{
+  color:var(--ink) !important;
+  text-shadow:0 1px 0 rgba(255,255,255,.72);
+}
+
+#pse-app .pse-hero-subtitle,
+#pse-app .pse-section-header p,
+#pse-app .pse-card p,
+#pse-app .pse-step-card p,
+#pse-app .pse-team-box span,
+#pse-app .pse-why-card p,
+#pse-app .pse-industry-card span,
+#pse-app .pse-info-row p,
+#pse-app .pse-stat-box p,
+#pse-app .pse-form-note{
+  color:var(--ink-soft) !important;
+}
+
+#pse-app .pse-tag,
+#pse-app .pse-card-link,
+#pse-app .pse-num,
+#pse-app .pse-stat-box > span,
+#pse-app .pse-why-card > i,
+#pse-app .pse-industry-card i,
+#pse-app .pse-icon-wrap{
+  color:var(--accent) !important;
+}
+
+/* Navigation readability */
+#pse-app .pse-nav-menu a,
+#pse-app .pse-footer-links a{
+  color:#292621 !important;
+  transition:color .28s ease,text-shadow .28s ease,transform .28s ease !important;
+}
+#pse-app .pse-nav-menu a:hover,
+#pse-app .pse-footer-links a:hover{
+  color:var(--accent) !important;
+  text-shadow:0 0 14px rgba(184,92,56,.38) !important;
+}
+
+/* Soft illumination around interactive surfaces */
+#pse-app .pse-card,
+#pse-app .pse-step-card,
+#pse-app .pse-team-box,
+#pse-app .pse-why-card,
+#pse-app .pse-industry-card,
+#pse-app .pse-partner-card{
+  border-color:var(--line) !important;
+  transition:transform .38s cubic-bezier(.16,1,.3,1),
+             border-color .32s ease,
+             box-shadow .38s ease,
+             background .32s ease !important;
+}
+
+#pse-app .pse-card:hover,
+#pse-app .pse-step-card:hover,
+#pse-app .pse-team-box:hover,
+#pse-app .pse-why-card:hover,
+#pse-app .pse-industry-card:hover,
+#pse-app .pse-partner-card:hover{
+  border-color:rgba(184,92,56,.48) !important;
+  box-shadow:
+    0 18px 38px rgba(45,31,22,.10),
+    0 0 30px rgba(184,92,56,.13),
+    inset 0 1px 0 rgba(255,255,255,.8) !important;
+}
+
+#pse-app .pse-card:hover h3,
+#pse-app .pse-step-card:hover h4,
+#pse-app .pse-team-box:hover h4,
+#pse-app .pse-why-card:hover h3,
+#pse-app .pse-industry-card:hover strong{
+  text-shadow:0 0 18px rgba(184,92,56,.20) !important;
+}
+
+/* Icons get a restrained light bloom */
+#pse-app .pse-icon-wrap,
+#pse-app .pse-why-card > i,
+#pse-app .pse-industry-card i{
+  transition:transform .32s ease,filter .32s ease,box-shadow .32s ease !important;
+}
+#pse-app .pse-card:hover .pse-icon-wrap,
+#pse-app .pse-why-card:hover > i,
+#pse-app .pse-industry-card:hover i{
+  filter:drop-shadow(0 0 10px rgba(184,92,56,.42)) !important;
+}
+
+/* Buttons: visible text + warm edge lighting */
+#pse-app .pse-btn-pill,
+#pse-app .pse-btn-primary,
+#pse-app .pse-submit-btn{
+  transition:transform .28s ease,box-shadow .32s ease,filter .32s ease !important;
+}
+#pse-app .pse-btn-pill:hover,
+#pse-app .pse-btn-primary:hover,
+#pse-app .pse-submit-btn:hover{
+  transform:translateY(-3px) !important;
+  filter:brightness(1.06) !important;
+  box-shadow:0 12px 30px rgba(184,92,56,.25),0 0 24px rgba(184,92,56,.18) !important;
+}
+
+/* Form text / focus visibility */
+#pse-app .pse-input-group label{color:#38332d !important}
+#pse-app .pse-input-group input,
+#pse-app .pse-input-group select,
+#pse-app .pse-input-group textarea{
+  color:#171512 !important;
+  border-color:rgba(23,21,18,.20) !important;
+}
+#pse-app .pse-input-group input::placeholder,
+#pse-app .pse-input-group textarea::placeholder{color:#777066 !important;opacity:1 !important}
+#pse-app .pse-input-group input:focus,
+#pse-app .pse-input-group select:focus,
+#pse-app .pse-input-group textarea:focus{
+  border-color:rgba(184,92,56,.72) !important;
+  box-shadow:0 0 0 3px rgba(184,92,56,.10),0 0 18px rgba(184,92,56,.12) !important;
+  outline:none !important;
+}
+
+/* Hero headline has a gentle editorial glow, not neon */
+#pse-app .pse-hero-title{text-shadow:0 2px 20px rgba(255,255,255,.38) !important}
+#pse-app .pse-gradient-text{
+  filter:drop-shadow(0 0 16px rgba(184,92,56,.18));
+}
+
+/* Respect accessibility */
+@media (prefers-reduced-motion:reduce){
+  #pse-app *{transition-duration:.01ms !important;animation-duration:.01ms !important;}
+}
+</style>
+<style id="pse-menu-colour-fix-v2">
+/* Menu bar text visibility — stronger specificity so it overrides all previous theme rules */
+#pse-app .pse-nav .pse-nav-menu a {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+#pse-app .pse-nav .pse-nav-menu a:hover,
+#pse-app .pse-nav .pse-nav-menu a:focus-visible,
+#pse-app .pse-nav .pse-nav-menu a:active {
+  color: #C45A32 !important;
+  -webkit-text-fill-color: #C45A32 !important;
+  text-shadow: 0 0 12px rgba(196,90,50,.22) !important;
+}
+/* Mobile menu */
+#pse-app #pse-mobile-menu a {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+#pse-app #pse-mobile-menu a:hover,
+#pse-app #pse-mobile-menu a:focus-visible,
+#pse-app #pse-mobile-menu a:active {
+  color: #C45A32 !important;
+  -webkit-text-fill-color: #C45A32 !important;
+}
+
+
+  /* FINAL OUTER WEBSITE BACKGROUND — rounded frame */
+  #pse-app {
+    border-radius: 32px !important;
+    border: 1px solid rgba(255,255,255,.10) !important;
+    overflow: hidden !important;
+    box-shadow: 0 24px 80px rgba(0,0,0,.28) !important;
+  }
+
+  @media (max-width: 767px) {
+    #pse-app {
+      border-radius: 22px !important;
+    }
+  }
+
+
+/* ==========================================================
+   FINAL SURGICAL UPDATE — ROUNDED SECTION DIVIDERS
+   Keep divider lines rounded at both ends without changing
+   section spacing, content, colours, or functionality.
+   ========================================================== */
+#pse-app .pse-section + .pse-section {
+  border-top: 0 !important;
+  position: relative !important;
+}
+#pse-app .pse-section + .pse-section::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 48px !important;
+  right: 48px !important;
+  height: 1px !important;
+  background: var(--pse-line, rgba(0,0,0,.12)) !important;
+  border-radius: 999px !important;
+  pointer-events: none !important;
+}
+
+/* Rounded horizontal divider used above statistics blocks. */
+#pse-app .pse-stat-box {
+  border-top: 0 !important;
+  position: relative !important;
+}
+#pse-app .pse-stat-box::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 12px !important;
+  right: 12px !important;
+  height: 1px !important;
+  background: var(--pse-line, rgba(0,0,0,.12)) !important;
+  border-radius: 999px !important;
+}
+
+/* Rounded top divider of the footer. */
+#pse-app .pse-footer {
+  border-top: 0 !important;
+  position: relative !important;
+}
+#pse-app .pse-footer::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 24px !important;
+  right: 24px !important;
+  height: 1px !important;
+  background: rgba(255,255,255,.12) !important;
+  border-radius: 999px !important;
+  pointer-events: none !important;
+}
+
+/* Rounded borders around the service divider strip. */
+#pse-app .pse-service-strip {
+  border-radius: 18px !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 767px) {
+  #pse-app .pse-section + .pse-section::before {
+    left: 14px !important;
+    right: 14px !important;
+  }
+  #pse-app .pse-stat-box::before {
+    left: 10px !important;
+    right: 10px !important;
+  }
+  #pse-app .pse-footer::before {
+    left: 16px !important;
+    right: 16px !important;
+  }
+}
+
+</style>
+
+
+<style id="pse-v11-universal-card-motion">
+/* ==========================================================
+   V11 — UNIVERSAL CARD HOVER + LIGHTING + SCROLL REVEAL
+   Visual-only enhancement. Existing content/functionality kept.
+   ========================================================== */
+#pse-app .pse-card,
+#pse-app .pse-step-card,
+#pse-app .pse-partner-card,
+#pse-app .pse-industry-card,
+#pse-app .pse-why-card,
+#pse-app .pse-team-box,
+#pse-app .pse-stat-box,
+#pse-app .pse-form-box,
+#pse-app .pse-contact-grid,
+#pse-app .pse-service-strip,
+#pse-app .pse-service-item {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  transition:
+    transform .42s cubic-bezier(.2,.75,.2,1),
+    box-shadow .42s ease,
+    border-color .35s ease,
+    background .42s ease,
+    filter .42s ease !important;
+  will-change: transform, box-shadow !important;
+}
+
+/* Soft ambient lighting layer inside every interactive surface */
+#pse-app .pse-card::after,
+#pse-app .pse-step-card::after,
+#pse-app .pse-partner-card::after,
+#pse-app .pse-industry-card::after,
+#pse-app .pse-why-card::after,
+#pse-app .pse-team-box::after,
+#pse-app .pse-stat-box::after,
+#pse-app .pse-form-box::after,
+#pse-app .pse-contact-grid::after,
+#pse-app .pse-service-strip::after,
+#pse-app .pse-service-item::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: -35% !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255,255,255,.16), transparent 34%),
+    radial-gradient(circle at 82% 85%, rgba(196,90,50,.18), transparent 38%) !important;
+  filter: blur(22px) !important;
+  transform: scale(.82) !important;
+  transition: opacity .45s ease, transform .55s ease !important;
+}
+
+#pse-app .pse-card:hover,
+#pse-app .pse-step-card:hover,
+#pse-app .pse-partner-card:hover,
+#pse-app .pse-industry-card:hover,
+#pse-app .pse-why-card:hover,
+#pse-app .pse-team-box:hover,
+#pse-app .pse-stat-box:hover,
+#pse-app .pse-form-box:hover,
+#pse-app .pse-contact-grid:hover,
+#pse-app .pse-service-strip:hover,
+#pse-app .pse-service-item:hover {
+  transform: translateY(-7px) !important;
+  border-color: rgba(196,90,50,.42) !important;
+  box-shadow:
+    0 20px 42px rgba(0,0,0,.16),
+    0 0 0 1px rgba(255,255,255,.06) inset,
+    0 0 34px rgba(196,90,50,.13) !important;
+  filter: brightness(1.025) !important;
+}
+
+#pse-app .pse-card:hover::after,
+#pse-app .pse-step-card:hover::after,
+#pse-app .pse-partner-card:hover::after,
+#pse-app .pse-industry-card:hover::after,
+#pse-app .pse-why-card:hover::after,
+#pse-app .pse-team-box:hover::after,
+#pse-app .pse-stat-box:hover::after,
+#pse-app .pse-form-box:hover::after,
+#pse-app .pse-contact-grid:hover::after,
+#pse-app .pse-service-strip:hover::after,
+#pse-app .pse-service-item:hover::after {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+/* Slightly stronger lighting for the black enterprise-brand cards */
+#pse-app .pse-partner-card:hover {
+  box-shadow:
+    0 22px 48px rgba(0,0,0,.28),
+    0 0 34px rgba(196,90,50,.20),
+    0 0 0 1px rgba(255,255,255,.08) inset !important;
+}
+
+/* Scroll reveal: every card/surface enters smoothly as it reaches the viewport */
+#pse-app .pse-scroll-surface {
+  opacity: 0 !important;
+  transform: translateY(28px) scale(.985) !important;
+  transition:
+    opacity .72s cubic-bezier(.2,.7,.2,1),
+    transform .72s cubic-bezier(.2,.7,.2,1) !important;
+}
+#pse-app .pse-scroll-surface.pse-scroll-visible {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* Preserve the existing horizontal partner/service movement */
+#pse-app .pse-partner-card,
+#pse-app .pse-service-item {
+  transform-origin: center center !important;
+}
+
+@media (max-width: 767px) {
+  #pse-app .pse-card:hover,
+  #pse-app .pse-step-card:hover,
+  #pse-app .pse-partner-card:hover,
+  #pse-app .pse-industry-card:hover,
+  #pse-app .pse-why-card:hover,
+  #pse-app .pse-team-box:hover,
+  #pse-app .pse-stat-box:hover,
+  #pse-app .pse-form-box:hover,
+  #pse-app .pse-contact-grid:hover,
+  #pse-app .pse-service-strip:hover,
+  #pse-app .pse-service-item:hover {
+    transform: translateY(-4px) !important;
+    box-shadow:
+      0 14px 30px rgba(0,0,0,.14),
+      0 0 24px rgba(196,90,50,.11) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #pse-app .pse-scroll-surface,
+  #pse-app .pse-scroll-surface.pse-scroll-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  #pse-app .pse-card,
+  #pse-app .pse-step-card,
+  #pse-app .pse-partner-card,
+  #pse-app .pse-industry-card,
+  #pse-app .pse-why-card,
+  #pse-app .pse-team-box,
+  #pse-app .pse-stat-box,
+  #pse-app .pse-form-box,
+  #pse-app .pse-contact-grid,
+  #pse-app .pse-service-strip,
+  #pse-app .pse-service-item {
+    transition: none !important;
+  }
+}
+</style>
+<script>
+(function(){
+  function initPseV11(){
+    var root=document.getElementById('pse-app');
+    if(!root) return;
+    var selector=[
+      '.pse-card','.pse-step-card','.pse-partner-card','.pse-industry-card',
+      '.pse-why-card','.pse-team-box','.pse-stat-box','.pse-form-box',
+      '.pse-contact-grid','.pse-service-strip','.pse-service-item'
+    ].join(',');
+    var surfaces=root.querySelectorAll(selector);
+    surfaces.forEach(function(el,i){
+      el.classList.add('pse-scroll-surface');
+      el.style.transitionDelay=(Math.min(i%5,4)*55)+'ms';
+    });
+    if(!('IntersectionObserver' in window)){
+      surfaces.forEach(function(el){el.classList.add('pse-scroll-visible');});
+      return;
+    }
+    var observer=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('pse-scroll-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },{root:null,rootMargin:'0px 0px -8% 0px',threshold:.08});
+    surfaces.forEach(function(el){observer.observe(el);});
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initPseV11);
+  else initPseV11();
+})();
+</script>
+
+<style id="pse-v13-statistics-width-match">
+/* V13 — Statistics table width matched to Engineering & Facility Infrastructure section */
+#pse-app .pse-stats-grid {
+  width: min(1200px, calc(100% - 48px)) !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+@media (max-width: 767px) {
+  #pse-app .pse-stats-grid {
+    width: calc(100% - 24px) !important;
+    max-width: 100% !important;
+  }
+}
+</style>
