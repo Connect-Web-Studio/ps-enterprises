@@ -280,35 +280,80 @@
   .pse-hero .pse-hero-next { right: 8px !important; }
 }
 
-/* SURGICAL: Enterprise Partners white section + black branded cards */
+/* SURGICAL: Leading Enterprise Partners — glass/dark reference treatment only */
 #pse-app #pse-clients{
-  background:#ffffff !important;
-  color:#171717 !important;
+  background:#0B101A !important;
+  color:#FFFFFF !important;
+  border:0 !important;
+  border-top:0 !important;
+  border-bottom:0 !important;
+  box-shadow:none !important;
 }
+
+/* Clean dark canvas — no rectangular background frame/border */
 #pse-app #pse-clients .pse-section-header h2{
-  color:#171717 !important;
+  color:#FFFFFF !important;
 }
 #pse-app #pse-clients .pse-tag{
   color:#C45A32 !important;
 }
+
 #pse-app #pse-clients .pse-ticker-wrap{
-  background:#fff !important;
+  position:relative !important;
+  background:rgba(11,16,26,.18) !important;
   padding:28px 0 !important;
-  mask-image:linear-gradient(to right,transparent,black 7%,black 93%,transparent) !important;
-  -webkit-mask-image:linear-gradient(to right,transparent,black 7%,black 93%,transparent) !important;
+  border:0 !important;
+  box-shadow:
+    inset 72px 0 55px -58px rgba(0,0,0,.95),
+    inset -72px 0 55px -58px rgba(0,0,0,.95) !important;
+  backdrop-filter:blur(10px) !important;
+  -webkit-backdrop-filter:blur(10px) !important;
+  mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%) !important;
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%) !important;
 }
+
+/* Soft glass shadows at the beginning and end of the moving strip */
+#pse-app #pse-clients .pse-ticker-wrap::before,
+#pse-app #pse-clients .pse-ticker-wrap::after{
+  content:"" !important;
+  position:absolute !important;
+  top:0 !important;
+  bottom:0 !important;
+  width:110px !important;
+  z-index:5 !important;
+  pointer-events:none !important;
+}
+#pse-app #pse-clients .pse-ticker-wrap::before{
+  left:0 !important;
+  background:linear-gradient(90deg,#0B101A 0%,rgba(11,16,26,.88) 28%,rgba(11,16,26,0) 100%) !important;
+}
+#pse-app #pse-clients .pse-ticker-wrap::after{
+  right:0 !important;
+  background:linear-gradient(270deg,#0B101A 0%,rgba(11,16,26,.88) 28%,rgba(11,16,26,0) 100%) !important;
+}
+
 #pse-app #pse-clients .pse-partner-card{
-  background:#050505 !important;
-  border:1px solid rgba(255,255,255,.14) !important;
+  background:linear-gradient(145deg,rgba(25,32,45,.72),rgba(10,15,24,.82)) !important;
+  border:1px solid rgba(255,255,255,.08) !important;
   border-radius:18px !important;
-  box-shadow:0 12px 30px rgba(0,0,0,.20),0 0 0 1px rgba(0,0,0,.08) !important;
+  box-shadow:
+    0 14px 34px rgba(0,0,0,.32),
+    inset 0 1px 0 rgba(255,255,255,.07),
+    inset 0 -1px 0 rgba(0,0,0,.28) !important;
+  backdrop-filter:blur(14px) saturate(115%) !important;
+  -webkit-backdrop-filter:blur(14px) saturate(115%) !important;
   transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease, filter .35s ease !important;
 }
+
 #pse-app #pse-clients .pse-partner-card:hover{
   transform:translateY(-7px) scale(1.035) !important;
-  border-color:rgba(196,90,50,.65) !important;
-  box-shadow:0 18px 42px rgba(0,0,0,.28),0 0 24px rgba(196,90,50,.18) !important;
+  border-color:rgba(255,255,255,.18) !important;
+  box-shadow:
+    0 20px 44px rgba(0,0,0,.42),
+    0 0 28px rgba(196,90,50,.12),
+    inset 0 1px 0 rgba(255,255,255,.12) !important;
 }
+
 #pse-app #pse-clients .pse-brand-svg{
   filter:drop-shadow(0 2px 5px rgba(255,255,255,.10)) drop-shadow(0 0 8px rgba(255,255,255,.08)) !important;
 }
@@ -316,11 +361,27 @@
   color:#fff !important;
   text-shadow:0 1px 8px rgba(255,255,255,.18) !important;
 }
+
 @media(max-width:640px){
-  #pse-app #pse-clients .pse-ticker-wrap{padding:22px 0 !important;}
-  #pse-app #pse-clients .pse-partner-card{
-    width:190px !important;height:105px !important;
+  #pse-app #pse-clients .pse-ticker-wrap{
+    padding:22px 0 !important;
+    box-shadow:
+      inset 48px 0 38px -42px rgba(0,0,0,.95),
+      inset -48px 0 38px -42px rgba(0,0,0,.95) !important;
   }
+  #pse-app #pse-clients .pse-ticker-wrap::before,
+  #pse-app #pse-clients .pse-ticker-wrap::after{
+    width:72px !important;
+  }
+  #pse-app #pse-clients .pse-partner-card{
+    width:190px !important;
+    height:105px !important;
+  }
+}
+
+#pse-app #pse-clients,
+#pse-app #pse-clients .pse-ticker-wrap{
+  border-color:transparent !important;
 }
 
 </style>
@@ -1122,6 +1183,49 @@ body{font-family:'Inter',Arial,sans-serif!important;}
 }
 </style>
 
+<style>
+/* V19 — seamless enterprise partner ticker: four continuous brand sets */
+#pse-app #pse-clients .pse-ticker-track-ltr{
+  width:max-content !important;
+  display:flex !important;
+  flex-wrap:nowrap !important;
+  gap:24px !important;
+  will-change:transform !important;
+}
+#pse-app #pse-clients .pse-partner-card{
+  flex:0 0 190px !important;
+}
+@media(max-width:640px){
+  #pse-app #pse-clients .pse-ticker-track-ltr{
+    gap:24px !important;
+  }
+  #pse-app #pse-clients .pse-partner-card{
+    flex:0 0 190px !important;
+  }
+}
+</style>
+<style>
+/* V20 — smooth website scrolling */
+html{
+  scroll-behavior:smooth !important;
+  scroll-padding-top:18px !important;
+}
+html,
+body{
+  overscroll-behavior-y:auto !important;
+}
+#pse-app{
+  -webkit-overflow-scrolling:touch !important;
+}
+#pse-app a[href^="#"]{
+  scroll-behavior:smooth !important;
+}
+@media (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior:auto !important;
+  }
+}
+</style>
 </head>
 <body>
 <!-- Mobile/desktop viewport behavior: responsive layout activates only below 768 CSS px.
@@ -1457,6 +1561,148 @@ body{font-family:'Inter',Arial,sans-serif!important;}
         </div>
 
         <!-- DUPLICATE SET -->
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <circle cx="22" cy="18" r="14" fill="#e11d23"/>
+            <path d="M12 20 L26 12 L22 24 Z" fill="#fff"/>
+            <text x="42" y="22" font-family="'Arial Black', sans-serif" font-weight="900" font-size="14" fill="#e11d23">EICHER</text>
+            <text x="104" y="22" font-family="Arial, sans-serif" font-weight="800" font-size="15" fill="#003057">VOLVO</text>
+            <text x="80" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" font-weight="700" fill="#94a3b8">VE COMMERCIAL VEHICLES</text>
+          </svg>
+          <span class="pse-brand-label">Eicher Volvo</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <rect x="12" y="18" width="6" height="18" fill="#94a3b8"/>
+            <rect x="21" y="11" width="8" height="25" fill="#0056b3"/>
+            <text x="36" y="30" font-family="'Arial Black', sans-serif" font-weight="900" font-size="21" fill="#38bdf8">PRL</text>
+            <text x="80" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#94a3b8">INFRASTRUCTURE PVT. LTD.</text>
+          </svg>
+          <span class="pse-brand-label">PRL Infrastructure</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <path d="M15 32 L26 12 L37 32 Z" fill="#94a3b8"/>
+            <path d="M29 32 L40 12 L51 32 Z" fill="#f97316"/>
+            <text x="105" y="24" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="10.5" fill="#ffffff">MOMENT ENERGY</text>
+            <text x="105" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" letter-spacing="2" fill="#f97316">ISPAT PLANT</text>
+          </svg>
+          <span class="pse-brand-label">Moment Energy</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <path d="M 38 12 C 55 12, 75 16, 85 22 C 72 20, 52 19, 45 22 Z" fill="#e11d23"/>
+            <text x="80" y="38" text-anchor="middle" font-family="'Arial Black', sans-serif" font-style="italic" font-weight="900" font-size="28" fill="#3b82f6">JSW</text>
+          </svg>
+          <span class="pse-brand-label">J.S.W.</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <circle cx="25" cy="25" r="18" fill="none" stroke="#0284c7" stroke-width="2"/>
+            <line x1="25" y1="12" x2="25" y2="38" stroke="#0284c7" stroke-width="2"/>
+            <line x1="16" y1="20" x2="34" y2="20" stroke="#0284c7" stroke-width="2"/>
+            <text x="50" y="27" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="14" fill="#38bdf8">M.P.E.B.</text>
+            <text x="50" y="38" font-family="Arial, sans-serif" font-size="7" fill="#94a3b8">Contract Basis</text>
+          </svg>
+          <span class="pse-brand-label">M.P.E.B.</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <text x="12" y="28" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="17" fill="#0284c7">AE</text>
+            <circle cx="48" cy="22" r="8" fill="none" stroke="#10b981" stroke-width="3"/>
+            <text x="60" y="28" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="17" fill="#0284c7">LUS</text>
+            <text x="80" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" letter-spacing="2" fill="#cbd5e1">ENGINEERING</text>
+          </svg>
+          <span class="pse-brand-label">Aeolus Engg.</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <text x="28" y="26" font-family="'Arial Black', sans-serif" font-weight="900" font-size="24" fill="#3b82f6">b</text>
+            <text x="44" y="26" font-family="'Arial Black', sans-serif" font-weight="900" font-size="24" fill="#e11d23">a</text>
+            <text x="68" y="18" font-family="Arial, sans-serif" font-weight="700" font-size="7.5" fill="#ffffff">business</text>
+            <text x="68" y="26" font-family="Arial, sans-serif" font-weight="700" font-size="7.5" fill="#ffffff">automation</text>
+            <text x="80" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#94a3b8">(i) private limited</text>
+          </svg>
+          <span class="pse-brand-label">Business Automation</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <text x="80" y="16" text-anchor="middle" font-family="Georgia, serif" font-weight="600" font-size="10" fill="#e2e8f0">Reliance</text>
+            <text x="80" y="38" text-anchor="middle" font-family="'Arial Black', sans-serif" font-weight="900" font-size="20" fill="#ef4444">resQ</text>
+          </svg>
+          <span class="pse-brand-label">Reliance ResQ</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <circle cx="22" cy="18" r="14" fill="#e11d23"/>
+            <path d="M12 20 L26 12 L22 24 Z" fill="#fff"/>
+            <text x="42" y="22" font-family="'Arial Black', sans-serif" font-weight="900" font-size="14" fill="#e11d23">EICHER</text>
+            <text x="104" y="22" font-family="Arial, sans-serif" font-weight="800" font-size="15" fill="#003057">VOLVO</text>
+            <text x="80" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" font-weight="700" fill="#94a3b8">VE COMMERCIAL VEHICLES</text>
+          </svg>
+          <span class="pse-brand-label">Eicher Volvo</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <rect x="12" y="18" width="6" height="18" fill="#94a3b8"/>
+            <rect x="21" y="11" width="8" height="25" fill="#0056b3"/>
+            <text x="36" y="30" font-family="'Arial Black', sans-serif" font-weight="900" font-size="21" fill="#38bdf8">PRL</text>
+            <text x="80" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#94a3b8">INFRASTRUCTURE PVT. LTD.</text>
+          </svg>
+          <span class="pse-brand-label">PRL Infrastructure</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <path d="M15 32 L26 12 L37 32 Z" fill="#94a3b8"/>
+            <path d="M29 32 L40 12 L51 32 Z" fill="#f97316"/>
+            <text x="105" y="24" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="10.5" fill="#ffffff">MOMENT ENERGY</text>
+            <text x="105" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" letter-spacing="2" fill="#f97316">ISPAT PLANT</text>
+          </svg>
+          <span class="pse-brand-label">Moment Energy</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <path d="M 38 12 C 55 12, 75 16, 85 22 C 72 20, 52 19, 45 22 Z" fill="#e11d23"/>
+            <text x="80" y="38" text-anchor="middle" font-family="'Arial Black', sans-serif" font-style="italic" font-weight="900" font-size="28" fill="#3b82f6">JSW</text>
+          </svg>
+          <span class="pse-brand-label">J.S.W.</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <circle cx="25" cy="25" r="18" fill="none" stroke="#0284c7" stroke-width="2"/>
+            <line x1="25" y1="12" x2="25" y2="38" stroke="#0284c7" stroke-width="2"/>
+            <line x1="16" y1="20" x2="34" y2="20" stroke="#0284c7" stroke-width="2"/>
+            <text x="50" y="27" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="14" fill="#38bdf8">M.P.E.B.</text>
+            <text x="50" y="38" font-family="Arial, sans-serif" font-size="7" fill="#94a3b8">Contract Basis</text>
+          </svg>
+          <span class="pse-brand-label">M.P.E.B.</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <text x="12" y="28" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="17" fill="#0284c7">AE</text>
+            <circle cx="48" cy="22" r="8" fill="none" stroke="#10b981" stroke-width="3"/>
+            <text x="60" y="28" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="17" fill="#0284c7">LUS</text>
+            <text x="80" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" letter-spacing="2" fill="#cbd5e1">ENGINEERING</text>
+          </svg>
+          <span class="pse-brand-label">Aeolus Engg.</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <text x="28" y="26" font-family="'Arial Black', sans-serif" font-weight="900" font-size="24" fill="#3b82f6">b</text>
+            <text x="44" y="26" font-family="'Arial Black', sans-serif" font-weight="900" font-size="24" fill="#e11d23">a</text>
+            <text x="68" y="18" font-family="Arial, sans-serif" font-weight="700" font-size="7.5" fill="#ffffff">business</text>
+            <text x="68" y="26" font-family="Arial, sans-serif" font-weight="700" font-size="7.5" fill="#ffffff">automation</text>
+            <text x="80" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#94a3b8">(i) private limited</text>
+          </svg>
+          <span class="pse-brand-label">Business Automation</span>
+        </div>
+        <div class="pse-partner-card">
+          <svg viewBox="0 0 160 50" class="pse-brand-svg">
+            <text x="80" y="16" text-anchor="middle" font-family="Georgia, serif" font-weight="600" font-size="10" fill="#e2e8f0">Reliance</text>
+            <text x="80" y="38" text-anchor="middle" font-family="'Arial Black', sans-serif" font-weight="900" font-size="20" fill="#ef4444">resQ</text>
+          </svg>
+          <span class="pse-brand-label">Reliance ResQ</span>
+        </div>
         <div class="pse-partner-card">
           <svg viewBox="0 0 160 50" class="pse-brand-svg">
             <circle cx="22" cy="18" r="14" fill="#e11d23"/>
@@ -2266,7 +2512,7 @@ body{font-family:'Inter',Arial,sans-serif!important;}
   /* Keyframe for Left-to-Right Scrolling */
   @keyframes pseScrollLTR {
     0% {
-      transform: translateX(-50%);
+      transform: translateX(-25%);
     }
     100% {
       transform: translateX(0%);
