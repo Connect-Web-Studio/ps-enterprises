@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#060911">
-  <title>PS Enterprises | Fire Safety, Security, Networking & Engineering Solutions</title>
+  <title>PS Enterprises</title>
   <meta name="description" content="PS Enterprises delivers fire safety, CCTV surveillance, enterprise networking, AMC, manpower and engineering solutions across Madhya Pradesh, Chhattisgarh and Maharashtra.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap">
   <meta name="theme-color" content="#060911">
 
 <style id="pse-hero-overlap-fix">
@@ -723,7 +725,6 @@ body{font-family:'Plus Jakarta Sans',Arial,sans-serif!important}
    PS ENTERPRISES — KEXART-INSPIRED EDITORIAL UI V2
    DESIGN ONLY: content, links, forms and business data remain.
    ========================================================== */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
 
 :root{
   --kx-paper:#f3f0ea;
@@ -3804,14 +3805,1416 @@ html,body,#pse-app{
 }
 </style>
 
+
+
+<style id="pse-v49-universal-section-outer-border">
+/* V49 — UNIVERSAL SECTION OUTER FRAME
+   Match the Statistics panel: one clean, thin rounded outside border
+   around every major website section. No content/functionality changes. */
+#pse-app > section.pse-section,
+#pse-app > section.pse-hero,
+#pse-app > .pse-stats-grid,
+#pse-app > footer.pse-footer {
+  border:1px solid rgba(255,255,255,.12) !important;
+  border-radius:34px !important;
+  overflow:hidden !important;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.16),
+    inset 0 1px 0 rgba(255,255,255,.025) !important;
+}
+
+/* Keep the frame visually uniform — no heavier bottom edge. */
+#pse-app > section.pse-section,
+#pse-app > section.pse-hero,
+#pse-app > .pse-stats-grid,
+#pse-app > footer.pse-footer {
+  border-bottom-color:rgba(255,255,255,.12) !important;
+}
+
+/* The Statistics block is itself a major section and gets the same frame. */
+#pse-app > .pse-stats-grid {
+  position:relative !important;
+  background:linear-gradient(145deg,rgba(9,14,23,.94),rgba(6,10,17,.90)) !important;
+}
+
+/* Keep the existing subtle blue section lighting inside the new frame. */
+#pse-app > section.pse-section::after,
+#pse-app > section.pse-hero::after,
+#pse-app > .pse-stats-grid::after,
+#pse-app > footer.pse-footer::after {
+  border-radius:999px !important;
+}
+
+@media (max-width:767px){
+  #pse-app > section.pse-section,
+  #pse-app > section.pse-hero,
+  #pse-app > .pse-stats-grid,
+  #pse-app > footer.pse-footer {
+    border-radius:24px !important;
+    border-width:1px !important;
+  }
+}
+</style>
+
+<style id="pse-v50-uniform-glass-bottom-light">
+/* V50 — Uniform transparent-glass lower edge across every major section.
+   Match the reference Statistics frame: same restrained intensity, clean blue-white light,
+   no heavy neon and no change to content/layout. */
+#pse-app > section.pse-hero,
+#pse-app > .pse-stats-grid,
+#pse-app > section.pse-section,
+#pse-app > footer.pse-footer,
+#pse-app > footer {
+  position:relative !important;
+  overflow:hidden !important;
+  border:1px solid rgba(190,215,238,.12) !important;
+  border-bottom-color:rgba(175,215,245,.42) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.025),
+    0 10px 30px rgba(0,0,0,.12) !important;
+}
+
+/* The lower edge is a translucent glass highlight, not a bright neon line. */
+#pse-app > section.pse-hero::after,
+#pse-app > .pse-stats-grid::after,
+#pse-app > section.pse-section::after,
+#pse-app > footer.pse-footer::after,
+#pse-app > footer::after {
+  content:"" !important;
+  position:absolute !important;
+  left:3% !important;
+  right:3% !important;
+  bottom:0 !important;
+  height:1px !important;
+  z-index:20 !important;
+  pointer-events:none !important;
+  border-radius:999px !important;
+  background:linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(130,190,225,.16) 10%,
+    rgba(205,232,250,.34) 30%,
+    rgba(225,241,252,.50) 50%,
+    rgba(205,232,250,.34) 70%,
+    rgba(130,190,225,.16) 90%,
+    transparent 100%
+  ) !important;
+  box-shadow:
+    0 0 7px rgba(135,205,245,.15),
+    0 -1px 5px rgba(220,240,252,.055) !important;
+}
+
+/* A very soft translucent band immediately above the lower edge creates the
+   transparent-glass impression visible in the reference without a heavy glow. */
+#pse-app > section.pse-hero::before,
+#pse-app > .pse-stats-grid::before,
+#pse-app > section.pse-section::before,
+#pse-app > footer.pse-footer::before,
+#pse-app > footer::before {
+  opacity:1 !important;
+  pointer-events:none !important;
+}
+
+@media(max-width:767px){
+  #pse-app > section.pse-hero,
+  #pse-app > .pse-stats-grid,
+  #pse-app > section.pse-section,
+  #pse-app > footer.pse-footer,
+  #pse-app > footer {
+    border-radius:24px !important;
+    border-bottom-color:rgba(175,215,245,.38) !important;
+  }
+  #pse-app > section.pse-hero::after,
+  #pse-app > .pse-stats-grid::after,
+  #pse-app > section.pse-section::after,
+  #pse-app > footer.pse-footer::after,
+  #pse-app > footer::after {
+    left:4% !important;
+    right:4% !important;
+  }
+}
+</style>
+
+<style id="pse-kexart-visibility-lighting-v3">
+/* =========================================================
+   V3 — TEXT VISIBILITY + SOFT LIGHT / HOVER LIGHTING
+   Visual-only refinement. Content, layout and functionality unchanged.
+   ========================================================= */
+#pse-app{
+  --ink:#171512;
+  --ink-soft:#3f3a34;
+  --muted:#686158;
+  --paper:#f7f3ea;
+  --paper-2:#eee8dc;
+  --accent:#b85c38;
+  --accent-bright:#d46f47;
+  --line:rgba(23,21,18,.16);
+  color:var(--ink) !important;
+}
+
+#pse-app .pse-section-header h2,
+#pse-app .pse-hero-title,
+#pse-app .pse-card h3,
+#pse-app .pse-step-card h4,
+#pse-app .pse-team-box h4,
+#pse-app .pse-why-card h3,
+#pse-app .pse-industry-card strong,
+#pse-app .pse-info-row strong,
+#pse-app .pse-form-box h3,
+#pse-app .pse-contact-left h2{
+  color:var(--ink) !important;
+  text-shadow:0 1px 0 rgba(255,255,255,.72);
+}
+
+#pse-app .pse-hero-subtitle,
+#pse-app .pse-section-header p,
+#pse-app .pse-card p,
+#pse-app .pse-step-card p,
+#pse-app .pse-team-box span,
+#pse-app .pse-why-card p,
+#pse-app .pse-industry-card span,
+#pse-app .pse-info-row p,
+#pse-app .pse-stat-box p,
+#pse-app .pse-form-note{
+  color:var(--ink-soft) !important;
+}
+
+#pse-app .pse-tag,
+#pse-app .pse-card-link,
+#pse-app .pse-num,
+#pse-app .pse-stat-box > span,
+#pse-app .pse-why-card > i,
+#pse-app .pse-industry-card i,
+#pse-app .pse-icon-wrap{
+  color:var(--accent) !important;
+}
+
+/* Navigation readability */
+#pse-app .pse-nav-menu a,
+#pse-app .pse-footer-links a{
+  color:#292621 !important;
+  transition:color .28s ease,text-shadow .28s ease,transform .28s ease !important;
+}
+#pse-app .pse-nav-menu a:hover,
+#pse-app .pse-footer-links a:hover{
+  color:var(--accent) !important;
+  text-shadow:0 0 14px rgba(184,92,56,.38) !important;
+}
+
+/* Soft illumination around interactive surfaces */
+#pse-app .pse-card,
+#pse-app .pse-step-card,
+#pse-app .pse-team-box,
+#pse-app .pse-why-card,
+#pse-app .pse-industry-card,
+#pse-app .pse-partner-card{
+  border-color:var(--line) !important;
+  transition:transform .38s cubic-bezier(.16,1,.3,1),
+             border-color .32s ease,
+             box-shadow .38s ease,
+             background .32s ease !important;
+}
+
+#pse-app .pse-card:hover,
+#pse-app .pse-step-card:hover,
+#pse-app .pse-team-box:hover,
+#pse-app .pse-why-card:hover,
+#pse-app .pse-industry-card:hover,
+#pse-app .pse-partner-card:hover{
+  border-color:rgba(184,92,56,.48) !important;
+  box-shadow:
+    0 18px 38px rgba(45,31,22,.10),
+    0 0 30px rgba(184,92,56,.13),
+    inset 0 1px 0 rgba(255,255,255,.8) !important;
+}
+
+#pse-app .pse-card:hover h3,
+#pse-app .pse-step-card:hover h4,
+#pse-app .pse-team-box:hover h4,
+#pse-app .pse-why-card:hover h3,
+#pse-app .pse-industry-card:hover strong{
+  text-shadow:0 0 18px rgba(184,92,56,.20) !important;
+}
+
+/* Icons get a restrained light bloom */
+#pse-app .pse-icon-wrap,
+#pse-app .pse-why-card > i,
+#pse-app .pse-industry-card i{
+  transition:transform .32s ease,filter .32s ease,box-shadow .32s ease !important;
+}
+#pse-app .pse-card:hover .pse-icon-wrap,
+#pse-app .pse-why-card:hover > i,
+#pse-app .pse-industry-card:hover i{
+  filter:drop-shadow(0 0 10px rgba(184,92,56,.42)) !important;
+}
+
+/* Buttons: visible text + warm edge lighting */
+#pse-app .pse-btn-pill,
+#pse-app .pse-btn-primary,
+#pse-app .pse-submit-btn{
+  transition:transform .28s ease,box-shadow .32s ease,filter .32s ease !important;
+}
+#pse-app .pse-btn-pill:hover,
+#pse-app .pse-btn-primary:hover,
+#pse-app .pse-submit-btn:hover{
+  transform:translateY(-3px) !important;
+  filter:brightness(1.06) !important;
+  box-shadow:0 12px 30px rgba(184,92,56,.25),0 0 24px rgba(184,92,56,.18) !important;
+}
+
+/* Form text / focus visibility */
+#pse-app .pse-input-group label{color:#38332d !important}
+#pse-app .pse-input-group input,
+#pse-app .pse-input-group select,
+#pse-app .pse-input-group textarea{
+  color:#171512 !important;
+  border-color:rgba(23,21,18,.20) !important;
+}
+#pse-app .pse-input-group input::placeholder,
+#pse-app .pse-input-group textarea::placeholder{color:#777066 !important;opacity:1 !important}
+#pse-app .pse-input-group input:focus,
+#pse-app .pse-input-group select:focus,
+#pse-app .pse-input-group textarea:focus{
+  border-color:rgba(184,92,56,.72) !important;
+  box-shadow:0 0 0 3px rgba(184,92,56,.10),0 0 18px rgba(184,92,56,.12) !important;
+  outline:none !important;
+}
+
+/* Hero headline has a gentle editorial glow, not neon */
+#pse-app .pse-hero-title{text-shadow:0 2px 20px rgba(255,255,255,.38) !important}
+#pse-app .pse-gradient-text{
+  filter:drop-shadow(0 0 16px rgba(184,92,56,.18));
+}
+
+/* Respect accessibility */
+@media (prefers-reduced-motion:reduce){
+  #pse-app *{transition-duration:.01ms !important;animation-duration:.01ms !important;}
+}
+</style>
+
+<style id="pse-menu-colour-fix-v2">
+/* Menu bar text visibility — stronger specificity so it overrides all previous theme rules */
+#pse-app .pse-nav .pse-nav-menu a {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+#pse-app .pse-nav .pse-nav-menu a:hover,
+#pse-app .pse-nav .pse-nav-menu a:focus-visible,
+#pse-app .pse-nav .pse-nav-menu a:active {
+  color: #C45A32 !important;
+  -webkit-text-fill-color: #C45A32 !important;
+  text-shadow: 0 0 12px rgba(196,90,50,.22) !important;
+}
+/* Mobile menu */
+#pse-app #pse-mobile-menu a {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+#pse-app #pse-mobile-menu a:hover,
+#pse-app #pse-mobile-menu a:focus-visible,
+#pse-app #pse-mobile-menu a:active {
+  color: #C45A32 !important;
+  -webkit-text-fill-color: #C45A32 !important;
+}
+
+
+  /* FINAL OUTER WEBSITE BACKGROUND — rounded frame */
+  #pse-app {
+    border-radius: 32px !important;
+    border: 1px solid rgba(255,255,255,.10) !important;
+    overflow: hidden !important;
+    box-shadow: 0 24px 80px rgba(0,0,0,.28) !important;
+  }
+
+  @media (max-width: 767px) {
+    #pse-app {
+      border-radius: 22px !important;
+    }
+  }
+
+
+/* ==========================================================
+   FINAL SURGICAL UPDATE — ROUNDED SECTION DIVIDERS
+   Keep divider lines rounded at both ends without changing
+   section spacing, content, colours, or functionality.
+   ========================================================== */
+#pse-app .pse-section + .pse-section {
+  border-top: 0 !important;
+  position: relative !important;
+}
+#pse-app .pse-section + .pse-section::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 48px !important;
+  right: 48px !important;
+  height: 1px !important;
+  background: var(--pse-line, rgba(0,0,0,.12)) !important;
+  border-radius: 999px !important;
+  pointer-events: none !important;
+}
+
+/* Rounded horizontal divider used above statistics blocks. */
+#pse-app .pse-stat-box {
+  border-top: 0 !important;
+  position: relative !important;
+}
+#pse-app .pse-stat-box::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 12px !important;
+  right: 12px !important;
+  height: 1px !important;
+  background: var(--pse-line, rgba(0,0,0,.12)) !important;
+  border-radius: 999px !important;
+}
+
+/* Rounded top divider of the footer. */
+#pse-app .pse-footer {
+  border-top: 0 !important;
+  position: relative !important;
+}
+#pse-app .pse-footer::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 24px !important;
+  right: 24px !important;
+  height: 1px !important;
+  background: rgba(255,255,255,.12) !important;
+  border-radius: 999px !important;
+  pointer-events: none !important;
+}
+
+/* Rounded borders around the service divider strip. */
+#pse-app .pse-service-strip {
+  border-radius: 18px !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 767px) {
+  #pse-app .pse-section + .pse-section::before {
+    left: 14px !important;
+    right: 14px !important;
+  }
+  #pse-app .pse-stat-box::before {
+    left: 10px !important;
+    right: 10px !important;
+  }
+  #pse-app .pse-footer::before {
+    left: 16px !important;
+    right: 16px !important;
+  }
+}
+
+</style>
+
+<style id="pse-v11-universal-card-motion">
+/* ==========================================================
+   V11 — UNIVERSAL CARD HOVER + LIGHTING + SCROLL REVEAL
+   Visual-only enhancement. Existing content/functionality kept.
+   ========================================================== */
+#pse-app .pse-card,
+#pse-app .pse-step-card,
+#pse-app .pse-partner-card,
+#pse-app .pse-industry-card,
+#pse-app .pse-why-card,
+#pse-app .pse-team-box,
+#pse-app .pse-stat-box,
+#pse-app .pse-form-box,
+#pse-app .pse-contact-grid,
+#pse-app .pse-service-strip,
+#pse-app .pse-service-item {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  transition:
+    transform .42s cubic-bezier(.2,.75,.2,1),
+    box-shadow .42s ease,
+    border-color .35s ease,
+    background .42s ease,
+    filter .42s ease !important;
+  will-change: transform, box-shadow !important;
+}
+
+/* Soft ambient lighting layer inside every interactive surface */
+#pse-app .pse-card::after,
+#pse-app .pse-step-card::after,
+#pse-app .pse-partner-card::after,
+#pse-app .pse-industry-card::after,
+#pse-app .pse-why-card::after,
+#pse-app .pse-team-box::after,
+#pse-app .pse-stat-box::after,
+#pse-app .pse-form-box::after,
+#pse-app .pse-contact-grid::after,
+#pse-app .pse-service-strip::after,
+#pse-app .pse-service-item::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: -35% !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255,255,255,.16), transparent 34%),
+    radial-gradient(circle at 82% 85%, rgba(196,90,50,.18), transparent 38%) !important;
+  filter: blur(22px) !important;
+  transform: scale(.82) !important;
+  transition: opacity .45s ease, transform .55s ease !important;
+}
+
+#pse-app .pse-card:hover,
+#pse-app .pse-step-card:hover,
+#pse-app .pse-partner-card:hover,
+#pse-app .pse-industry-card:hover,
+#pse-app .pse-why-card:hover,
+#pse-app .pse-team-box:hover,
+#pse-app .pse-stat-box:hover,
+#pse-app .pse-form-box:hover,
+#pse-app .pse-contact-grid:hover,
+#pse-app .pse-service-strip:hover,
+#pse-app .pse-service-item:hover {
+  transform: translateY(-7px) !important;
+  border-color: rgba(196,90,50,.42) !important;
+  box-shadow:
+    0 20px 42px rgba(0,0,0,.16),
+    0 0 0 1px rgba(255,255,255,.06) inset,
+    0 0 34px rgba(196,90,50,.13) !important;
+  filter: brightness(1.025) !important;
+}
+
+#pse-app .pse-card:hover::after,
+#pse-app .pse-step-card:hover::after,
+#pse-app .pse-partner-card:hover::after,
+#pse-app .pse-industry-card:hover::after,
+#pse-app .pse-why-card:hover::after,
+#pse-app .pse-team-box:hover::after,
+#pse-app .pse-stat-box:hover::after,
+#pse-app .pse-form-box:hover::after,
+#pse-app .pse-contact-grid:hover::after,
+#pse-app .pse-service-strip:hover::after,
+#pse-app .pse-service-item:hover::after {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+/* Slightly stronger lighting for the black enterprise-brand cards */
+#pse-app .pse-partner-card:hover {
+  box-shadow:
+    0 22px 48px rgba(0,0,0,.28),
+    0 0 34px rgba(196,90,50,.20),
+    0 0 0 1px rgba(255,255,255,.08) inset !important;
+}
+
+/* Scroll reveal: every card/surface enters smoothly as it reaches the viewport */
+#pse-app .pse-scroll-surface {
+  opacity: 0 !important;
+  transform: translateY(28px) scale(.985) !important;
+  transition:
+    opacity .72s cubic-bezier(.2,.7,.2,1),
+    transform .72s cubic-bezier(.2,.7,.2,1) !important;
+}
+#pse-app .pse-scroll-surface.pse-scroll-visible {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* Preserve the existing horizontal partner/service movement */
+#pse-app .pse-partner-card,
+#pse-app .pse-service-item {
+  transform-origin: center center !important;
+}
+
+@media (max-width: 767px) {
+  #pse-app .pse-card:hover,
+  #pse-app .pse-step-card:hover,
+  #pse-app .pse-partner-card:hover,
+  #pse-app .pse-industry-card:hover,
+  #pse-app .pse-why-card:hover,
+  #pse-app .pse-team-box:hover,
+  #pse-app .pse-stat-box:hover,
+  #pse-app .pse-form-box:hover,
+  #pse-app .pse-contact-grid:hover,
+  #pse-app .pse-service-strip:hover,
+  #pse-app .pse-service-item:hover {
+    transform: translateY(-4px) !important;
+    box-shadow:
+      0 14px 30px rgba(0,0,0,.14),
+      0 0 24px rgba(196,90,50,.11) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #pse-app .pse-scroll-surface,
+  #pse-app .pse-scroll-surface.pse-scroll-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  #pse-app .pse-card,
+  #pse-app .pse-step-card,
+  #pse-app .pse-partner-card,
+  #pse-app .pse-industry-card,
+  #pse-app .pse-why-card,
+  #pse-app .pse-team-box,
+  #pse-app .pse-stat-box,
+  #pse-app .pse-form-box,
+  #pse-app .pse-contact-grid,
+  #pse-app .pse-service-strip,
+  #pse-app .pse-service-item {
+    transition: none !important;
+  }
+}
+</style>
+
+<style id="pse-v13-statistics-width-match">
+/* V13 — Statistics table width matched to Engineering & Facility Infrastructure section */
+#pse-app .pse-stats-grid {
+  width: min(1200px, calc(100% - 48px)) !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+@media (max-width: 767px) {
+  #pse-app .pse-stats-grid {
+    width: calc(100% - 24px) !important;
+    max-width: 100% !important;
+  }
+}
+</style>
+
+<style id="pse-v47-scroll-performance-fix">
+/* ==========================================================
+   V47 — SCROLL JITTER / PERFORMANCE FIX
+   Surgical fix: preserve the current V46 design, colours,
+   content, ticker and hover lighting while removing the
+   transform/compositing conflicts that can make wheel/touch
+   scrolling feel shaky.
+   ========================================================== */
+
+/* 1) Do not promote every card to its own transform layer.
+      This was unnecessarily expensive during page scrolling. */
+#pse-app .pse-card,
+#pse-app .pse-step-card,
+#pse-app .pse-partner-card,
+#pse-app .pse-industry-card,
+#pse-app .pse-why-card,
+#pse-app .pse-team-box,
+#pse-app .pse-stat-box,
+#pse-app .pse-form-box,
+#pse-app .pse-contact-grid,
+#pse-app .pse-service-strip,
+#pse-app .pse-service-item{
+  will-change:auto !important;
+}
+
+/* 2) Scroll-reveal transforms are a common source of perceived
+      movement/judder when several surfaces enter at once.
+      Keep the reveal, but use opacity only. */
+#pse-app .pse-scroll-surface,
+#pse-app .pse-scroll-surface.pse-scroll-visible{
+  transform:none !important;
+  transition:opacity .45s ease !important;
+}
+#pse-app .pse-scroll-surface{
+  opacity:0 !important;
+}
+#pse-app .pse-scroll-surface.pse-scroll-visible{
+  opacity:1 !important;
+}
+
+/* 3) Do not let hover translate cards while the page is moving.
+      Keep the existing blue lighting/shadow language without
+      introducing positional movement under the pointer. */
+#pse-app .pse-card:hover,
+#pse-app .pse-step-card:hover,
+#pse-app .pse-partner-card:hover,
+#pse-app .pse-industry-card:hover,
+#pse-app .pse-why-card:hover,
+#pse-app .pse-team-box:hover,
+#pse-app .pse-stat-box:hover,
+#pse-app .pse-form-box:hover,
+#pse-app .pse-contact-grid:hover,
+#pse-app .pse-service-strip:hover,
+#pse-app .pse-service-item:hover{
+  transform:none !important;
+}
+
+/* 4) Remove the touch-scrolling hint from a non-scroll-container. */
+#pse-app{
+  -webkit-overflow-scrolling:auto !important;
+}
+
+/* 5) Keep the intentionally animated partner ticker isolated from
+      the document's vertical scrolling/compositing path. */
+#pse-app #pse-clients .pse-ticker-track-ltr{
+  will-change:transform !important;
+  backface-visibility:hidden !important;
+  -webkit-backface-visibility:hidden !important;
+}
+
+/* 6) Reduce expensive paint work from hidden hover-light layers. */
+#pse-app .pse-card::after,
+#pse-app .pse-step-card::after,
+#pse-app .pse-partner-card::after,
+#pse-app .pse-industry-card::after,
+#pse-app .pse-why-card::after,
+#pse-app .pse-team-box::after,
+#pse-app .pse-stat-box::after,
+#pse-app .pse-form-box::after,
+#pse-app .pse-contact-grid::after,
+#pse-app .pse-service-strip::after,
+#pse-app .pse-service-item::after{
+  will-change:auto !important;
+}
+
+/* 7) Mobile: no hover-position movement at all. */
+@media(max-width:767px){
+  #pse-app .pse-card:hover,
+  #pse-app .pse-step-card:hover,
+  #pse-app .pse-partner-card:hover,
+  #pse-app .pse-industry-card:hover,
+  #pse-app .pse-why-card:hover,
+  #pse-app .pse-team-box:hover,
+  #pse-app .pse-stat-box:hover,
+  #pse-app .pse-form-box:hover,
+  #pse-app .pse-contact-grid:hover,
+  #pse-app .pse-service-strip:hover,
+  #pse-app .pse-service-item:hover{
+    transform:none !important;
+  }
+}
+</style>
+
+<style id="pse-v52-final-uniform-section-frame">
+/* V52 — FINAL VERIFIED UNIVERSAL SECTION FRAME
+   One identical outer border + lower transparent-glass reflection on every major section. */
+#pse-app > section.pse-hero,
+#pse-app > .pse-stats-grid,
+#pse-app > section.pse-section,
+#pse-app > footer.pse-footer {
+  border:1px solid rgba(190,215,238,.12) !important;
+  border-bottom-color:rgba(175,215,245,.42) !important;
+}
+
+#pse-app > section.pse-hero::after,
+#pse-app > .pse-stats-grid::after,
+#pse-app > section.pse-section::after,
+#pse-app > footer.pse-footer::after {
+  content:"" !important;
+  position:absolute !important;
+  left:3% !important;
+  right:3% !important;
+  bottom:0 !important;
+  height:1px !important;
+  z-index:20 !important;
+  pointer-events:none !important;
+  border-radius:999px !important;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(130,190,225,.16) 10%,
+    rgba(205,232,250,.34) 30%,
+    rgba(225,241,252,.50) 50%,
+    rgba(205,232,250,.34) 70%,
+    rgba(130,190,225,.16) 90%,
+    transparent 100%) !important;
+  box-shadow:0 0 7px rgba(135,205,245,.15),
+             0 -1px 5px rgba(220,240,252,.055) !important;
+}
+
+@media(max-width:767px){
+  #pse-app > section.pse-hero,
+  #pse-app > .pse-stats-grid,
+  #pse-app > section.pse-section,
+  #pse-app > footer.pse-footer {
+    border-bottom-color:rgba(175,215,245,.38) !important;
+  }
+  #pse-app > section.pse-hero::after,
+  #pse-app > .pse-stats-grid::after,
+  #pse-app > section.pse-section::after,
+  #pse-app > footer.pse-footer::after {
+    left:4% !important;
+    right:4% !important;
+  }
+}
+</style>
+
+<style id="pse-v53-why-section-glass-match">
+/* V53 — Why PS Enterprises: match the exact universal glass treatment. */
+#pse-app #pse-why{
+  position:relative !important;
+  overflow:hidden !important;
+  border:1px solid rgba(190,215,238,.12) !important;
+  border-bottom-color:rgba(175,215,245,.42) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.025),
+    0 10px 30px rgba(0,0,0,.12) !important;
+}
+
+/* Restore the lower translucent ambient band that an older rule disabled. */
+#pse-app #pse-why::before{
+  content:"" !important;
+  display:block !important;
+  position:absolute !important;
+  left:5% !important;
+  right:5% !important;
+  bottom:-18% !important;
+  height:58% !important;
+  z-index:0 !important;
+  pointer-events:none !important;
+  background:
+    radial-gradient(ellipse at 50% 100%,
+      rgba(0,153,255,.085) 0%,
+      rgba(0,126,255,.042) 28%,
+      rgba(0,126,255,.014) 48%,
+      transparent 72%),
+    radial-gradient(ellipse at 22% 100%,
+      rgba(0,183,255,.045) 0%,
+      transparent 55%) !important;
+  filter:blur(10px) !important;
+  opacity:1 !important;
+}
+
+/* Exact same lower glass reflection as every other major section. */
+#pse-app #pse-why::after{
+  content:"" !important;
+  display:block !important;
+  position:absolute !important;
+  left:3% !important;
+  right:3% !important;
+  bottom:0 !important;
+  height:1px !important;
+  z-index:20 !important;
+  pointer-events:none !important;
+  border-radius:999px !important;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(130,190,225,.16) 10%,
+    rgba(205,232,250,.34) 30%,
+    rgba(225,241,252,.50) 50%,
+    rgba(205,232,250,.34) 70%,
+    rgba(130,190,225,.16) 90%,
+    transparent 100%) !important;
+  box-shadow:
+    0 0 7px rgba(135,205,245,.15),
+    0 -1px 5px rgba(220,240,252,.055) !important;
+}
+
+#pse-app #pse-why > *{
+  position:relative !important;
+  z-index:2 !important;
+}
+
+@media(max-width:767px){
+  #pse-app #pse-why{
+    border-radius:24px !important;
+    border-bottom-color:rgba(175,215,245,.38) !important;
+  }
+  #pse-app #pse-why::after{
+    left:4% !important;
+    right:4% !important;
+  }
+}
+</style>
+
+
+<style id="pse-v54-why-exact-universal-match">
+/* V54 — Exact match: Why PS Enterprises uses the same section frame/light values as every other major section. */
+#pse-app #pse-why{
+  position:relative !important;
+  overflow:hidden !important;
+  border:1px solid rgba(190,215,238,.12) !important;
+  border-bottom-color:rgba(175,215,245,.42) !important;
+  border-radius:34px !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.025),
+    0 10px 30px rgba(0,0,0,.12) !important;
+}
+#pse-app #pse-why::before{
+  content:"" !important;
+  position:absolute !important;
+  left:5% !important; right:5% !important; bottom:-18% !important; height:58% !important;
+  z-index:0 !important; pointer-events:none !important;
+  background:
+    radial-gradient(ellipse at 50% 100%,rgba(0,153,255,.085) 0%,rgba(0,126,255,.042) 28%,rgba(0,126,255,.014) 48%,transparent 72%),
+    radial-gradient(ellipse at 22% 100%,rgba(0,183,255,.045) 0%,transparent 55%) !important;
+  filter:blur(10px) !important; opacity:1 !important;
+}
+#pse-app #pse-why::after{
+  content:"" !important; position:absolute !important; left:3% !important; right:3% !important; bottom:0 !important;
+  height:1px !important; z-index:20 !important; pointer-events:none !important; border-radius:999px !important;
+  background:linear-gradient(90deg,transparent 0%,rgba(130,190,225,.16) 10%,rgba(205,232,250,.34) 30%,rgba(225,241,252,.50) 50%,rgba(205,232,250,.34) 70%,rgba(130,190,225,.16) 90%,transparent 100%) !important;
+  box-shadow:0 0 7px rgba(135,205,245,.15),0 -1px 5px rgba(220,240,252,.055) !important;
+}
+#pse-app #pse-why > *{position:relative !important;z-index:2 !important;}
+@media(max-width:767px){
+  #pse-app #pse-why{border-radius:24px !important;border-bottom-color:rgba(175,215,245,.38) !important;}
+  #pse-app #pse-why::after{left:4% !important;right:4% !important;}
+}
+</style>
+
+
+<style id="pse-v55-universal-20px-rounded-corners">
+/* V55 — Universal 20px rounded corners across the complete webpage.
+   Visual-only change; preserve all existing glass lighting and functionality. */
+#pse-app,
+#pse-app > section,
+#pse-app > section.pse-section,
+#pse-app > section.pse-hero,
+#pse-app > .pse-stats-grid,
+#pse-app > footer,
+#pse-app > .pse-footer,
+#pse-app #pse-process,
+#pse-app #pse-clients,
+#pse-app #pse-industries,
+#pse-app #pse-why,
+#pse-app #pse-team,
+#pse-app #pse-contact,
+#pse-app #pse-services,
+#pse-app .pse-contact-grid,
+#pse-app .pse-form-box,
+#pse-app .pse-ticker-wrap,
+#pse-app .pse-service-strip,
+#pse-app .pse-stats-grid,
+#pse-app .pse-process-grid,
+#pse-app .pse-industry-grid,
+#pse-app .pse-why-grid,
+#pse-app .pse-grid-3,
+#pse-app .pse-grid-4,
+#pse-app .pse-card,
+#pse-app .pse-step-card,
+#pse-app .pse-team-box,
+#pse-app .pse-why-card,
+#pse-app .pse-industry-card,
+#pse-app .pse-partner-card,
+#pse-app .pse-stat-box,
+#pse-app .pse-quick-btn,
+#pse-app .pse-input-group input,
+#pse-app .pse-input-group select,
+#pse-app .pse-input-group textarea,
+#pse-app .pse-submit-btn {
+  border-radius:20px !important;
+}
+
+#pse-app > section,
+#pse-app > footer,
+#pse-app > .pse-footer {
+  overflow:hidden !important;
+}
+
+/* Keep pseudo-element light lines smoothly rounded. */
+#pse-app > section::before,
+#pse-app > section::after,
+#pse-app > footer::before,
+#pse-app > footer::after,
+#pse-app .pse-footer::before,
+#pse-app .pse-footer::after {
+  border-radius:999px !important;
+}
+
+@media(max-width:767px){
+  #pse-app,
+  #pse-app > section,
+  #pse-app > footer,
+  #pse-app > .pse-footer,
+  #pse-app .pse-card,
+  #pse-app .pse-step-card,
+  #pse-app .pse-team-box,
+  #pse-app .pse-why-card,
+  #pse-app .pse-industry-card,
+  #pse-app .pse-partner-card,
+  #pse-app .pse-stat-box {
+    border-radius:20px !important;
+  }
+}
+</style>
+\n<style id="pse-v56-final-clean-performance">\n/* V56 — FINAL CLEANUP / PERFORMANCE PASS\n   Surgical only: preserve content, layout, colours, ticker, forms and functionality.\n   Removes transform-based pointer/parallax motion and normalizes the final 20px geometry. */\n\n/* One definitive 20px radius for all major page surfaces. */\n#pse-app,\n#pse-app > section,\n#pse-app > footer,\n#pse-app > .pse-footer,\n#pse-app > .pse-stats-grid,\n#pse-app #pse-services,\n#pse-app #pse-process,\n#pse-app #pse-clients,\n#pse-app #pse-industries,\n#pse-app #pse-why,\n#pse-app #pse-team,\n#pse-app #pse-contact,\n#pse-app .pse-contact-grid,\n#pse-app .pse-form-box,\n#pse-app .pse-ticker-wrap,\n#pse-app .pse-service-strip,\n#pse-app .pse-stats-grid,\n#pse-app .pse-process-grid,\n#pse-app .pse-industry-grid,\n#pse-app .pse-why-grid,\n#pse-app .pse-grid-3,\n#pse-app .pse-grid-4,\n#pse-app .pse-card,\n#pse-app .pse-step-card,\n#pse-app .pse-team-box,\n#pse-app .pse-why-card,\n#pse-app .pse-industry-card,\n#pse-app .pse-partner-card,\n#pse-app .pse-stat-box,\n#pse-app .pse-quick-btn,\n#pse-app .pse-input-group input,\n#pse-app .pse-input-group select,\n#pse-app .pse-input-group textarea,\n#pse-app .pse-submit-btn {\n  border-radius:20px !important;\n}\n\n#pse-app > section,\n#pse-app > footer,\n#pse-app > .pse-footer {\n  overflow:hidden !important;\n}\n\n/* No transform-based hover movement: lighting/shadow remains, page scrolling stays stable. */\n#pse-app .pse-card:hover,\n#pse-app .pse-step-card:hover,\n#pse-app .pse-partner-card:hover,\n#pse-app .pse-industry-card:hover,\n#pse-app .pse-why-card:hover,\n#pse-app .pse-team-box:hover,\n#pse-app .pse-stat-box:hover,\n#pse-app .pse-form-box:hover,\n#pse-app .pse-contact-grid:hover,\n#pse-app .pse-service-strip:hover,\n#pse-app .pse-service-item:hover {\n  transform:none !important;\n}\n\n/* Scroll reveal uses opacity only. */\n#pse-app .pse-kex-reveal,\n#pse-app .pse-kex-reveal.is-visible,\n#pse-app .pse-scroll-surface,\n#pse-app .pse-scroll-surface.pse-scroll-visible {\n  transform:none !important;\n}\n#pse-app .pse-kex-reveal { transition:opacity .45s ease !important; }\n#pse-app .pse-scroll-surface { transition:opacity .45s ease !important; }\n\n/* Only the intentional horizontal ticker keeps transform compositing. */\n#pse-app #pse-clients .pse-ticker-track-ltr {\n  will-change:transform !important;\n  backface-visibility:hidden !important;\n  -webkit-backface-visibility:hidden !important;\n}\n\n/* Keep lower glass reflection lines clean and rounded. */\n#pse-app > section::after,\n#pse-app > footer::after,\n#pse-app .pse-footer::after {\n  border-radius:999px !important;\n}\n\n@media (max-width:767px) {\n  #pse-app,\n  #pse-app > section,\n  #pse-app > footer,\n  #pse-app > .pse-footer,\n  #pse-app .pse-card,\n  #pse-app .pse-step-card,\n  #pse-app .pse-team-box,\n  #pse-app .pse-why-card,\n  #pse-app .pse-industry-card,\n  #pse-app .pse-partner-card,\n  #pse-app .pse-stat-box {\n    border-radius:20px !important;\n  }\n}\n\n@media (prefers-reduced-motion:reduce) {\n  #pse-app .pse-kex-reveal,\n  #pse-app .pse-kex-reveal.is-visible,\n  #pse-app .pse-scroll-surface,\n  #pse-app .pse-scroll-surface.pse-scroll-visible {\n    opacity:1 !important;\n    transform:none !important;\n    transition:none !important;\n  }\n}\n</style>\n
+<style id="pse-v57-menu-background-security-services">
+/* V57 — MENU BACKGROUND MATCHES "Security and Services" ACCENT COLOUR */
+#pse-app .pse-nav {
+  background:
+    linear-gradient(135deg,
+      #C45A32 0%,
+      #B84F2B 52%,
+      #A94727 100%) !important;
+  border-color: rgba(255,255,255,.18) !important;
+  box-shadow:
+    0 12px 34px rgba(0,0,0,.28),
+    0 0 24px rgba(196,90,50,.16) !important;
+}
+
+#pse-app .pse-nav::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.22) 22%,
+    rgba(255,255,255,.42) 50%,
+    rgba(255,255,255,.22) 78%,
+    transparent
+  ) !important;
+  box-shadow: 0 0 8px rgba(196,90,50,.18) !important;
+}
+</style>
+
+
+<style id="pse-v58-enterprise-digital-network">
+/* V58 — Enterprise Digital Network hero animation
+   Lightweight CSS-only motion: grid, orbital arcs, network lines, pulses and beam.
+   No mouse tracking, no JS animation and no layout-transform animation. */
+#pse-app .pse-hero{
+  isolation:isolate !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 72% 28%,rgba(0,153,255,.105),transparent 30%),
+    radial-gradient(circle at 92% 76%,rgba(0,112,255,.075),transparent 28%),
+    linear-gradient(145deg,#050A12 0%,#07101B 54%,#050A12 100%) !important;
+}
+#pse-app .pse-hero .pse-live-digital-bg{
+  position:absolute !important;
+  inset:0 !important;
+  z-index:0 !important;
+  pointer-events:none !important;
+  overflow:hidden !important;
+  opacity:.96 !important;
+}
+
+/* Fine technical grid */
+#pse-app .pse-hero .pse-digital-grid{
+  position:absolute !important;
+  inset:-12% !important;
+  background-image:
+    linear-gradient(rgba(90,180,255,.055) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(90,180,255,.055) 1px,transparent 1px) !important;
+  background-size:46px 46px !important;
+  mask-image:radial-gradient(ellipse at 72% 48%,black 0%,rgba(0,0,0,.82) 38%,transparent 76%) !important;
+  -webkit-mask-image:radial-gradient(ellipse at 72% 48%,black 0%,rgba(0,0,0,.82) 38%,transparent 76%) !important;
+  animation:pseGridDrift 18s linear infinite !important;
+}
+
+/* Large orbital arcs */
+#pse-app .pse-hero .pse-digital-orbit{
+  position:absolute !important;
+  border:1px solid rgba(90,190,255,.20) !important;
+  border-radius:50% !important;
+  box-shadow:0 0 16px rgba(0,153,255,.07),inset 0 0 14px rgba(0,153,255,.025) !important;
+  transform-origin:center center !important;
+}
+#pse-app .pse-hero .pse-digital-orbit-a{
+  width:720px !important;height:720px !important;
+  right:-250px !important;top:-215px !important;
+  transform:rotate(18deg) !important;
+  animation:pseOrbitA 24s linear infinite !important;
+}
+#pse-app .pse-hero .pse-digital-orbit-b{
+  width:470px !important;height:470px !important;
+  right:10px !important;bottom:-250px !important;
+  border-color:rgba(130,205,255,.16) !important;
+  animation:pseOrbitB 18s linear infinite reverse !important;
+}
+
+/* Moving light beam */
+#pse-app .pse-hero .pse-digital-beam{
+  position:absolute !important;
+  top:-15% !important;
+  left:58% !important;
+  width:1px !important;
+  height:130% !important;
+  background:linear-gradient(to bottom,transparent,rgba(130,205,255,.52) 45%,rgba(0,153,255,.18) 56%,transparent) !important;
+  box-shadow:0 0 12px rgba(0,153,255,.24) !important;
+  transform:rotate(18deg) !important;
+  opacity:.38 !important;
+  animation:pseBeamSweep 11s ease-in-out infinite !important;
+}
+
+/* Network connectors */
+#pse-app .pse-hero .pse-digital-network{
+  position:absolute !important;
+  width:330px !important;height:170px !important;
+  opacity:.42 !important;
+  background:
+    linear-gradient(26deg,transparent 48%,rgba(85,190,255,.26) 49%,rgba(85,190,255,.26) 49.5%,transparent 50%),
+    linear-gradient(153deg,transparent 48%,rgba(85,190,255,.20) 49%,rgba(85,190,255,.20) 49.5%,transparent 50%),
+    linear-gradient(90deg,transparent 49.5%,rgba(85,190,255,.16) 50%,transparent 50.5%) !important;
+  filter:drop-shadow(0 0 5px rgba(0,153,255,.10)) !important;
+  animation:pseNetworkFloat 12s ease-in-out infinite !important;
+}
+#pse-app .pse-hero .pse-network-1{right:5%;top:17% !important;}
+#pse-app .pse-hero .pse-network-2{right:20%;bottom:8% !important;transform:scale(.72) rotate(-8deg) !important;animation-delay:-4s !important;}
+#pse-app .pse-hero .pse-network-3{right:-3%;top:52% !important;transform:scale(.58) rotate(9deg) !important;animation-delay:-8s !important;}
+
+/* Data pulses */
+#pse-app .pse-hero .pse-digital-pulse{
+  position:absolute !important;
+  width:7px !important;height:7px !important;
+  border-radius:50% !important;
+  background:rgba(210,240,255,.9) !important;
+  box-shadow:0 0 0 4px rgba(0,153,255,.09),0 0 16px rgba(0,153,255,.62) !important;
+  animation:psePulse 4.8s ease-in-out infinite !important;
+}
+#pse-app .pse-hero .pse-pulse-1{right:25%;top:24% !important;}
+#pse-app .pse-hero .pse-pulse-2{right:12%;top:58% !important;animation-delay:-1.7s !important;}
+#pse-app .pse-hero .pse-pulse-3{right:38%;bottom:18% !important;animation-delay:-3.1s !important;}
+
+/* Existing nodes remain, but move gently rather than aggressively. */
+#pse-app .pse-hero .pse-digital-node{
+  animation-duration:6s !important;
+  animation-timing-function:ease-in-out !important;
+}
+
+/* Keep hero copy completely above the animation and visually clean. */
+#pse-app .pse-hero .pse-hero-content{
+  position:relative !important;
+  z-index:4 !important;
+  background:transparent !important;
+  background-color:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+
+/* Lightweight motion only. */
+@keyframes pseGridDrift{
+  0%{transform:translate3d(0,0,0)}
+  50%{transform:translate3d(-18px,10px,0)}
+  100%{transform:translate3d(0,0,0)}
+}
+@keyframes pseOrbitA{
+  from{transform:rotate(18deg)}
+  to{transform:rotate(378deg)}
+}
+@keyframes pseOrbitB{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+@keyframes pseBeamSweep{
+  0%,100%{left:56%;opacity:.10}
+  50%{left:80%;opacity:.48}
+}
+@keyframes pseNetworkFloat{
+  0%,100%{opacity:.22;transform:translate3d(0,0,0)}
+  50%{opacity:.46;transform:translate3d(-8px,6px,0)}
+}
+@keyframes psePulse{
+  0%,100%{transform:scale(.72);opacity:.35}
+  50%{transform:scale(1.45);opacity:1}
+}
+
+@media (max-width:767px){
+  #pse-app .pse-hero .pse-digital-grid{background-size:34px 34px !important;opacity:.68 !important;}
+  #pse-app .pse-hero .pse-digital-orbit-a{width:520px !important;height:520px !important;right:-280px !important;top:-130px !important;}
+  #pse-app .pse-hero .pse-digital-orbit-b{width:330px !important;height:330px !important;right:-80px !important;bottom:-190px !important;}
+  #pse-app .pse-hero .pse-digital-network{opacity:.25 !important;transform:scale(.72) !important;}
+  #pse-app .pse-hero .pse-digital-beam{opacity:.24 !important;}
+}
+
+/* Accessibility: honor the user's reduced-motion preference. */
+@media (prefers-reduced-motion:reduce){
+  #pse-app .pse-hero .pse-digital-grid,
+  #pse-app .pse-hero .pse-digital-orbit-a,
+  #pse-app .pse-hero .pse-digital-orbit-b,
+  #pse-app .pse-hero .pse-digital-beam,
+  #pse-app .pse-hero .pse-digital-network,
+  #pse-app .pse-hero .pse-digital-pulse,
+  #pse-app .pse-hero .pse-digital-node{
+    animation:none !important;
+  }
+}
+</style>
+
+
+<style id="pse-v59-visible-hero-network">
+/* V59 — ensure the Enterprise Digital Network is visibly rendered */
+#pse-app .pse-hero .pse-live-digital-bg{
+  display:block !important;
+  visibility:visible !important;
+  z-index:1 !important;
+  opacity:1 !important;
+}
+#pse-app .pse-hero .pse-digital-grid{
+  opacity:.95 !important;
+  background-size:42px 42px !important;
+  animation:pseGridDrift 14s linear infinite !important;
+}
+#pse-app .pse-hero .pse-digital-orbit-a{
+  border-width:2px !important;
+  border-color:rgba(90,190,255,.30) !important;
+}
+#pse-app .pse-hero .pse-digital-orbit-b{
+  border-width:2px !important;
+  border-color:rgba(130,205,255,.24) !important;
+}
+#pse-app .pse-hero .pse-digital-network{
+  opacity:.62 !important;
+}
+#pse-app .pse-hero .pse-digital-beam{
+  width:2px !important;
+  opacity:.55 !important;
+}
+#pse-app .pse-hero .pse-digital-pulse{
+  opacity:.75 !important;
+}
+#pse-app .pse-hero .pse-hero-content{
+  z-index:5 !important;
+}
+@media(max-width:767px){
+  #pse-app .pse-hero .pse-digital-grid{opacity:.72 !important;}
+  #pse-app .pse-hero .pse-digital-network{opacity:.38 !important;}
+  #pse-app .pse-hero .pse-digital-beam{opacity:.34 !important;}
+}
+</style>
+
+
+<style id="pse-v60-menu-text-optimized">
+/* V60 — menu typography optimized for the new PS Enterprises orange nav */
+#pse-app .pse-nav .pse-nav-menu a{
+  color:#FFF7F2 !important;
+  -webkit-text-fill-color:#FFF7F2 !important;
+  text-shadow:0 1px 2px rgba(50,20,10,.22) !important;
+  font-weight:600 !important;
+  transition:
+    color .22s ease,
+    text-shadow .22s ease,
+    background-color .22s ease !important;
+}
+
+/* Premium hover: warm ivory highlight, not another orange */
+#pse-app .pse-nav .pse-nav-menu a:hover,
+#pse-app .pse-nav .pse-nav-menu a:focus-visible{
+  color:#FFFFFF !important;
+  -webkit-text-fill-color:#FFFFFF !important;
+  text-shadow:
+    0 0 10px rgba(255,255,255,.34),
+    0 1px 2px rgba(60,20,8,.18) !important;
+  background:rgba(255,255,255,.10) !important;
+  border-radius:10px !important;
+}
+
+/* Current/active state */
+#pse-app .pse-nav .pse-nav-menu a.active,
+#pse-app .pse-nav .pse-nav-menu a[aria-current="page"],
+#pse-app .pse-nav .pse-nav-menu a.current{
+  color:#FFFFFF !important;
+  -webkit-text-fill-color:#FFFFFF !important;
+  background:rgba(255,255,255,.13) !important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.18) !important;
+  border-radius:10px !important;
+}
+
+/* Mobile menu remains highly readable against the orange background */
+#pse-app #pse-mobile-menu a{
+  color:#FFF7F2 !important;
+  -webkit-text-fill-color:#FFF7F2 !important;
+  font-weight:600 !important;
+}
+#pse-app #pse-mobile-menu a:hover,
+#pse-app #pse-mobile-menu a:focus-visible,
+#pse-app #pse-mobile-menu a:active{
+  color:#FFFFFF !important;
+  -webkit-text-fill-color:#FFFFFF !important;
+  background:rgba(255,255,255,.10) !important;
+  border-radius:10px !important;
+  text-shadow:0 0 10px rgba(255,255,255,.28) !important;
+}
+</style>
+
+
+<style id="pse-v61-premium-menu-hero-polish">
+/* V61 — premium navigation + subtle hero depth polish */
+
+/* 1. Active navigation indicator */
+#pse-app .pse-nav .pse-nav-menu a{
+  position:relative !important;
+}
+#pse-app .pse-nav .pse-nav-menu a.active::after,
+#pse-app .pse-nav .pse-nav-menu a[aria-current="page"]::after,
+#pse-app .pse-nav .pse-nav-menu a.current::after{
+  content:"" !important;
+  position:absolute !important;
+  left:20% !important;
+  right:20% !important;
+  bottom:3px !important;
+  height:2px !important;
+  border-radius:999px !important;
+  background:#FFFFFF !important;
+  box-shadow:0 0 8px rgba(255,255,255,.38) !important;
+}
+
+/* 2. Cleaner CTA hierarchy */
+#pse-app .pse-nav > .pse-btn-pill{
+  background:linear-gradient(135deg,#FFF8F3 0%,#FFFFFF 100%) !important;
+  color:#7E301A !important;
+  -webkit-text-fill-color:#7E301A !important;
+  border:1px solid rgba(255,255,255,.72) !important;
+  box-shadow:
+    0 7px 20px rgba(70,20,8,.18),
+    0 0 14px rgba(255,255,255,.10) !important;
+  transition:transform .22s ease,box-shadow .22s ease,background .22s ease !important;
+}
+#pse-app .pse-nav > .pse-btn-pill:hover,
+#pse-app .pse-nav > .pse-btn-pill:focus-visible{
+  background:#FFFFFF !important;
+  color:#5F2413 !important;
+  -webkit-text-fill-color:#5F2413 !important;
+  transform:translateY(-1px) !important;
+  box-shadow:
+    0 10px 24px rgba(70,20,8,.22),
+    0 0 18px rgba(255,255,255,.18) !important;
+}
+
+/* 3. Slightly more breathing room between menu items */
+#pse-app .pse-nav .pse-nav-menu{
+  gap:10px !important;
+}
+#pse-app .pse-nav .pse-nav-menu a{
+  padding-left:12px !important;
+  padding-right:12px !important;
+}
+
+/* 4. Subtle orange-to-white lower edge */
+#pse-app .pse-nav::after{
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.20) 18%,
+    rgba(255,255,255,.52) 50%,
+    rgba(255,255,255,.20) 82%,
+    transparent
+  ) !important;
+  box-shadow:
+    0 0 8px rgba(255,255,255,.12),
+    0 0 12px rgba(196,90,50,.10) !important;
+}
+
+/* 5. Hero depth wave: a slow, non-distracting brightness sweep */
+#pse-app .pse-hero .pse-live-digital-bg::after{
+  content:"" !important;
+  position:absolute !important;
+  top:-15% !important;
+  left:-35% !important;
+  width:26% !important;
+  height:130% !important;
+  transform:skewX(-18deg) !important;
+  background:linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(120,210,255,.035) 35%,
+    rgba(180,230,255,.13) 50%,
+    rgba(120,210,255,.035) 65%,
+    transparent 100%
+  ) !important;
+  filter:blur(7px) !important;
+  opacity:.72 !important;
+  animation:pseHeroDepthWave 9s ease-in-out infinite !important;
+  pointer-events:none !important;
+}
+
+/* Keep strongest hero motion toward the right side. */
+#pse-app .pse-hero .pse-digital-grid{
+  mask-image:radial-gradient(
+    ellipse at 76% 50%,
+    black 0%,
+    rgba(0,0,0,.88) 34%,
+    rgba(0,0,0,.30) 60%,
+    transparent 82%
+  ) !important;
+  -webkit-mask-image:radial-gradient(
+    ellipse at 76% 50%,
+    black 0%,
+    rgba(0,0,0,.88) 34%,
+    rgba(0,0,0,.30) 60%,
+    transparent 82%
+  ) !important;
+}
+
+@keyframes pseHeroDepthWave{
+  0%,12%{left:-35%;opacity:0;}
+  28%{opacity:.72;}
+  58%{left:112%;opacity:.46;}
+  74%,100%{left:112%;opacity:0;}
+}
+
+@media(max-width:767px){
+  #pse-app .pse-nav .pse-nav-menu{gap:6px !important;}
+  #pse-app .pse-nav .pse-nav-menu a{padding-left:9px !important;padding-right:9px !important;}
+  #pse-app .pse-hero .pse-live-digital-bg::after{
+    opacity:.42 !important;
+    filter:blur(5px) !important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  #pse-app .pse-hero .pse-live-digital-bg::after{
+    animation:none !important;
+  }
+}
+</style>
+
+
+<style id="pse-v62-smooth-get-in-touch">
+/* V62 — Smooth GET IN TOUCH hover
+   Surgical fix: no abrupt lift, no competing global button hover rules. */
+#pse-app .pse-nav > .pse-btn-pill{
+  position:relative !important;
+  transform:translateY(0) !important;
+  filter:none !important;
+  transition:
+    transform .34s cubic-bezier(.22,1,.36,1),
+    background-color .34s ease,
+    background-image .34s ease,
+    color .30s ease,
+    box-shadow .34s ease,
+    border-color .30s ease !important;
+  will-change:transform,box-shadow !important;
+}
+
+/* Smooth hover: tiny movement + gradual highlight */
+#pse-app .pse-nav > .pse-btn-pill:hover,
+#pse-app .pse-nav > .pse-btn-pill:focus-visible{
+  transform:translateY(-1px) scale(1.015) !important;
+  filter:none !important;
+  background:#FFFFFF !important;
+  color:#5F2413 !important;
+  -webkit-text-fill-color:#5F2413 !important;
+  border-color:rgba(255,255,255,.92) !important;
+  box-shadow:
+    0 9px 22px rgba(70,20,8,.18),
+    0 0 16px rgba(255,255,255,.16) !important;
+}
+
+/* Smooth return when pointer leaves */
+#pse-app .pse-nav > .pse-btn-pill:active{
+  transform:translateY(0) scale(.995) !important;
+  transition-duration:.12s !important;
+}
+
+/* Keep the arrow/icon visually synchronized */
+#pse-app .pse-nav > .pse-btn-pill i{
+  display:inline-block !important;
+  transition:transform .34s cubic-bezier(.22,1,.36,1) !important;
+}
+#pse-app .pse-nav > .pse-btn-pill:hover i,
+#pse-app .pse-nav > .pse-btn-pill:focus-visible i{
+  transform:translateX(2px) !important;
+}
+
+@media(prefers-reduced-motion:reduce){
+  #pse-app .pse-nav > .pse-btn-pill,
+  #pse-app .pse-nav > .pse-btn-pill i{
+    transition:none !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <!-- Mobile/desktop viewport behavior: responsive layout activates only below 768 CSS px.
      This keeps Android/iPhone "Desktop site" (~980px CSS viewport) on the full desktop navigation/layout,
      while normal phone viewport widths use the mobile category menu. -->
-<!-- Load FontAwesome Icons & Google Fonts safely -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap">
 
 <!-- Global Full-Width Breakout for Astra & WPBakery -->
 <style>
@@ -3881,13 +5284,25 @@ html,body,#pse-app{
   <!-- Hero Section -->
   <section class="pse-hero">
 <div class="pse-live-digital-bg" aria-hidden="true">
+  <span class="pse-digital-grid"></span>
+
   <span class="pse-digital-orbit pse-digital-orbit-a"></span>
   <span class="pse-digital-orbit pse-digital-orbit-b"></span>
+
+  <span class="pse-digital-network pse-network-1"></span>
+  <span class="pse-digital-network pse-network-2"></span>
+  <span class="pse-digital-network pse-network-3"></span>
+
   <span class="pse-digital-beam"></span>
+
   <span class="pse-digital-node pse-node-1"></span>
   <span class="pse-digital-node pse-node-2"></span>
   <span class="pse-digital-node pse-node-3"></span>
   <span class="pse-digital-node pse-node-4"></span>
+
+  <span class="pse-digital-pulse pse-pulse-1"></span>
+  <span class="pse-digital-pulse pse-pulse-2"></span>
+  <span class="pse-digital-pulse pse-pulse-3"></span>
 </div>
 
 
@@ -7022,121 +8437,6 @@ html,body,#pse-app{
 
 </style>
 
-<!-- Micro-Interactions Script -->
-<script>
-  (function() {
-    const cards = document.querySelectorAll('.pse-card, .pse-step-card');
-    cards.forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        card.style.transform = `perspective(600px) rotateX(${(-y/rect.height)*8}deg) rotateY(${(x/rect.width)*8}deg) translateY(-6px)`;
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = `perspective(600px) rotateX(0deg) rotateY(0deg) translateY(0)`;
-      });
-    });
-  })();
-
-  /* Tablet/mobile navigation */
-  (function() {
-    const toggle = document.querySelector('.pse-menu-toggle');
-    const menu = document.getElementById('pse-mobile-menu');
-
-    if (!toggle || !menu) return;
-
-    const closeMenu = () => {
-      menu.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Open navigation menu');
-    };
-
-    toggle.addEventListener('click', (event) => {
-      event.stopPropagation();
-      const open = menu.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
-    });
-
-    menu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
-
-    document.addEventListener('click', (event) => {
-      if (!menu.classList.contains('is-open')) return;
-      if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-        closeMenu();
-      }
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') closeMenu();
-    });
-
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 767) closeMenu();
-    });
-
-    const breakpoint = window.matchMedia('(max-width: 767px)');
-    const handleBreakpointChange = (event) => {
-      if (!event.matches) closeMenu();
-    };
-    if (breakpoint.addEventListener) {
-      breakpoint.addEventListener('change', handleBreakpointChange);
-    } else if (breakpoint.addListener) {
-      breakpoint.addListener(handleBreakpointChange);
-    }
-  })();
-
-  /* Requirement form UX: validates locally and prepares a clear confirmation.
-     No external form service is assumed, so no claim is made that an email was sent. */
-  (function() {
-    const form = document.getElementById('pse-inquiry-form');
-    if (!form) return;
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-      const name = form.querySelector('input[placeholder="Your Name"]');
-      const phone = form.querySelector('input[type="tel"]');
-      const category = document.getElementById('pse-service-category');
-      const message = document.getElementById('pse-message');
-      const required = [name, phone, category];
-      let valid = true;
-      required.forEach(el => {
-        el.style.borderColor = '';
-        if (!el.value.trim()) {
-          el.style.borderColor = '#ef4444';
-          valid = false;
-        }
-      });
-      if (!valid) {
-        const note = form.querySelector('.pse-form-note');
-        note.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Please complete the required fields.';
-        note.style.color = '#f87171';
-        return;
-      }
-      const note = form.querySelector('.pse-form-note');
-      note.innerHTML = '<i class="fa-solid fa-check"></i> Requirement details captured. Please use WhatsApp or Call Sales to send/confirm your enquiry.';
-      note.style.color = '#86efac';
-
-      const msg = [
-        'Hello PS Enterprises,',
-        '',
-        'I would like to discuss a requirement.',
-        'Name: ' + name.value.trim(),
-        'Phone: ' + phone.value.trim(),
-        'Service: ' + category.value,
-        'Requirement: ' + (message.value.trim() || 'Not specified')
-      ].join('\n');
-      const wa = 'https://wa.me/919399226485?text=' + encodeURIComponent(msg);
-      const btn = form.querySelector('.pse-submit-btn');
-      btn.innerHTML = '<i class="fa-brands fa-whatsapp"></i> Continue on WhatsApp';
-      btn.type = 'button';
-      btn.onclick = function() { window.open(wa, '_blank', 'noopener'); };
-    });
-  })();
-</script>
-
 <script id="pse-stats-counter-script">
 (function () {
   const section = document.querySelector('.pse-stats-grid');
@@ -7205,16 +8505,6 @@ html,body,#pse-app{
     const io=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -50px 0px'});
     els.forEach(el=>io.observe(el));
   }else els.forEach(el=>el.classList.add('is-visible'));
-  // Lightweight pointer parallax for desktop cards; disabled for touch/coarse pointers.
-  if(window.matchMedia && window.matchMedia('(pointer:fine)').matches){
-    root.querySelectorAll('.pse-card,.pse-step-card,.pse-team-box,.pse-why-card').forEach(card=>{
-      card.addEventListener('pointermove',function(e){
-        const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-        card.style.transform='perspective(900px) rotateX('+(-y*2.2)+'deg) rotateY('+(x*2.2)+'deg) translateY(-8px)';
-      });
-      card.addEventListener('pointerleave',function(){card.style.transform=''});
-    });
-  }
 })();
 </script>
 
@@ -7385,444 +8675,8 @@ html,body,#pse-app{
   }
 }
 </style>
-</body>
-</html>
-
-<style id="pse-kexart-visibility-lighting-v3">
-/* =========================================================
-   V3 — TEXT VISIBILITY + SOFT LIGHT / HOVER LIGHTING
-   Visual-only refinement. Content, layout and functionality unchanged.
-   ========================================================= */
-#pse-app{
-  --ink:#171512;
-  --ink-soft:#3f3a34;
-  --muted:#686158;
-  --paper:#f7f3ea;
-  --paper-2:#eee8dc;
-  --accent:#b85c38;
-  --accent-bright:#d46f47;
-  --line:rgba(23,21,18,.16);
-  color:var(--ink) !important;
-}
-
-#pse-app .pse-section-header h2,
-#pse-app .pse-hero-title,
-#pse-app .pse-card h3,
-#pse-app .pse-step-card h4,
-#pse-app .pse-team-box h4,
-#pse-app .pse-why-card h3,
-#pse-app .pse-industry-card strong,
-#pse-app .pse-info-row strong,
-#pse-app .pse-form-box h3,
-#pse-app .pse-contact-left h2{
-  color:var(--ink) !important;
-  text-shadow:0 1px 0 rgba(255,255,255,.72);
-}
-
-#pse-app .pse-hero-subtitle,
-#pse-app .pse-section-header p,
-#pse-app .pse-card p,
-#pse-app .pse-step-card p,
-#pse-app .pse-team-box span,
-#pse-app .pse-why-card p,
-#pse-app .pse-industry-card span,
-#pse-app .pse-info-row p,
-#pse-app .pse-stat-box p,
-#pse-app .pse-form-note{
-  color:var(--ink-soft) !important;
-}
-
-#pse-app .pse-tag,
-#pse-app .pse-card-link,
-#pse-app .pse-num,
-#pse-app .pse-stat-box > span,
-#pse-app .pse-why-card > i,
-#pse-app .pse-industry-card i,
-#pse-app .pse-icon-wrap{
-  color:var(--accent) !important;
-}
-
-/* Navigation readability */
-#pse-app .pse-nav-menu a,
-#pse-app .pse-footer-links a{
-  color:#292621 !important;
-  transition:color .28s ease,text-shadow .28s ease,transform .28s ease !important;
-}
-#pse-app .pse-nav-menu a:hover,
-#pse-app .pse-footer-links a:hover{
-  color:var(--accent) !important;
-  text-shadow:0 0 14px rgba(184,92,56,.38) !important;
-}
-
-/* Soft illumination around interactive surfaces */
-#pse-app .pse-card,
-#pse-app .pse-step-card,
-#pse-app .pse-team-box,
-#pse-app .pse-why-card,
-#pse-app .pse-industry-card,
-#pse-app .pse-partner-card{
-  border-color:var(--line) !important;
-  transition:transform .38s cubic-bezier(.16,1,.3,1),
-             border-color .32s ease,
-             box-shadow .38s ease,
-             background .32s ease !important;
-}
-
-#pse-app .pse-card:hover,
-#pse-app .pse-step-card:hover,
-#pse-app .pse-team-box:hover,
-#pse-app .pse-why-card:hover,
-#pse-app .pse-industry-card:hover,
-#pse-app .pse-partner-card:hover{
-  border-color:rgba(184,92,56,.48) !important;
-  box-shadow:
-    0 18px 38px rgba(45,31,22,.10),
-    0 0 30px rgba(184,92,56,.13),
-    inset 0 1px 0 rgba(255,255,255,.8) !important;
-}
-
-#pse-app .pse-card:hover h3,
-#pse-app .pse-step-card:hover h4,
-#pse-app .pse-team-box:hover h4,
-#pse-app .pse-why-card:hover h3,
-#pse-app .pse-industry-card:hover strong{
-  text-shadow:0 0 18px rgba(184,92,56,.20) !important;
-}
-
-/* Icons get a restrained light bloom */
-#pse-app .pse-icon-wrap,
-#pse-app .pse-why-card > i,
-#pse-app .pse-industry-card i{
-  transition:transform .32s ease,filter .32s ease,box-shadow .32s ease !important;
-}
-#pse-app .pse-card:hover .pse-icon-wrap,
-#pse-app .pse-why-card:hover > i,
-#pse-app .pse-industry-card:hover i{
-  filter:drop-shadow(0 0 10px rgba(184,92,56,.42)) !important;
-}
-
-/* Buttons: visible text + warm edge lighting */
-#pse-app .pse-btn-pill,
-#pse-app .pse-btn-primary,
-#pse-app .pse-submit-btn{
-  transition:transform .28s ease,box-shadow .32s ease,filter .32s ease !important;
-}
-#pse-app .pse-btn-pill:hover,
-#pse-app .pse-btn-primary:hover,
-#pse-app .pse-submit-btn:hover{
-  transform:translateY(-3px) !important;
-  filter:brightness(1.06) !important;
-  box-shadow:0 12px 30px rgba(184,92,56,.25),0 0 24px rgba(184,92,56,.18) !important;
-}
-
-/* Form text / focus visibility */
-#pse-app .pse-input-group label{color:#38332d !important}
-#pse-app .pse-input-group input,
-#pse-app .pse-input-group select,
-#pse-app .pse-input-group textarea{
-  color:#171512 !important;
-  border-color:rgba(23,21,18,.20) !important;
-}
-#pse-app .pse-input-group input::placeholder,
-#pse-app .pse-input-group textarea::placeholder{color:#777066 !important;opacity:1 !important}
-#pse-app .pse-input-group input:focus,
-#pse-app .pse-input-group select:focus,
-#pse-app .pse-input-group textarea:focus{
-  border-color:rgba(184,92,56,.72) !important;
-  box-shadow:0 0 0 3px rgba(184,92,56,.10),0 0 18px rgba(184,92,56,.12) !important;
-  outline:none !important;
-}
-
-/* Hero headline has a gentle editorial glow, not neon */
-#pse-app .pse-hero-title{text-shadow:0 2px 20px rgba(255,255,255,.38) !important}
-#pse-app .pse-gradient-text{
-  filter:drop-shadow(0 0 16px rgba(184,92,56,.18));
-}
-
-/* Respect accessibility */
-@media (prefers-reduced-motion:reduce){
-  #pse-app *{transition-duration:.01ms !important;animation-duration:.01ms !important;}
-}
-</style>
-<style id="pse-menu-colour-fix-v2">
-/* Menu bar text visibility — stronger specificity so it overrides all previous theme rules */
-#pse-app .pse-nav .pse-nav-menu a {
-  color: #FFFFFF !important;
-  opacity: 1 !important;
-  text-shadow: none !important;
-  -webkit-text-fill-color: #FFFFFF !important;
-}
-#pse-app .pse-nav .pse-nav-menu a:hover,
-#pse-app .pse-nav .pse-nav-menu a:focus-visible,
-#pse-app .pse-nav .pse-nav-menu a:active {
-  color: #C45A32 !important;
-  -webkit-text-fill-color: #C45A32 !important;
-  text-shadow: 0 0 12px rgba(196,90,50,.22) !important;
-}
-/* Mobile menu */
-#pse-app #pse-mobile-menu a {
-  color: #FFFFFF !important;
-  opacity: 1 !important;
-  -webkit-text-fill-color: #FFFFFF !important;
-}
-#pse-app #pse-mobile-menu a:hover,
-#pse-app #pse-mobile-menu a:focus-visible,
-#pse-app #pse-mobile-menu a:active {
-  color: #C45A32 !important;
-  -webkit-text-fill-color: #C45A32 !important;
-}
 
 
-  /* FINAL OUTER WEBSITE BACKGROUND — rounded frame */
-  #pse-app {
-    border-radius: 32px !important;
-    border: 1px solid rgba(255,255,255,.10) !important;
-    overflow: hidden !important;
-    box-shadow: 0 24px 80px rgba(0,0,0,.28) !important;
-  }
-
-  @media (max-width: 767px) {
-    #pse-app {
-      border-radius: 22px !important;
-    }
-  }
-
-
-/* ==========================================================
-   FINAL SURGICAL UPDATE — ROUNDED SECTION DIVIDERS
-   Keep divider lines rounded at both ends without changing
-   section spacing, content, colours, or functionality.
-   ========================================================== */
-#pse-app .pse-section + .pse-section {
-  border-top: 0 !important;
-  position: relative !important;
-}
-#pse-app .pse-section + .pse-section::before {
-  content: "" !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 48px !important;
-  right: 48px !important;
-  height: 1px !important;
-  background: var(--pse-line, rgba(0,0,0,.12)) !important;
-  border-radius: 999px !important;
-  pointer-events: none !important;
-}
-
-/* Rounded horizontal divider used above statistics blocks. */
-#pse-app .pse-stat-box {
-  border-top: 0 !important;
-  position: relative !important;
-}
-#pse-app .pse-stat-box::before {
-  content: "" !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 12px !important;
-  right: 12px !important;
-  height: 1px !important;
-  background: var(--pse-line, rgba(0,0,0,.12)) !important;
-  border-radius: 999px !important;
-}
-
-/* Rounded top divider of the footer. */
-#pse-app .pse-footer {
-  border-top: 0 !important;
-  position: relative !important;
-}
-#pse-app .pse-footer::before {
-  content: "" !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 24px !important;
-  right: 24px !important;
-  height: 1px !important;
-  background: rgba(255,255,255,.12) !important;
-  border-radius: 999px !important;
-  pointer-events: none !important;
-}
-
-/* Rounded borders around the service divider strip. */
-#pse-app .pse-service-strip {
-  border-radius: 18px !important;
-  overflow: hidden !important;
-}
-
-@media (max-width: 767px) {
-  #pse-app .pse-section + .pse-section::before {
-    left: 14px !important;
-    right: 14px !important;
-  }
-  #pse-app .pse-stat-box::before {
-    left: 10px !important;
-    right: 10px !important;
-  }
-  #pse-app .pse-footer::before {
-    left: 16px !important;
-    right: 16px !important;
-  }
-}
-
-</style>
-
-
-<style id="pse-v11-universal-card-motion">
-/* ==========================================================
-   V11 — UNIVERSAL CARD HOVER + LIGHTING + SCROLL REVEAL
-   Visual-only enhancement. Existing content/functionality kept.
-   ========================================================== */
-#pse-app .pse-card,
-#pse-app .pse-step-card,
-#pse-app .pse-partner-card,
-#pse-app .pse-industry-card,
-#pse-app .pse-why-card,
-#pse-app .pse-team-box,
-#pse-app .pse-stat-box,
-#pse-app .pse-form-box,
-#pse-app .pse-contact-grid,
-#pse-app .pse-service-strip,
-#pse-app .pse-service-item {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  transition:
-    transform .42s cubic-bezier(.2,.75,.2,1),
-    box-shadow .42s ease,
-    border-color .35s ease,
-    background .42s ease,
-    filter .42s ease !important;
-  will-change: transform, box-shadow !important;
-}
-
-/* Soft ambient lighting layer inside every interactive surface */
-#pse-app .pse-card::after,
-#pse-app .pse-step-card::after,
-#pse-app .pse-partner-card::after,
-#pse-app .pse-industry-card::after,
-#pse-app .pse-why-card::after,
-#pse-app .pse-team-box::after,
-#pse-app .pse-stat-box::after,
-#pse-app .pse-form-box::after,
-#pse-app .pse-contact-grid::after,
-#pse-app .pse-service-strip::after,
-#pse-app .pse-service-item::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: -35% !important;
-  z-index: -1 !important;
-  pointer-events: none !important;
-  opacity: 0 !important;
-  background:
-    radial-gradient(circle at 20% 15%, rgba(255,255,255,.16), transparent 34%),
-    radial-gradient(circle at 82% 85%, rgba(196,90,50,.18), transparent 38%) !important;
-  filter: blur(22px) !important;
-  transform: scale(.82) !important;
-  transition: opacity .45s ease, transform .55s ease !important;
-}
-
-#pse-app .pse-card:hover,
-#pse-app .pse-step-card:hover,
-#pse-app .pse-partner-card:hover,
-#pse-app .pse-industry-card:hover,
-#pse-app .pse-why-card:hover,
-#pse-app .pse-team-box:hover,
-#pse-app .pse-stat-box:hover,
-#pse-app .pse-form-box:hover,
-#pse-app .pse-contact-grid:hover,
-#pse-app .pse-service-strip:hover,
-#pse-app .pse-service-item:hover {
-  transform: translateY(-7px) !important;
-  border-color: rgba(196,90,50,.42) !important;
-  box-shadow:
-    0 20px 42px rgba(0,0,0,.16),
-    0 0 0 1px rgba(255,255,255,.06) inset,
-    0 0 34px rgba(196,90,50,.13) !important;
-  filter: brightness(1.025) !important;
-}
-
-#pse-app .pse-card:hover::after,
-#pse-app .pse-step-card:hover::after,
-#pse-app .pse-partner-card:hover::after,
-#pse-app .pse-industry-card:hover::after,
-#pse-app .pse-why-card:hover::after,
-#pse-app .pse-team-box:hover::after,
-#pse-app .pse-stat-box:hover::after,
-#pse-app .pse-form-box:hover::after,
-#pse-app .pse-contact-grid:hover::after,
-#pse-app .pse-service-strip:hover::after,
-#pse-app .pse-service-item:hover::after {
-  opacity: 1 !important;
-  transform: scale(1) !important;
-}
-
-/* Slightly stronger lighting for the black enterprise-brand cards */
-#pse-app .pse-partner-card:hover {
-  box-shadow:
-    0 22px 48px rgba(0,0,0,.28),
-    0 0 34px rgba(196,90,50,.20),
-    0 0 0 1px rgba(255,255,255,.08) inset !important;
-}
-
-/* Scroll reveal: every card/surface enters smoothly as it reaches the viewport */
-#pse-app .pse-scroll-surface {
-  opacity: 0 !important;
-  transform: translateY(28px) scale(.985) !important;
-  transition:
-    opacity .72s cubic-bezier(.2,.7,.2,1),
-    transform .72s cubic-bezier(.2,.7,.2,1) !important;
-}
-#pse-app .pse-scroll-surface.pse-scroll-visible {
-  opacity: 1 !important;
-  transform: translateY(0) scale(1) !important;
-}
-
-/* Preserve the existing horizontal partner/service movement */
-#pse-app .pse-partner-card,
-#pse-app .pse-service-item {
-  transform-origin: center center !important;
-}
-
-@media (max-width: 767px) {
-  #pse-app .pse-card:hover,
-  #pse-app .pse-step-card:hover,
-  #pse-app .pse-partner-card:hover,
-  #pse-app .pse-industry-card:hover,
-  #pse-app .pse-why-card:hover,
-  #pse-app .pse-team-box:hover,
-  #pse-app .pse-stat-box:hover,
-  #pse-app .pse-form-box:hover,
-  #pse-app .pse-contact-grid:hover,
-  #pse-app .pse-service-strip:hover,
-  #pse-app .pse-service-item:hover {
-    transform: translateY(-4px) !important;
-    box-shadow:
-      0 14px 30px rgba(0,0,0,.14),
-      0 0 24px rgba(196,90,50,.11) !important;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #pse-app .pse-scroll-surface,
-  #pse-app .pse-scroll-surface.pse-scroll-visible {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
-  #pse-app .pse-card,
-  #pse-app .pse-step-card,
-  #pse-app .pse-partner-card,
-  #pse-app .pse-industry-card,
-  #pse-app .pse-why-card,
-  #pse-app .pse-team-box,
-  #pse-app .pse-stat-box,
-  #pse-app .pse-form-box,
-  #pse-app .pse-contact-grid,
-  #pse-app .pse-service-strip,
-  #pse-app .pse-service-item {
-    transition: none !important;
-  }
-}
-</style>
 <script>
 (function(){
   function initPseV11(){
@@ -7856,123 +8710,5 @@ html,body,#pse-app{
   else initPseV11();
 })();
 </script>
-
-<style id="pse-v13-statistics-width-match">
-/* V13 — Statistics table width matched to Engineering & Facility Infrastructure section */
-#pse-app .pse-stats-grid {
-  width: min(1200px, calc(100% - 48px)) !important;
-  max-width: 1200px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-@media (max-width: 767px) {
-  #pse-app .pse-stats-grid {
-    width: calc(100% - 24px) !important;
-    max-width: 100% !important;
-  }
-}
-</style>
-
-
-<style id="pse-v47-scroll-performance-fix">
-/* ==========================================================
-   V47 — SCROLL JITTER / PERFORMANCE FIX
-   Surgical fix: preserve the current V46 design, colours,
-   content, ticker and hover lighting while removing the
-   transform/compositing conflicts that can make wheel/touch
-   scrolling feel shaky.
-   ========================================================== */
-
-/* 1) Do not promote every card to its own transform layer.
-      This was unnecessarily expensive during page scrolling. */
-#pse-app .pse-card,
-#pse-app .pse-step-card,
-#pse-app .pse-partner-card,
-#pse-app .pse-industry-card,
-#pse-app .pse-why-card,
-#pse-app .pse-team-box,
-#pse-app .pse-stat-box,
-#pse-app .pse-form-box,
-#pse-app .pse-contact-grid,
-#pse-app .pse-service-strip,
-#pse-app .pse-service-item{
-  will-change:auto !important;
-}
-
-/* 2) Scroll-reveal transforms are a common source of perceived
-      movement/judder when several surfaces enter at once.
-      Keep the reveal, but use opacity only. */
-#pse-app .pse-scroll-surface,
-#pse-app .pse-scroll-surface.pse-scroll-visible{
-  transform:none !important;
-  transition:opacity .45s ease !important;
-}
-#pse-app .pse-scroll-surface{
-  opacity:0 !important;
-}
-#pse-app .pse-scroll-surface.pse-scroll-visible{
-  opacity:1 !important;
-}
-
-/* 3) Do not let hover translate cards while the page is moving.
-      Keep the existing blue lighting/shadow language without
-      introducing positional movement under the pointer. */
-#pse-app .pse-card:hover,
-#pse-app .pse-step-card:hover,
-#pse-app .pse-partner-card:hover,
-#pse-app .pse-industry-card:hover,
-#pse-app .pse-why-card:hover,
-#pse-app .pse-team-box:hover,
-#pse-app .pse-stat-box:hover,
-#pse-app .pse-form-box:hover,
-#pse-app .pse-contact-grid:hover,
-#pse-app .pse-service-strip:hover,
-#pse-app .pse-service-item:hover{
-  transform:none !important;
-}
-
-/* 4) Remove the touch-scrolling hint from a non-scroll-container. */
-#pse-app{
-  -webkit-overflow-scrolling:auto !important;
-}
-
-/* 5) Keep the intentionally animated partner ticker isolated from
-      the document's vertical scrolling/compositing path. */
-#pse-app #pse-clients .pse-ticker-track-ltr{
-  will-change:transform !important;
-  backface-visibility:hidden !important;
-  -webkit-backface-visibility:hidden !important;
-}
-
-/* 6) Reduce expensive paint work from hidden hover-light layers. */
-#pse-app .pse-card::after,
-#pse-app .pse-step-card::after,
-#pse-app .pse-partner-card::after,
-#pse-app .pse-industry-card::after,
-#pse-app .pse-why-card::after,
-#pse-app .pse-team-box::after,
-#pse-app .pse-stat-box::after,
-#pse-app .pse-form-box::after,
-#pse-app .pse-contact-grid::after,
-#pse-app .pse-service-strip::after,
-#pse-app .pse-service-item::after{
-  will-change:auto !important;
-}
-
-/* 7) Mobile: no hover-position movement at all. */
-@media(max-width:767px){
-  #pse-app .pse-card:hover,
-  #pse-app .pse-step-card:hover,
-  #pse-app .pse-partner-card:hover,
-  #pse-app .pse-industry-card:hover,
-  #pse-app .pse-why-card:hover,
-  #pse-app .pse-team-box:hover,
-  #pse-app .pse-stat-box:hover,
-  #pse-app .pse-form-box:hover,
-  #pse-app .pse-contact-grid:hover,
-  #pse-app .pse-service-strip:hover,
-  #pse-app .pse-service-item:hover{
-    transform:none !important;
-  }
-}
-</style>
+</body>
+</html>
